@@ -1,3 +1,30 @@
-# Literature
+# Research
 
-Here is a review of existing methods.
+Now that you have a sense of why phylogenies are so important
+you can start to think about a group whose evolutionary history you might like to investigate.
+You can pick any group or ask your instructor for suggestions.
+Once you pick a group you'll need to investigate it a bit more to determine
+whether you can narrow your research to address particularly interesting research questions,
+and then determine whether there are data to help you answer those questions.
+You might consider picking a group that is studied by URI faculty.
+
+To get started find out something about your group.
+You can start with Google, although you should rapidly move on to searching the primary literature.
+How to use Google Scholar:
+
+* http://research.clps.brown.edu/amonroe/assets/google-scholar-tips.pdf  
+* https://www.youtube.com/watch?v=B7bUS9TYvRU  
+* https://www.youtube.com/watch?v=6vSE-_iq7NE
+
+Once you locate a paper to read you need to read it.
+Check out this recommendation on how to read a paper efficiently and effectively: 
+https://www.youtube.com/watch?v=Gv5ku0eoY6k
+
+You will need to turn in an annotated bibliography of at least 5 sources.
+Note that you may need to skim 10-20 papers before settling on 5 to read in depth.
+Your annotated bibliography should include the full citation followed by a 1-2 paragraph summary of the important points (particularly results) in the article as they relate to your research.
+Note that an annotated bibliography is not an abstract.
+Here are some examples and references:  
+
+* https://owl.purdue.edu/owl/general_writing/common_writing_assignments/annotated_bibliographies/annotated_bibliography_samples.html  
+* https://guides.library.cornell.edu/annotatedbibliography

@@ -1,21 +1,17 @@
 # Introduction {#intro}
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+## Phylogenies
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+If you're familiar with the basics of evolution you're probably familiar with phylogenies:
+the tree-like structure that allows you to tell how closely related species are.
+For example, here is a simply phylogeny of some groups of vertebrates:
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
-```
+![](https://cdn.britannica.com/83/199483-050-7A240BE2.jpg)
 
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
-
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
-
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+To gain some understanding of phylogenies and phylogenetics check out  
+1. [A brief description of phylogenetics](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-phylogenetics/).  
+2. [Importance of phylogenetics](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/why-is-phylogenetics-important/)  
+3. [Phylogenies](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-a-phylogeny/)  
+4. [Example phylogeny: a family tree](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-a-phylogeny/the-example-of-a-family-tree/)  
+5. [Phylogenies as evolutionary history](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-a-phylogeny/interpreting-patterns-of-relatedness/)  
+6. [Phylogenies as a tool](https://evolution.berkeley.edu/evolibrary/article/evo_10)

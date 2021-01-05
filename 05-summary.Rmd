@@ -1,3 +1,40 @@
-# Final Words
+# Computational skills
 
-We have finished a nice book.
+We have seen a little bit of how the computer can analyze data much more quckly than
+we can do by hand.
+This is even more true when we have genome data.
+For example, the human genome is 3.2 billion bases.
+It would be hard to compare all that data to data from other species just using your eyes.
+Instead we're going to need to learn some basic programming skills 
+so we can tell the computer how to work with our data.
+
+First, you'll have noticed that the computer we're using doesn't have the graphical interface
+you usually use (like a PC or Mac).
+That means you have to type in your commands - you can't point and click.
+This actually has a hidden benefit because it's easy to write down what you did in
+a line of text rather than having to try to explain where to click on each step.
+
+Let's start by learning how to log in the our server and run commands without clicking.
+If you have a PC you'll need [git-bash](https://gitforwindows.org/). If you have a Mac you can open Terminal (you may need to search for it).
+
+## Log in to the server
+
+## Basic navigation
+
+List
+```
+ls
+```
+
+Learn about folders
+```
+pwd
+```
+
+Change directory
+```
+cd 
+```
+
+Adapt from  http://swcarpentry.github.io/shell-novice/
+

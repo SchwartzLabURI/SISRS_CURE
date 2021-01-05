@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Getting the computer to run analyses | Phylogenomics with SISRS</title>
+  <meta name="description" content="Step-by-step guide for research using SISRS to get orthologs for phylogenomics." />
+  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Getting the computer to run analyses | Phylogenomics with SISRS" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Step-by-step guide for research using SISRS to get orthologs for phylogenomics." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Getting the computer to run analyses | Phylogenomics with SISRS" />
+  
+  <meta name="twitter:description" content="Step-by-step guide for research using SISRS to get orthologs for phylogenomics." />
+  
+
+<meta name="author" content="Rachel Schwartz" />
+
+
+<meta name="date" content="2021-01-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="methods.html"/>
+<link rel="next" href="computational-skills.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Phylogenomics Research Course</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Getting Started</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#phylogenies"><i class="fa fa-check"></i><b>2.1</b> Phylogenies</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="research.html"><a href="research.html"><i class="fa fa-check"></i><b>3</b> Research</a></li>
+<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
+<li class="chapter" data-level="5" data-path="getting-the-computer-to-run-analyses.html"><a href="getting-the-computer-to-run-analyses.html"><i class="fa fa-check"></i><b>5</b> Getting the computer to run analyses</a></li>
+<li class="chapter" data-level="6" data-path="computational-skills.html"><a href="computational-skills.html"><i class="fa fa-check"></i><b>6</b> Computational skills</a></li>
+<li class="chapter" data-level="7" data-path="getting-your-data.html"><a href="getting-your-data.html"><i class="fa fa-check"></i><b>7</b> Getting your data</a><ul>
+<li class="chapter" data-level="7.1" data-path="getting-your-data.html"><a href="getting-your-data.html#download"><i class="fa fa-check"></i><b>7.1</b> Download</a></li>
+<li class="chapter" data-level="7.2" data-path="getting-your-data.html"><a href="getting-your-data.html#sisrs"><i class="fa fa-check"></i><b>7.2</b> SISRS</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="building-trees.html"><a href="building-trees.html"><i class="fa fa-check"></i><b>8</b> Building Trees</a><ul>
+<li class="chapter" data-level="8.1" data-path="building-trees.html"><a href="building-trees.html#background-on-tree-building"><i class="fa fa-check"></i><b>8.1</b> Background on tree building</a></li>
+<li class="chapter" data-level="8.2" data-path="building-trees.html"><a href="building-trees.html#building-trees-from-your-data"><i class="fa fa-check"></i><b>8.2</b> Building trees from your data</a></li>
+<li class="chapter" data-level="8.3" data-path="building-trees.html"><a href="building-trees.html#visualizing-trees"><i class="fa fa-check"></i><b>8.3</b> Visualizing trees</a></li>
+<li class="chapter" data-level="8.4" data-path="building-trees.html"><a href="building-trees.html#what-does-my-tree-mean"><i class="fa fa-check"></i><b>8.4</b> What does my tree mean?</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>9</b> Results</a><ul>
+<li class="chapter" data-level="9.1" data-path="results.html"><a href="results.html#what-does-your-tree-tell-you"><i class="fa fa-check"></i><b>9.1</b> What does your tree tell you?</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="sharing-your-results.html"><a href="sharing-your-results.html"><i class="fa fa-check"></i><b>10</b> Sharing your results</a><ul>
+<li class="chapter" data-level="10.1" data-path="sharing-your-results.html"><a href="sharing-your-results.html#start-reading"><i class="fa fa-check"></i><b>10.1</b> Start reading</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="sharing-your-results.html"><a href="sharing-your-results.html#develop-a-bibliography"><i class="fa fa-check"></i><b>10.1.1</b> Develop a bibliography</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="sharing-your-results.html"><a href="sharing-your-results.html#presentation"><i class="fa fa-check"></i><b>10.2</b> Presentation</a></li>
+<li class="chapter" data-level="10.3" data-path="sharing-your-results.html"><a href="sharing-your-results.html#writing-a-paper"><i class="fa fa-check"></i><b>10.3</b> Writing a paper</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="sharing-your-results.html"><a href="sharing-your-results.html#intro-1"><i class="fa fa-check"></i><b>10.3.1</b> Intro</a></li>
+<li class="chapter" data-level="10.3.2" data-path="sharing-your-results.html"><a href="sharing-your-results.html#methods-1"><i class="fa fa-check"></i><b>10.3.2</b> Methods</a></li>
+<li class="chapter" data-level="10.3.3" data-path="sharing-your-results.html"><a href="sharing-your-results.html#results-1"><i class="fa fa-check"></i><b>10.3.3</b> Results</a></li>
+<li class="chapter" data-level="10.3.4" data-path="sharing-your-results.html"><a href="sharing-your-results.html#discussion"><i class="fa fa-check"></i><b>10.3.4</b> Discussion</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Phylogenomics with SISRS</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="getting-the-computer-to-run-analyses" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Getting the computer to run analyses</h1>
+<p>Rather than counting how much data we have by hand, let’s get the computer
+to do this tedious work for us.
+To get started</p>
+<ol style="list-style-type: decimal">
+<li>Log in to the <a href="https://celsrs.uri.edu/">RStudio Server</a> on campus.</li>
+<li>Enter your username (the first part of your email address) and password (URI student ID)</li>
+<li>If you haven’t used RStudio before learn a little bit here</li>
+<li>Make a new project to work on this research project</li>
+<li>Use the Upload button (lower right) to upload the file of information you obtained from ENA</li>
+<li>Click the Terminal tab and type</li>
+</ol>
+<pre><code>Rscript ../../shared/make_download_script.R [file] [target_data_size] [outfile]</code></pre>
+<p>Replace the items in brackets with:</p>
+<ol style="list-style-type: decimal">
+<li>your file from ENA</li>
+<li>target data size should be in Mbp - get genome size, multiply by coverage, and round up significantly</li>
+<li>a name you determine to save information to</li>
+</ol>
+<p>Now click on the output files to fine out what species have enough data to work with.
+If you are satisfied with the available data continue.
+Otherwise you might need to try a different group.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="methods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="computational-skills.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-application.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

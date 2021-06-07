@@ -1,16 +1,17 @@
 #!/bin/sh
 
-set -e
+#set -e
 
-[ -z "${GITHUB_PAT}" ] && exit 0
-[ "${TRAVIS_BRANCH}" != "master" ] && exit 0
+#[ -z "${GITHUB_PAT}" ] && exit 0
+#[ "${TRAVIS_BRANCH}" != "master" ] && exit 0
 
-git config --global user.email "rsschwartz@gmail.com"
-git config --global user.name "Rachel Schwartz"
+#git config --global user.email "rsschwartz@gmail.com"
+#git config --global user.name "Rachel Schwartz"
 
-git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git book-output
-cd book-output
-cp -r ../_book/* ./
+#git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git book-output
+#cd book-output
+#cp -r ../_book/* ./
+cp -r _book/* book
 git add --all *
-git commit -m"Update the book" || true
-git push -q origin gh-pages
+git commit -m "Update the book" || true
+git push origin gh-pages

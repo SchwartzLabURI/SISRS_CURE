@@ -19,12 +19,14 @@ Let's start by learning how to log in the our server and run commands without cl
 ## Log in to the server
 
 Mac:
+
 * open your Terminal (you may need to search for it)
 * at the prompt type ssh -l username bluewaves.uri.edu , replacing username with the first part of your email address.
 * you should be prompted to enter a password of your choice - note that the password does not show up when you type
 * you should arrive at a prompt for bluewaves
 
 PC:
+
 * Download and install [git-bash](https://gitforwindows.org/). 
 * open git-bash 
 * at the prompt type ssh -l username bluewaves.uri.edu , replacing username with the first part of your email address.

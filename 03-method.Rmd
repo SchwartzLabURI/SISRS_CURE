@@ -3,14 +3,15 @@
 Once you have settled on a group that you are interested in studying you need to find out
 if there are data to help you answer your research questions.
 We'll be using genome sequence data to determine the species relationships in your group.
-[Learn more about how molecular data is used in phylogenetics](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-phylogenetics/why-use-molecular-data/).
+Read the following to learn more about molecular phylogenetics:'
 
-https://www.ncbi.nlm.nih.gov/books/NBK21122/
+* [Learn more about how molecular data is used in phylogenetics](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-phylogenetics/why-use-molecular-data/).
+* [Genomes ch. 16](https://www.ncbi.nlm.nih.gov/books/NBK21122/)
 
 To acquire molecular data to compare the species in your group 
 you either need to do a lot of sequencing, or find sequencing someone else has done.
 Becuase sequencing takes time and money we'll try using data that is already available
-and just hasn't bee analyzed to answer the questions you are interested in.
+and just hasn't been analyzed to answer the questions you are interested in.
 
 1. Go to the [European Nucleotide Archive](https://www.ebi.ac.uk/ena/browser/advanced-search)
 2. Select: Data type: Raw Reads

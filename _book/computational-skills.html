@@ -24,7 +24,7 @@
 <meta name="author" content="Rachel Schwartz" />
 
 
-<meta name="date" content="2021-06-07" />
+<meta name="date" content="2021-06-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -76,7 +76,10 @@
 <li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
 <li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#phylogenies"><i class="fa fa-check"></i><b>2.1</b> Phylogenies</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="research.html"><a href="research.html"><i class="fa fa-check"></i><b>3</b> Research</a></li>
+<li class="chapter" data-level="3" data-path="research.html"><a href="research.html"><i class="fa fa-check"></i><b>3</b> Research</a><ul>
+<li class="chapter" data-level="3.1" data-path="research.html"><a href="research.html#freewrite-assignment"><i class="fa fa-check"></i><b>3.1</b> Freewrite assignment</a></li>
+<li class="chapter" data-level="3.2" data-path="research.html"><a href="research.html#annotated-bibliography-assignment"><i class="fa fa-check"></i><b>3.2</b> Annotated Bibliography assignment</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
 <li class="chapter" data-level="5" data-path="getting-the-computer-to-run-analyses.html"><a href="getting-the-computer-to-run-analyses.html"><i class="fa fa-check"></i><b>5</b> Getting the computer to run analyses</a></li>
 <li class="chapter" data-level="6" data-path="computational-skills.html"><a href="computational-skills.html"><i class="fa fa-check"></i><b>6</b> Computational skills</a><ul>
@@ -143,20 +146,52 @@ you usually use (like a PC or Mac).
 That means you have to type in your commands - you can’t point and click.
 This actually has a hidden benefit because it’s easy to write down what you did in
 a line of text rather than having to try to explain where to click on each step.</p>
-<p>Let’s start by learning how to log in the our server and run commands without clicking.
-If you have a PC you’ll need <a href="https://gitforwindows.org/">git-bash</a>. If you have a Mac you can open Terminal (you may need to search for it).</p>
+<p>Let’s start by learning how to log in the our server and run commands without clicking.</p>
 <div id="log-in-to-the-server" class="section level2">
 <h2><span class="header-section-number">6.1</span> Log in to the server</h2>
+<p>Mac:
+* open your Terminal (you may need to search for it)
+* at the prompt type ssh -l username bluewaves.uri.edu , replacing username with the first part of your email address.
+* you should be prompted to enter a password of your choice - note that the password does not show up when you type
+* you should arrive at a prompt for bluewaves</p>
+<p>PC:
+* Download and install <a href="https://gitforwindows.org/">git-bash</a>.
+* open git-bash
+* at the prompt type ssh -l username bluewaves.uri.edu , replacing username with the first part of your email address.
+* you should be prompted to enter a password of your choice - note that the password does not show up when you type
+* you should arrive at a prompt for bluewaves</p>
 </div>
 <div id="basic-navigation" class="section level2">
 <h2><span class="header-section-number">6.2</span> Basic navigation</h2>
-<p>List</p>
-<pre><code>ls</code></pre>
-<p>Learn about folders</p>
-<pre><code>pwd</code></pre>
-<p>Change directory</p>
-<pre><code>cd </code></pre>
-<p>Adapt from <a href="http://swcarpentry.github.io/shell-novice/" class="uri">http://swcarpentry.github.io/shell-novice/</a></p>
+<p>You are now logged in to bluewaves, which is a cluster of computers that can be used for research.
+First, you’ll need to learn to navigate around only by typing.
+Computing clusters typically require you to type all the commands.</p>
+<p>For example, to list all the files in your home folder (where you are when you log in) type <code>ls</code>.
+There probably isn’t anything in this folder right now.
+This is just like opening a folder in a Finder window on a Mac or a folder on a PC,
+except you had to type the command instead of simply double clicking.</p>
+<p>Second (and to help you get used to typing instead of clicking), let’s find out
+where we are in the folder structure.
+You should be in your home folder, which is inside another folder,
+and so on and so forth.
+Think of it as a highly organized filing cabinet, and you will need to move in between folders
+to access files.
+Type <code>pwd</code> to see the folder you are in.
+You’ll see your folder at the end, preceeded by a slash, preceeded by another folder, and so on.</p>
+<p>Let’s start by making a new folder to put your work in.
+Use the <code>mkdir</code> command to make a new directory.
+Unlike the prior commands you learned, but like most commands you’ll use,
+this command also takes an argument, which is another “word” that comes after this command.
+When you make a directory you need to name it, so instead of just
+<code>mkdir</code> you need <code>mkdir results</code> or <code>mkdir test</code> or some other folder name.</p>
+<p>Now that you have a new folder open it up.
+You change the directory using the <code>cd</code> command.
+Again, this command takes an argument so you’ll type <code>cd results</code> or <code>cd test</code> depending on what you named your folder.</p>
+<p>Type <code>pwd</code> again.
+Notice what folder you are in.
+To go back to the folder containing your current folder type <code>cd ..</code>, which will take you one level up in the folder hierarchy.
+Type <code>pwd</code> again to see where you are now.</p>
+<p>Adapted from <a href="http://swcarpentry.github.io/shell-novice/" class="uri">http://swcarpentry.github.io/shell-novice/</a></p>
 
 </div>
 </div>

@@ -6,10 +6,9 @@ To get started
 
 1. Log in to the [RStudio Server](https://celsrs.uri.edu/) on campus.
 2. Enter your username (the first part of your email address) and password (URI student ID)
-3. If you haven't used RStudio before learn a little bit here
-4. Make a new project to work on this research project
-5. Use the Upload button (lower right) to upload the file of information you obtained from ENA
-6. Click the Terminal tab and type
+3. Make a new project to work on this research project
+4. Use the Upload button (lower right) to upload the file of information you obtained from ENA
+5. Click the Terminal tab and type
 
 ```
 Rscript ../../shared/make_download_script.R [file] [target_data_size] [outfile]

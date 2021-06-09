@@ -2,6 +2,8 @@ getting-started
 intro
 phylogenies
 research
+freewrite-assignment
+annotated-bibliography-assignment
 methods
 getting-the-computer-to-run-analyses
 computational-skills

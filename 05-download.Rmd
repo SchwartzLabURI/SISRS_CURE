@@ -38,14 +38,5 @@ Now move to the download node on Bluewaves with `ssh fs03`.
 Finally, run your scrip with `bash download_data.sh`.
 
 To go back to your main terminal type `ctrl-ad`. In the future to get back into the screen window type `screen -r`.
-
-
-## SISRS
-
-clone sisrs
-
-learn job submission
-
-https://hpc-carpentry.github.io/hpc-intro/
-
-run each script
+Once all your data download you will see your main prompt again.
+Type `exit` to quite the screen.

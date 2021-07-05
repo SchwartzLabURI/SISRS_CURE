@@ -1,0 +1,29 @@
+## SISRS
+
+**Add what SISRS does**
+
+
+In your home folder (cd back there if you need to) type 
+
+`git clone https://github.com/SchwartzLabURI/SISRS.git` to get the software we will use to analyze your data.
+
+Make a new folder for your SISRS results.
+
+Now we need to work with scripts (just like before) to run each step of the analysis.
+However, this time we'll take advantage of the computing power of the cluster
+so that each student in the class can run their analysis on a separate computer.
+When you log in to Bluewave you are on the "head node".
+From here you can submit jobs to run analyses on the other nodes attached to the cluster.
+
+Move into the SISRS folder and then the scripts folder inside that and the slurm_submissions inside that.
+Slurm is the name of the software used to keep track of all the jobs you submit.
+Use nano to open `1_submit.slurm`.
+Change the mail user line to your email address.
+Change the last line to include your data directory and results directory. Also delete the hashtag at the beginning of the line.
+Exit nano and save the script.
+
+Instead of running the script with the `bash` command you will submit a job as `sbatch 1_submit.slurm`.
+You will get an email when your job is done.
+
+Continue to run steps 2-7 (but not 7a or 7b).
+You will also need to change the ntasks-per-node line to 20 and use 20 processors any time that information is requested.

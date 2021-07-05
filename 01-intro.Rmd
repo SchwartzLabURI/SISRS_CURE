@@ -1,5 +1,7 @@
 # Introduction {#intro}
 
+Start by watching this [introduction to animal evolution](https://www.youtube.com/watch?v=zgM0F6UmC70).
+
 ## Phylogenies
 
 If you're familiar with the basics of evolution you're probably familiar with phylogenies:
@@ -8,7 +10,10 @@ For example, here is a simply phylogeny of some groups of vertebrates:
 
 ![](https://cdn.britannica.com/83/199483-050-7A240BE2.jpg)
 
-To gain some understanding of phylogenies and phylogenetics check out  
+Now watch [this video](https://www.youtube.com/watch?v=cVaw7nF72Aw) to understand the motivation behind phylogenetic research and the role you can play in determining how evolution happened.
+
+To gain further understanding of phylogenies and phylogenetics check out  
+
 1. [A brief description of phylogenetics](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-phylogenetics/).  
 2. [Importance of phylogenetics](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/why-is-phylogenetics-important/)  
 3. [Phylogenies](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-a-phylogeny/)  

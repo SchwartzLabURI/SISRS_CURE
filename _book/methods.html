@@ -158,15 +158,20 @@ and just hasn’t been analyzed to answer the questions you are interested in.</
 <li>Click Download report tsv</li>
 </ol>
 <p>Now you have a list of available data and relevant information to get it.
+It should look the same as what you saw in your browser.
 You can open this file in Excel or Google Sheets.</p>
 <p>It might look like you have a lot of data, but it’s actually hard to tell from this page.
 You might have a lot of data for one or a few species and not enough to analyze your whole group.
-You could count up how much data you have by hand, but that would take a lot of time
-if you have a lot of samples.
-Sort your data by scientific_name.
-Try to get 10 times as many bases (base_count) as the size of the genome for each species.
-Select the samples you want and save those in a separate sheet.
-Split the ftp column so you have both links.</p>
+To figure out which data you will need sort this list of samples by scientific_name.
+For each species (scientific_name column) you will need about 10 times the amount of bases as the size of the genome
+(i.e. you should have on average about 10 sequence fragments covering each base in the genome).
+To figure out how many bases you need use Google and Google Scholar to find the size of the genome of one of your species.
+Now that you know how many bases you need select the samples you want (for a total of 10x coverage) and save those in a separate sheet.</p>
+<p>The video on sequencing explains how the two ends of each genome fragment are sequenced.
+That means that most of your samples have two files to download.
+These are both listed in the fastq_ftp column.
+Highlight the fastq_ftp column, right-click, and select insert.
+Use Text-to-column in the Data menu to separate the column in two based on a semicolon.</p>
 
 </div>
             </section>

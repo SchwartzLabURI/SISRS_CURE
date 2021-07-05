@@ -3,15 +3,42 @@
 ## Download
 Include an outgroup
 
-Upload your file
+Move into your data folder with `cd`.
 
-go to 03
+Our next step will be to download the data you want to work with onto Bluewaves.
+First we need to create a **script** to make this happen.
+A script is a detailed set of instructions for the computer to follow.
+Your script is going to be a series of instructions to download files and put them in particular folders so you can access them.
+We are going to use the program `nano`, which is built into Bluewaves to write this script.
+Type `nano download_data.sh`.
+Again, we have a command followed by an argument (in this case the name of the file we are creating).
+Notice how the file ends in `.sh`.
+Just like you have files that end in `.xls` or `.doc` this tells the computer the file is a shell script.
 
-run script to download files
+Commands in your shell script and just like commands on the command line.
+For each file you want to download type the following on a single line:
 
-exit to main
+* `wget`
+* The ftp link
+* `-P`
+* the scientific name
 
-cd to /data/
+Repeat with the second ftp link for the sample if it has one.
+
+Exit `nano` using `ctrl-x` and save your changes.
+
+To download data to Bluewaves we need to access a special part of the system.
+First let's make sure your script will run even if you close your computer and disconnect from Bluewaves.
+Without this step when you disconnect your commands will stop running.
+
+`screen`
+
+Now move to the download node on Bluewaves with `ssh fs03`.
+
+Finally, run your scrip with `bash download_data.sh`.
+
+To go back to your main terminal type `ctrl-ad`. In the future to get back into the screen window type `screen -r`.
+
 
 ## SISRS
 

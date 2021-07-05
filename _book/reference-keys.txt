@@ -5,12 +5,12 @@ research
 freewrite-assignment
 annotated-bibliography-assignment
 methods
-getting-the-computer-to-run-analyses
 computational-skills
 log-in-to-the-server
 basic-navigation
 getting-your-data
 download
+getting-phylogenetic-markers
 sisrs
 building-trees
 background-on-tree-building
@@ -29,3 +29,4 @@ methods-1
 results-1
 discussion
 research-ideas
+getting-the-computer-to-run-analyses

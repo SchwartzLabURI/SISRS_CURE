@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 11 Research Ideas | Phylogenomics with SISRS</title>
+  <title>Chapter 7 Getting phylogenetic markers | Phylogenomics with SISRS</title>
   <meta name="description" content="Step-by-step guide for research using SISRS to get orthologs for phylogenomics." />
   <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 11 Research Ideas | Phylogenomics with SISRS" />
+  <meta property="og:title" content="Chapter 7 Getting phylogenetic markers | Phylogenomics with SISRS" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 11 Research Ideas | Phylogenomics with SISRS" />
+  <meta name="twitter:title" content="Chapter 7 Getting phylogenetic markers | Phylogenomics with SISRS" />
   
   <meta name="twitter:description" content="Step-by-step guide for research using SISRS to get orthologs for phylogenomics." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="sharing-your-results.html"/>
-<link rel="next" href="getting-the-computer-to-run-analyses.html"/>
+<link rel="prev" href="getting-your-data.html"/>
+<link rel="next" href="building-trees.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -134,31 +134,39 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="research-ideas" class="section level1">
-<h1><span class="header-section-number">Chapter 11</span> Research Ideas</h1>
-<p>Feeling a little lost as to how to pick a group to work on?
-There are so many species out there. It is hard to know what might be interesting.
-To get you started here are some examples of past research questions:</p>
-<ul>
-<li>Did disease-carrying ticks evolve so that closely related species carry the same parasite? Or do distantly related species have a single species of parasite that they carry?</li>
-<li>Did birds evolve to live on water once or more times?</li>
-<li>Do plants in South America that look similar share a common ancestor, or did that phenotype evolve more than once to adapt to the environment?</li>
-</ul>
-<p>Here are some groups that are studied at URI that you might find interesting:</p>
-<ul>
-<li><p>Hard coral (Scleractinia). Consider how <em>Astrangia poculata</em> might have evolved to live in the cold waters of New England (in doing background research look up the whole family).</p></li>
-<li><p>Adelgids. How did these species (hemipteran parasites on trees such as hemlock) parasitize species of trees?</p></li>
-<li><p>Sharks</p></li>
-</ul>
+<div id="getting-phylogenetic-markers" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Getting phylogenetic markers</h1>
+<div id="sisrs" class="section level2">
+<h2><span class="header-section-number">7.1</span> SISRS</h2>
+<p><strong>Add what SISRS does</strong></p>
+<p>In your home folder (cd back there if you need to) type</p>
+<p><code>git clone https://github.com/SchwartzLabURI/SISRS.git</code> to get the software we will use to analyze your data.</p>
+<p>Make a new folder for your SISRS results.</p>
+<p>Now we need to work with scripts (just like before) to run each step of the analysis.
+However, this time we’ll take advantage of the computing power of the cluster
+so that each student in the class can run their analysis on a separate computer.
+When you log in to Bluewave you are on the “head node”.
+From here you can submit jobs to run analyses on the other nodes attached to the cluster.</p>
+<p>Move into the SISRS folder and then the scripts folder inside that and the slurm_submissions inside that.
+Slurm is the name of the software used to keep track of all the jobs you submit.
+Use nano to open <code>1_submit.slurm</code>.
+Change the mail user line to your email address.
+Change the last line to include your data directory and results directory. Also delete the hashtag at the beginning of the line.
+Exit nano and save the script.</p>
+<p>Instead of running the script with the <code>bash</code> command you will submit a job as <code>sbatch 1_submit.slurm</code>.
+You will get an email when your job is done.</p>
+<p>Continue to run steps 2-7 (but not 7a or 7b).
+You will also need to change the ntasks-per-node line to 20 and use 20 processors any time that information is requested.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="sharing-your-results.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="getting-the-computer-to-run-analyses.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="getting-your-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="building-trees.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -189,7 +197,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/91-ideas.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-sisrs.Rmd",
 "text": "Edit"
 },
 "history": {

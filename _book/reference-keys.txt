@@ -29,4 +29,3 @@ methods-1
 results-1
 discussion
 research-ideas
-getting-the-computer-to-run-analyses

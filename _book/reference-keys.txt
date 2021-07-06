@@ -1,5 +1,5 @@
 getting-started
-intro
+introduction
 phylogenies
 research
 freewrite-assignment
@@ -24,7 +24,7 @@ start-reading
 develop-a-bibliography
 presentation
 writing-a-paper
-intro-1
+intro
 methods-1
 results-1
 discussion

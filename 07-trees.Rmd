@@ -4,7 +4,7 @@
 
 [Background](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-a-phylogeny/aspects-of-phylogenies/)
 
-https://zageno.com/l/guide-to-different-methods-of-phylogenetic-tree-construction?utm_source=facebook&utm_medium=article&utm_campaign=r_phylogenetic_tree_construction
+https://zageno.com/l/guide-to-different-methods-of-phylogenetic-tree-construction
 
 https://www.youtube.com/playlist?list=PLZv47g5zgNKVcBDLTZzA6VT5bSHYr5KGj
 
@@ -16,8 +16,9 @@ Different group members should research different approaches
 
 ## Visualizing trees
 
-R - ape etc
-Compare results
+* Download [Figtree](https://github.com/rambaut/figtree/releases) to your personal computer.
+* Download tree.
+* Root tree.
 
 ## What does my tree mean?
 

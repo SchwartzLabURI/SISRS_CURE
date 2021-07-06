@@ -1,6 +1,9 @@
-# Introduction {#intro}
+# Introduction 
 
 Start by watching this [introduction to animal evolution](https://www.youtube.com/watch?v=zgM0F6UmC70).
+
+In this class we are going to conduct a research project using genomic data to figure out how a set of species are related (i.e. build phylogenies).
+Read more [about the research process](https://bookdown.org/pkaldunn/Book/Intro.html).
 
 ## Phylogenies
 

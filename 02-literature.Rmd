@@ -57,7 +57,7 @@ Continue your exploration by looking at a paper you have found helpful.
 Look a citations within this paper that seem helpful and go read those.
 Look up the paper in Google Scholar and click on the cited by link to find other papers
 that referenced this one.
-We will develop your background readings further with a [Citation Tracking Activity](citation_tracking.html).
+We will develop your background readings further with a [Citation Tracking Activity](citation-tracker-exercise.html).
 
 ## Freewrite assignment
 

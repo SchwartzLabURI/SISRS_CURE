@@ -145,7 +145,6 @@
 <h1><span class="header-section-number">Chapter 6</span> Getting your data</h1>
 <div id="download" class="section level2">
 <h2><span class="header-section-number">6.1</span> Download</h2>
-<p>Include an outgroup</p>
 <p>Move into your data folder with <code>cd</code>.</p>
 <p>Our next step will be to download the data you want to work with onto Bluewaves.
 First we need to create a <strong>script</strong> to make this happen.
@@ -157,7 +156,7 @@ Again, we have a command followed by an argument (in this case the name of the f
 Notice how the file ends in <code>.sh</code>.
 Just like you have files that end in <code>.xls</code> or <code>.doc</code> this tells the computer the file is a shell script.</p>
 <p>Commands in your shell script and just like commands on the command line.
-For each file you want to download type the following on a single line:</p>
+For each file you want to download type the following (separated by spaces) on a single line:</p>
 <ul>
 <li><code>wget</code></li>
 <li>The ftp link</li>
@@ -165,16 +164,24 @@ For each file you want to download type the following on a single line:</p>
 <li>the scientific name (as one word without spaces)</li>
 </ul>
 <p>Repeat with the second ftp link for the sample if it has one.</p>
+<p>Repeat this process for each sample you want to download.</p>
 <p>Exit <code>nano</code> using <code>ctrl-x</code> and save your changes.</p>
-<p>To download data to Bluewaves we need to access a special part of the system.
-First let’s make sure your script will run even if you close your computer and disconnect from Bluewaves.
-Without this step when you disconnect your commands will stop running.</p>
-<p><code>screen</code></p>
-<p>Now move to the download node on Bluewaves with <code>ssh fs03</code>.</p>
-<p>Finally, run your scrip with <code>bash download_data.sh</code>.</p>
-<p>To go back to your main terminal type <code>ctrl-ad</code>. In the future to get back into the screen window type <code>screen -r</code>.
-Once all your data download you will see your main prompt again.
-Type <code>exit</code> to quite the screen.</p>
+<p>There are many people doing work on the cluster so we need take advantage of the computing power of the cluster
+so that each student in the class can run their analysis on a separate computer.
+When you log in to the cluster you are on the “head node”.
+From here you can submit jobs to run analyses on the other nodes attached to the cluster.
+In order to communicate information about your job to the cluster you need to add the following lines to the beginning of your download script.</p>
+<pre><code>#!/bin/bash
+#SBATCH --job-name=&quot;download&quot;
+#SBATCH --time=150:00:00  # walltime limit (HH:MM:SS)
+#SBATCH --nodes=1   # number of nodes
+#SBATCH --ntasks-per-node=36   # processor core(s) per node
+
+cd $SLURM_SUBMIT_DIR
+</code></pre>
+<p>Quit nano and save.</p>
+<p>Submit your job as <code>sbatch download_data.sh</code>.</p>
+<p>You can monitor the progress of your download by listing the contents of your <code>data</code> folder and the contents of the folders inside it.</p>
 
 </div>
 </div>

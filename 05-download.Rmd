@@ -1,7 +1,6 @@
 # Getting your data
 
 ## Download
-Include an outgroup
 
 Move into your data folder with `cd`.
 
@@ -16,7 +15,7 @@ Notice how the file ends in `.sh`.
 Just like you have files that end in `.xls` or `.doc` this tells the computer the file is a shell script.
 
 Commands in your shell script and just like commands on the command line.
-For each file you want to download type the following on a single line:
+For each file you want to download type the following (separated by spaces) on a single line:
 
 * `wget`
 * The ftp link
@@ -25,18 +24,29 @@ For each file you want to download type the following on a single line:
 
 Repeat with the second ftp link for the sample if it has one.
 
+Repeat this process for each sample you want to download.
+
 Exit `nano` using `ctrl-x` and save your changes.
 
-To download data to Bluewaves we need to access a special part of the system.
-First let's make sure your script will run even if you close your computer and disconnect from Bluewaves.
-Without this step when you disconnect your commands will stop running.
+There are many people doing work on the cluster so we need take advantage of the computing power of the cluster
+so that each student in the class can run their analysis on a separate computer.
+When you log in to the cluster you are on the "head node".
+From here you can submit jobs to run analyses on the other nodes attached to the cluster.
+In order to communicate information about your job to the cluster you need to add the following lines to the beginning of your download script.
 
-`screen`
+```
+#!/bin/bash
+#SBATCH --job-name="download"
+#SBATCH --time=150:00:00  # walltime limit (HH:MM:SS)
+#SBATCH --nodes=1   # number of nodes
+#SBATCH --ntasks-per-node=36   # processor core(s) per node
 
-Now move to the download node on Bluewaves with `ssh fs03`.
+cd $SLURM_SUBMIT_DIR
 
-Finally, run your scrip with `bash download_data.sh`.
+```
 
-To go back to your main terminal type `ctrl-ad`. In the future to get back into the screen window type `screen -r`.
-Once all your data download you will see your main prompt again.
-Type `exit` to quite the screen.
+Quit nano and save.
+
+Submit your job as `sbatch download_data.sh`.
+
+You can monitor the progress of your download by listing the contents of your `data` folder and the contents of the folders inside it.

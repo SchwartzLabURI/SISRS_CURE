@@ -3,7 +3,7 @@ introduction
 phylogenies
 research
 annotated-bibliography-assignment
-methods
+getting-data
 computational-skills
 access-from-off-campus
 on-a-mac
@@ -29,7 +29,7 @@ develop-a-bibliography
 presentation
 writing-a-paper
 intro
-methods-1
+methods
 results-1
 discussion
 research-ideas

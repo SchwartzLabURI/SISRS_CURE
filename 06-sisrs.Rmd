@@ -19,9 +19,9 @@ Change the mail user line to your email address.
 Change the last line to include your data directory and results directory. Also delete the hashtag at the beginning of the line.
 Exit nano and save the script.
 
-You will submit a job as `sbatch slurm_submissions/1_submit.slurm`.
+Submit your first job as `sbatch slurm_submissions/1_submit.slurm`.
 You will get an email when your job is done.
 
-Continue to run steps 2, 3, 4, 5, 6, 6b, 6c, 6d, and 7, changing the information as with the first script.
-You will also need to change the ntasks-per-node line to 20 and use 20 processors any time that information is requested.
+Continue to submit jobs for steps 2, 3, 4, 5, 6, 6b, 6c, 6d, and 7, changing the information as with the first script.
+You will also need to change the ntasks-per-node line to 20 and use 20 processors any time that information is requested. Look for lines marked CHANGE.
 At the last step list several numbers for the missing flag in the range of approximately half of your species.

@@ -1,24 +1,36 @@
 # Building Trees
 
+## Phylogenetic Data
+
+You now have alignments of variable sites useful for building phylogenies.
+If you aren't sure what that means refer back to some of the earlier materials.
+
 ## Background on tree building
 
-[Background](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-a-phylogeny/aspects-of-phylogenies/)
+Read more on phylogenies:
 
-https://zageno.com/l/guide-to-different-methods-of-phylogenetic-tree-construction
+* [Background](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-a-phylogeny/aspects-of-phylogenies/)
 
-https://www.youtube.com/playlist?list=PLZv47g5zgNKVcBDLTZzA6VT5bSHYr5KGj
+* https://zageno.com/l/guide-to-different-methods-of-phylogenetic-tree-construction
+
+* https://www.youtube.com/playlist?list=PLZv47g5zgNKVcBDLTZzA6VT5bSHYr5KGj
 
 ## Building trees from your data
 
-Run IQTree or RAxML
-Run other methods
-Different group members should research different approaches
+We will take a simple "concatenation" approach to analyzing your data.
+That means we will analyze all the sites together and expect them to come from one evolutionary history.
+There are more complex ways to consider the data, including different histories and different models that you can try later.
+
+Edit the `runRaxml.sh` slurm script for your data and submit it.
+This will generate plain text files of the best estimate of the phylogeny for your data using a Maximum Likelihood algorithm.
 
 ## Visualizing trees
 
 * Download [Figtree](https://github.com/rambaut/figtree/releases) to your personal computer.
-* Download tree.
-* Root tree.
+* Download the file labeled RAxML_bipartitions (with the suffix for your analysis) to your personal computer.
+* Open your tree file in Figtree
+* Root tree using your outgroup.
+* Look at bootstrap support on each node.
 
 ## What does my tree mean?
 

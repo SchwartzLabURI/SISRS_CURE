@@ -59,6 +59,10 @@ Look up the paper in Google Scholar and click on the cited by link to find other
 that referenced this one.
 We will develop your background readings further with a [Citation Tracking Activity](citation-tracker-exercise.html).
 
+
+**https://uri.libguides.com/google/gschol**
+
+**Resources: https://uri.libguides.com/inforhode**
 ## Freewrite assignment
 
 At this point you should have a lot of ideas in your head.
@@ -103,4 +107,4 @@ Here are some examples and references:
 * [https://owl.purdue.edu/owl/general_writing/common_writing_assignments/annotated_bibliographies/annotated_bibliography_samples.html](https://owl.purdue.edu/owl/general_writing/common_writing_assignments/annotated_bibliographies/annotated_bibliography_samples.html)
 * [https://guides.library.cornell.edu/annotatedbibliography](https://guides.library.cornell.edu/annotatedbibliography)
 
-
+**Reflect on remaining lit**

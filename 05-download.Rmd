@@ -21,7 +21,7 @@ For each file you want to download type the following on a single line:
 * `wget`
 * The ftp link
 * `-P`
-* the scientific name
+* the scientific name (as one word without spaces)
 
 Repeat with the second ftp link for the sample if it has one.
 

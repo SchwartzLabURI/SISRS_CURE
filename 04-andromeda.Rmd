@@ -14,26 +14,40 @@ a line of text rather than having to try to explain where to click on each step.
 
 Let's start by learning how to log in the our server and run commands without clicking.
 
-## Log in to the server
+## Access from off campus
 
-Mac:
+* Please go to [https://security.uri.edu/duo/](https://security.uri.edu/duo/) There you will find instructions detailing how to enroll in DUO andset up Cisco AnyConnect. 
+
+* Make sure to follow the directions  step by step and make a note of any issues or roadblocks so that you can report them to ITS Security Services.
+
+* After installing and connecting to the VPN, please verify that you can connect to your specific network resources from home that you need to access. 
+
+* If you need to request VPN access prior to following these instructions see [https://security.uri.edu/vpn/](https://security.uri.edu/vpn/)
+
+## On a Mac
+
+### Getting access
 
 * open your Terminal (you may need to search for it)
-* at the prompt type `ssh -l username bluewaves.uri.edu` , replacing `username` with the first part of your email address.
-* you should be prompted to enter a password of your choice - note that the password does not show up when you type
-* you should arrive at a prompt for bluewaves
+* follow the instructions under Generating an SSH Key at [https://web.uri.edu/hpc-research-computing/using-andromeda/](https://web.uri.edu/hpc-research-computing/using-andromeda/)
 
-PC:
+### Log in to the server
 
-* Download and install [git-bash](https://gitforwindows.org/). 
-* open git-bash 
-* at the prompt type `ssh -l username bluewaves.uri.edu` , replacing username with the first part of your email address.
-* you should be prompted to enter a password of your choice - note that the password does not show up when you type
-* you should arrive at a prompt for bluewaves
+* In your Terminal at the prompt type `ssh -l username ssh3.hac.uri.edu` , replacing `username` with the first part of your email address.
+* You should see a prompt with `ssh3`
+
+## On a PC
+
+* Download and install [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/). 
+* open Putty
+* follow the instructions under Generating an SSH Key at [https://web.uri.edu/hpc-research-computing/using-andromeda/](https://web.uri.edu/hpc-research-computing/using-andromeda/)
+* In the box marked Host Name type `ssh3.hac.uri.edu`, replacing username with the first part of your email address.
+* Use your email username to log in
+* You should see a prompt with `ssh3`
 
 ## Basic navigation
 
-You are now logged in to bluewaves, which is a cluster of computers that can be used for research.
+You are now logged in to Andromeda, which is a cluster of computers that can be used for research.
 First, you'll need to learn to navigate around only by typing.
 Computing clusters typically require you to type all the commands.
 

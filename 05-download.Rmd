@@ -2,13 +2,14 @@
 
 ## Download
 
-Move into your data folder with `cd`.
+Move into your data folder in your main folder with `cd`.
+If you aren't continuing from the last chapter you may need to use the full path to your main folder.
 
 Our next step will be to download the data you want to work with onto Bluewaves.
 First we need to create a **script** to make this happen.
 A script is a detailed set of instructions for the computer to follow.
 Your script is going to be a series of instructions to download files and put them in particular folders so you can access them.
-We are going to use the program `nano`, which is built into Bluewaves to write this script.
+We are going to use the program `nano`, which is built into the system, to write this script.
 Type `nano download_data.sh`.
 Again, we have a command followed by an argument (in this case the name of the file we are creating).
 Notice how the file ends in `.sh`.
@@ -40,10 +41,13 @@ In order to communicate information about your job to the cluster you need to ad
 #SBATCH --time=150:00:00  # walltime limit (HH:MM:SS)
 #SBATCH --nodes=1   # number of nodes
 #SBATCH --ntasks-per-node=36   # processor core(s) per node
+#SBATCH --mail-user="rsschwartz@uri.edu" 
 
 cd $SLURM_SUBMIT_DIR
 
 ```
+
+Replace the email address on the second-to-last line with yours.
 
 Quit nano and save.
 

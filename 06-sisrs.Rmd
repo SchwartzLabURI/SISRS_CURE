@@ -5,23 +5,22 @@
 **Add what SISRS does**
 
 
-In your home folder (cd back there if you need to) type 
+In your main folder (cd back there if you need to) type 
 
-`git clone https://github.com/SchwartzLabURI/SISRS.git` to get the software we will use to analyze your data.
-
-Make a new folder for your SISRS results.
+`git clone https://github.com/SchwartzLabURI/SISRS.git` to download the software we will use to analyze your data.
+Since you only have to do this once don't worry about details beyond the idea that you are downloading a program.
 
 Now we need to work with scripts (just like before) to run each step of the analysis.
 Move into the SISRS folder and then the scripts folder inside that.
 Slurm is the name of the software used to keep track of all the jobs you submit.
 Use nano to open `slurm_submissions/1_submit.slurm`.
-Change the mail user line to your email address.
-Change the last line to include your data directory and results directory. Also delete the hashtag at the beginning of the line.
+Change all the lines marked `CHANGE` to be relevant to your work.
 Exit nano and save the script.
 
 Submit your first job as `sbatch slurm_submissions/1_submit.slurm`.
 You will get an email when your job is done.
 
-Continue to submit jobs for steps 2, 3, 4, 5, 6, 6b, 6c, 6d, and 7, changing the information as with the first script.
+Continue to edit scripts and submit jobs for steps 2, 3, 4, 5, 6, 6b, 6c, 6d, and 7, changing the information as with the first script.
+Wait for each script to report that it has completed before continuing to the next step and do not continue if your recieve any error messages.
 You will also need to change the ntasks-per-node line to 20 and use 20 processors any time that information is requested. Look for lines marked CHANGE.
 At the last step list several numbers for the missing flag in the range of approximately half of your species.

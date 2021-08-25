@@ -1,8 +1,14 @@
 # Research
 
+## Selecting a group to study
+
 Now that you have a sense of why phylogenies are so important
 you can start to think about a group whose evolutionary history you might like to investigate.
-You can pick any group or ask your instructor for suggestions.
+Watch [this video](https://www.youtube.com/watch?v=cVaw7nF72Aw) to understand the motivation behind phylogenetic research.
+You will see that our understanding of how species are related is constantly changing.
+That means that you can play a role you can play in determining how evolution happened.
+
+You can pick any group to study or ask your instructor for suggestions.
 Once you pick a group you'll need to investigate it a bit more to determine
 whether you can narrow your research to address particularly interesting research questions,
 and then determine whether there are data to help you answer those questions.
@@ -10,12 +16,29 @@ You might consider picking a group that is studied by URI faculty.
 
 If you still need ideas [click here](research-ideas.html).
 
+## Learning about your group
+
+You will need to do some background research to learn about 
+the group you propose to study, and to provide motivation of your work.
+Check out the URI Library's [Basics of College Level Research](https://www.youtube.com/watch?v=v5AWzB_CKIs&t=241s).
+
+### Finding research articles
+
 To get started find out something about your group.
 You can start with Google, although you should rapidly move on to searching the primary literature.
+Learn about [scholarly and popular sources](https://www.youtube.com/watch?v=IZzX3VcyYLk&t=147s) to understand why you need to go beyond popular or secondary literature.
+Also check out the URI Library's discussion on [why not just search Google](https://www.youtube.com/watch?v=gpOjKqUkMNY&t=96s).
+For general suggestions on finding literature on your topic see the URI Library's guide to [finding journal articles](https://www.youtube.com/watch?v=xbL3OiKZbqM&t=174s).
+
+The URI Library offers a variety of databases for research, but Google Scholar can be a good way to find literature on your topic.
+
 How to use Google Scholar:
 
 * [https://www.youtube.com/watch?v=B7bUS9TYvRU](https://www.youtube.com/watch?v=B7bUS9TYvRU)
 * [https://www.youtube.com/watch?v=6vSE-_iq7NE](https://www.youtube.com/watch?v=6vSE-_iq7NE)
+* [URI's guide to Google Scholar](https://uri.libguides.com/google/gschol)
+
+If you are struggling to find papers that seem relevant to your research topic try the URI Library's guide to [developing an effective search strategy](https://www.youtube.com/watch?v=vpw8aysfdng).
 
 When you find an article you want, you can access it as a member of the URI community.
 However, if you are off campus the journal may not recognize you.
@@ -23,7 +46,7 @@ In Google Scholar click the menu bar in the upper left and choose settings.
 Search for the University of Rhode Island and select URI library.
 Google Scholar will now have Search @ URI Libraries on the right if there's an article you want.
 
-You may need to search for you article via the library website.
+If you still have problems you may need to search for you article via the library website.
 
 * Go to [https://web.uri.edu/library/](https://web.uri.edu/library/).
 * Under Find Resources paste the name of an article of interest and Search.
@@ -31,16 +54,22 @@ You may need to search for you article via the library website.
 * If URI has access to the article you should be able to read it.
 * You may need to repeat your search on the URI website for other articles depending on your connection.
 
+### Reading research articles
+
 Once you locate a paper to read you need to read it.
 Check out these recommendations on how to read a paper efficiently and effectively: 
 
 * [https://www.youtube.com/watch?v=Gv5ku0eoY6k](https://www.youtube.com/watch?v=Gv5ku0eoY6k)
 * [https://www.youtube.com/watch?v=IeaD0ZaUJ3Y](https://www.youtube.com/watch?v=IeaD0ZaUJ3Y)
 
+Continue to search for and read background material using the [Citation Tracking Activity](citation-tracker-exercise.html). 
+
 At this point you may have picked a group to study, and hopefully you have a good reason for this group.
 Keep in mind that you may be fascinated by a particular group of species, but you still have to convince others to be equally fascinated.
 If you aren't sure, try explaining your project to a friend or roommate.
 Also check out [past projects](research-ideas.html) for example research questions.
+
+### More background information
 
 At this point you should have a group of species and a (possibly vague) question.
 You won't have everything pinned down precisely, but write down what you have.
@@ -53,16 +82,6 @@ You can also find out more about the species in your group by searching
 the [Open Tree of Life](https://tree.opentreeoflife.org/)
 and [TimeTree](http://timetree.org/).
 
-Continue your exploration by looking at a paper you have found helpful.
-Look a citations within this paper that seem helpful and go read those.
-Look up the paper in Google Scholar and click on the cited by link to find other papers
-that referenced this one.
-We will develop your background readings further with a [Citation Tracking Activity](citation-tracker-exercise.html).
-
-
-**https://uri.libguides.com/google/gschol**
-
-**Resources: https://uri.libguides.com/inforhode**
 ## Freewrite assignment
 
 At this point you should have a lot of ideas in your head.
@@ -107,4 +126,10 @@ Here are some examples and references:
 * [https://owl.purdue.edu/owl/general_writing/common_writing_assignments/annotated_bibliographies/annotated_bibliography_samples.html](https://owl.purdue.edu/owl/general_writing/common_writing_assignments/annotated_bibliographies/annotated_bibliography_samples.html)
 * [https://guides.library.cornell.edu/annotatedbibliography](https://guides.library.cornell.edu/annotatedbibliography)
 
-**Reflect on remaining lit**
+## Reflection assignment
+
+Write a short reflection on your annotatated bibliography.
+
+* Why did you select the papers you chose to read more in depth?
+* Why did you feel that the remaining papers were less relevant?
+* Do you feel that your research question is strong and well motivated? Explain why.

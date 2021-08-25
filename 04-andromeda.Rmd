@@ -14,11 +14,11 @@ a line of text rather than having to try to explain where to click on each step.
 
 Let's start by learning how to log in the our server and run commands without clicking.
 
-## Access from off campus
+## Access from off campus (optional)
 
-* Please go to [https://security.uri.edu/duo/](https://security.uri.edu/duo/) There you will find instructions detailing how to enroll in DUO andset up Cisco AnyConnect. 
+* Please go to [https://security.uri.edu/duo/](https://security.uri.edu/duo/). There you will find instructions detailing how to enroll in DUO andset up Cisco AnyConnect. 
 
-* Make sure to follow the directions  step by step and make a note of any issues or roadblocks so that you can report them to ITS Security Services.
+* Make sure to follow the directions step by step and make a note of any issues or roadblocks so that you can report them to ITS Security Services.
 
 * After installing and connecting to the VPN, please verify that you can connect to your specific network resources from home that you need to access. 
 
@@ -65,21 +65,30 @@ to access files.
 Type `pwd` to see the folder you are in.
 You'll see your folder at the end, preceeded by a slash, preceeded by another folder, and so on.
 
-Let's start by making a new folder to put your work in.
-Use the `mkdir` command to make a new directory.
+Your home folder is on a relatively small disk, so for all of our subsequent work we will use
+a large storage disk.
+This disk contains everyone's data, organized by research lab.
+You change the directory using the `cd` command.
+To get to the main folder for the Schwartz lab you need to changed directories
+using the `cd` command. 
 Unlike the prior commands you learned, but like most commands you'll use,
 this command also takes an argument, which is another "word" that comes after this command.
+In this case you need the argument is the "path" to the folder.
+Type `cd /data/schwartzlab`.
+
+Let's start by making a new folder to put your work in.
+Use the `mkdir` command to make a new directory.
 When you make a directory you need to name it, so instead of just
-`mkdir` you need `mkdir data` or  or some other folder name.
+`mkdir` you need `mkdir newfolder` or some other folder name.
+This is a shared lab folder so you should make a folder with your username.
+For example I might type `mkdir rsschwartz`.
+From now on I will refer to this as your main folder.
 
-Now that you have a new folder open it up.
-You change the directory using the `cd` command.
-Again, this command takes an argument so you'll type `cd data`.
-
+Move into your folder (use `cd`) and make a new folder called data.
+Now that you have a new folder move into it.
 Type `pwd` again.
 Notice what folder you are in.
 To go back to the folder containing your current folder type `cd ..`, which will take you one level up in the folder hierarchy.
 Type `pwd` again to see where you are now.
 
-Adapted from  http://swcarpentry.github.io/shell-novice/
-
+Now that you have seen a few commands check out the [Cheatsheet](cheatsheet.html) of commands at the end of the book for future reference.

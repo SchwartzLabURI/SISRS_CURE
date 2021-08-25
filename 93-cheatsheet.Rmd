@@ -1,0 +1,13 @@
+# Cheatsheet {-}
+
+`pwd`: Print Working Directory: prints the path to the current folder
+
+`cd` [path to folder]: Change Directory
+
+`mkdir` [name of folder]: MaKe Directory
+
+`nano` [name of file]: Open a file with a text editor on the system
+
+`sbatch` [name of file]: Submit a job to run on the cluster
+
+

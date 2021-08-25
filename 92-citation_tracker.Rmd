@@ -1,3 +1,25 @@
 # Citation Tracker Exercise {-}
 
+As you read background literature for your research you should have encountered references to other literature in parentheses. 
+The citations show where the paper's author got their background information.
+In turn, these citations can provide further information for you to read in greater detail.
 
+1. Read the introduction an article you found in your Google Scholar search and look for information that appears highly relevant to your topic.
+2. Look for the citation that provided the author's source for this information.
+3. Now look at the references at the end of the paper and find the full citation for the paper.
+4. Look up this paper using Google Scholar.
+5. Continue to look for citations in your original article and in this new article.
+
+As you read various articles, keep in mind that not all papers are highly relevant to your research question. You will likely not read all of these articles in depth.
+
+You can find additional relevant papers by looking for paper that cite an article you find particularly relevant.
+
+1. Search for your relevant paper in Google Scholar.
+2. Click on the Cited By link.
+3. Check out the papers Google Scholar has recorded as listing this paper in the citations. Note that articles are cited for many reasons, so many of the articles you see will not be relevant to your research. 
+
+Using the processes above aim for a total of 15-20 papers you would consider reading in more depth.
+
+Adapted from
+Jenny Fielding, Reference Librarian Northern Essex Community College, Haverhill, Massachusetts
+Teaching Information Literacy Threshold Concepts : : Lesson Plans for Librarians, edited by Patricia Bravender, et al., Association of College & Research Libraries, 2015. ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/uri/detail.action?docID=5888806.

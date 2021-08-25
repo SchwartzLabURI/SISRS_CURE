@@ -2,10 +2,17 @@ getting-started
 introduction
 phylogenies
 research
+selecting-a-group-to-study
+learning-about-your-group
+finding-research-articles
+reading-research-articles
+more-background-information
+freewrite-assignment
 annotated-bibliography-assignment
+reflection-assignment
 getting-data
 computational-skills
-access-from-off-campus
+access-from-off-campus-optional
 on-a-mac
 getting-access
 log-in-to-the-server
@@ -32,4 +39,3 @@ intro
 methods
 results-1
 discussion
-research-ideas

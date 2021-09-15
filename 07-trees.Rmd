@@ -15,7 +15,7 @@ Read more on phylogenies:
 
 * https://www.youtube.com/playlist?list=PLZv47g5zgNKVcBDLTZzA6VT5bSHYr5KGj
 
-## Building trees from your data
+## Building trees from your data (concatenation)
 
 We will take a simple "concatenation" approach to analyzing your data.
 That means we will analyze all the sites together and expect them to come from one evolutionary history.
@@ -24,10 +24,46 @@ There are more complex ways to consider the data, including different histories 
 Edit the `runRaxml.sh` slurm script for your data and submit it.
 This will generate plain text files of the best estimate of the phylogeny for your data using a Maximum Likelihood algorithm.
 
+## Building trees from your data (Multispecies coalescent)
+
+Another approach to use is a method modeling multispecies coalescent. SVDQuartets is one of such methods, specifically designed to work with site-based data.
+A nexus file can be used as an input to the program. Create an empty file which will become a slurm script that runs the program. Paste the following content in it:
+```
+#!/bin/bash
+#SBATCH --job-name="svdq"
+#SBATCH --time=150:00:00  # walltime limit (HH:MM:SS)
+#SBATCH --nodes=1   # number of nodes
+#SBATCH --ntasks-per-node=1   # processor core(s) per node
+#SBATCH -c 36
+
+#SBATCH --mail-user=your_email
+
+cd $SLURM_SUBMIT_DIR
+module load PAUP/4.0a168-centos64
+
+alignmentFile="svdquartets_tutorial/anomaly_zone.nex"
+logFile="svdq.log"
+treeFile="svdq.tre"
+
+nBoot=1000
+nCpus=36
+
+date
+
+echo "
+svdq bootstrap nreps=${nBoot} nthreads=${nCpus};
+saveTrees file=${treeFile};
+quit;
+" | paup ${alignmentFile} -L ${logFile}
+
+date
+```
+Adjust the email, the number of processors if needed (`#SBATCH -c` value should correspond to `nCpus` value), path and name of the input file (`alignmentFile`), and submit the script as sbatch job.
+
 ## Visualizing trees
 
 * Download [Figtree](https://github.com/rambaut/figtree/releases) to your personal computer.
-* Download the file labeled RAxML_bipartitions (with the suffix for your analysis) to your personal computer.
+* Download the file labeled RAxML_bipartitions (with the suffix for your analysis) (for the concatenation analysis) or `svdq.tre` (for the SVDQuartets multispecies coalescent analysis) to your personal computer.
 * Open your tree file in Figtree
 * Root tree using your outgroup.
 * Look at bootstrap support on each node.

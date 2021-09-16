@@ -27,7 +27,7 @@ This will generate plain text files of the best estimate of the phylogeny for yo
 ## Building trees from your data (Multispecies coalescent)
 
 Another approach to use is a method modeling multispecies coalescent. SVDQuartets is one of such methods, specifically designed to work with site-based data.
-A nexus file can be used as an input to the program. Create an empty file which will become a slurm script that runs the program. Paste the following content in it:
+(It is assumed that the same phylip alignment that was used for the concatenation approach is used here; if your alignment is in the nexus format, omit the `tonexus...` line). Create an empty file which will become a slurm script that runs the program. Paste the following content in it:
 ```
 #!/bin/bash
 #SBATCH --job-name="svdq"
@@ -51,10 +51,13 @@ nCpus=36
 date
 
 echo "
+log file=${logFile};
+tonexus format=RelPHYLIP fromfile=${alignmentFile} tofile=${alignmentFile}.svdq.nex interleaved=yes replace=yes;
+exe ${alignmentFile}.svdq.nex;
 svdq bootstrap nreps=${nBoot} nthreads=${nCpus};
 saveTrees file=${treeFile};
 quit;
-" | paup ${alignmentFile} -L ${logFile}
+" | paup
 
 date
 ```

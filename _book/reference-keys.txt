@@ -25,7 +25,8 @@ sisrs
 building-trees
 phylogenetic-data
 background-on-tree-building
-building-trees-from-your-data
+building-trees-from-your-data-concatenation
+building-trees-from-your-data-multispecies-coalescent
 visualizing-trees
 what-does-my-tree-mean
 results

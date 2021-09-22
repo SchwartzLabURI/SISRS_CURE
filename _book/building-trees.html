@@ -24,7 +24,7 @@
 <meta name="author" content="Rachel Schwartz" />
 
 
-<meta name="date" content="2021-08-25" />
+<meta name="date" content="2021-09-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -106,9 +106,10 @@
 <li class="chapter" data-level="8" data-path="building-trees.html"><a href="building-trees.html"><i class="fa fa-check"></i><b>8</b> Building Trees</a><ul>
 <li class="chapter" data-level="8.1" data-path="building-trees.html"><a href="building-trees.html#phylogenetic-data"><i class="fa fa-check"></i><b>8.1</b> Phylogenetic Data</a></li>
 <li class="chapter" data-level="8.2" data-path="building-trees.html"><a href="building-trees.html#background-on-tree-building"><i class="fa fa-check"></i><b>8.2</b> Background on tree building</a></li>
-<li class="chapter" data-level="8.3" data-path="building-trees.html"><a href="building-trees.html#building-trees-from-your-data"><i class="fa fa-check"></i><b>8.3</b> Building trees from your data</a></li>
-<li class="chapter" data-level="8.4" data-path="building-trees.html"><a href="building-trees.html#visualizing-trees"><i class="fa fa-check"></i><b>8.4</b> Visualizing trees</a></li>
-<li class="chapter" data-level="8.5" data-path="building-trees.html"><a href="building-trees.html#what-does-my-tree-mean"><i class="fa fa-check"></i><b>8.5</b> What does my tree mean?</a></li>
+<li class="chapter" data-level="8.3" data-path="building-trees.html"><a href="building-trees.html#building-trees-from-your-data-concatenation"><i class="fa fa-check"></i><b>8.3</b> Building trees from your data (concatenation)</a></li>
+<li class="chapter" data-level="8.4" data-path="building-trees.html"><a href="building-trees.html#building-trees-from-your-data-multispecies-coalescent"><i class="fa fa-check"></i><b>8.4</b> Building trees from your data (Multispecies coalescent)</a></li>
+<li class="chapter" data-level="8.5" data-path="building-trees.html"><a href="building-trees.html#visualizing-trees"><i class="fa fa-check"></i><b>8.5</b> Visualizing trees</a></li>
+<li class="chapter" data-level="8.6" data-path="building-trees.html"><a href="building-trees.html#what-does-my-tree-mean"><i class="fa fa-check"></i><b>8.6</b> What does my tree mean?</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>9</b> Results</a><ul>
 <li class="chapter" data-level="9.1" data-path="results.html"><a href="results.html#what-does-your-tree-tell-you"><i class="fa fa-check"></i><b>9.1</b> What does your tree tell you?</a></li>
@@ -166,26 +167,63 @@ If you aren’t sure what that means refer back to some of the earlier materials
 <li><p><a href="https://www.youtube.com/playlist?list=PLZv47g5zgNKVcBDLTZzA6VT5bSHYr5KGj" class="uri">https://www.youtube.com/playlist?list=PLZv47g5zgNKVcBDLTZzA6VT5bSHYr5KGj</a></p></li>
 </ul>
 </div>
-<div id="building-trees-from-your-data" class="section level2">
-<h2><span class="header-section-number">8.3</span> Building trees from your data</h2>
+<div id="building-trees-from-your-data-concatenation" class="section level2">
+<h2><span class="header-section-number">8.3</span> Building trees from your data (concatenation)</h2>
 <p>We will take a simple “concatenation” approach to analyzing your data.
 That means we will analyze all the sites together and expect them to come from one evolutionary history.
 There are more complex ways to consider the data, including different histories and different models that you can try later.</p>
 <p>Edit the <code>runRaxml.sh</code> slurm script for your data and submit it.
 This will generate plain text files of the best estimate of the phylogeny for your data using a Maximum Likelihood algorithm.</p>
 </div>
+<div id="building-trees-from-your-data-multispecies-coalescent" class="section level2">
+<h2><span class="header-section-number">8.4</span> Building trees from your data (Multispecies coalescent)</h2>
+<p>Another approach to use is a method modeling multispecies coalescent. SVDQuartets is one of such methods, specifically designed to work with site-based data.
+(It is assumed that the same phylip alignment that was used for the concatenation approach is used here; if your alignment is in the nexus format, omit the <code>tonexus...</code> line). Create an empty file which will become a slurm script that runs the program. Paste the following content in it:</p>
+<pre><code>#!/bin/bash
+#SBATCH --job-name=&quot;svdq&quot;
+#SBATCH --time=150:00:00  # walltime limit (HH:MM:SS)
+#SBATCH --nodes=1   # number of nodes
+#SBATCH --ntasks-per-node=1   # processor core(s) per node
+#SBATCH -c 36
+
+#SBATCH --mail-user=your_email
+
+cd $SLURM_SUBMIT_DIR
+module load PAUP/4.0a168-centos64
+
+alignmentFile=&quot;svdquartets_tutorial/anomaly_zone.nex&quot;
+logFile=&quot;svdq.log&quot;
+treeFile=&quot;svdq.tre&quot;
+
+nBoot=1000
+nCpus=36
+
+date
+
+echo &quot;
+log file=${logFile};
+tonexus format=RelPHYLIP fromfile=${alignmentFile} tofile=${alignmentFile}.svdq.nex interleaved=yes replace=yes;
+exe ${alignmentFile}.svdq.nex;
+svdq bootstrap nreps=${nBoot} nthreads=${nCpus};
+saveTrees file=${treeFile};
+quit;
+&quot; | paup
+
+date</code></pre>
+<p>Adjust the email, the number of processors if needed (<code>#SBATCH -c</code> value should correspond to <code>nCpus</code> value), path and name of the input file (<code>alignmentFile</code>), and submit the script as sbatch job.</p>
+</div>
 <div id="visualizing-trees" class="section level2">
-<h2><span class="header-section-number">8.4</span> Visualizing trees</h2>
+<h2><span class="header-section-number">8.5</span> Visualizing trees</h2>
 <ul>
 <li>Download <a href="https://github.com/rambaut/figtree/releases">Figtree</a> to your personal computer.</li>
-<li>Download the file labeled RAxML_bipartitions (with the suffix for your analysis) to your personal computer.</li>
+<li>Download the file labeled RAxML_bipartitions (with the suffix for your analysis) (for the concatenation analysis) or <code>svdq.tre</code> (for the SVDQuartets multispecies coalescent analysis) to your personal computer.</li>
 <li>Open your tree file in Figtree</li>
 <li>Root tree using your outgroup.</li>
 <li>Look at bootstrap support on each node.</li>
 </ul>
 </div>
 <div id="what-does-my-tree-mean" class="section level2">
-<h2><span class="header-section-number">8.5</span> What does my tree mean?</h2>
+<h2><span class="header-section-number">8.6</span> What does my tree mean?</h2>
 <p><a href="https://artic.network/how-to-read-a-tree.html" class="uri">https://artic.network/how-to-read-a-tree.html</a></p>
 
 </div>

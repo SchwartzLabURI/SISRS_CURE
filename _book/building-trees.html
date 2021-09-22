@@ -172,45 +172,13 @@ If you aren’t sure what that means refer back to some of the earlier materials
 <p>We will take a simple “concatenation” approach to analyzing your data.
 That means we will analyze all the sites together and expect them to come from one evolutionary history.
 There are more complex ways to consider the data, including different histories and different models that you can try later.</p>
-<p>Edit the <code>runRaxml.sh</code> slurm script for your data and submit it.
+<p>Edit the <code>slurm_submissions/runRaxml.sh</code> slurm script for your data and submit it.
 This will generate plain text files of the best estimate of the phylogeny for your data using a Maximum Likelihood algorithm.</p>
 </div>
 <div id="building-trees-from-your-data-multispecies-coalescent" class="section level2">
 <h2><span class="header-section-number">8.4</span> Building trees from your data (Multispecies coalescent)</h2>
-<p>Another approach to use is a method modeling multispecies coalescent. SVDQuartets is one of such methods, specifically designed to work with site-based data.
-(It is assumed that the same phylip alignment that was used for the concatenation approach is used here; if your alignment is in the nexus format, omit the <code>tonexus...</code> line). Create an empty file which will become a slurm script that runs the program. Paste the following content in it:</p>
-<pre><code>#!/bin/bash
-#SBATCH --job-name=&quot;svdq&quot;
-#SBATCH --time=150:00:00  # walltime limit (HH:MM:SS)
-#SBATCH --nodes=1   # number of nodes
-#SBATCH --ntasks-per-node=1   # processor core(s) per node
-#SBATCH -c 36
-
-#SBATCH --mail-user=your_email
-
-cd $SLURM_SUBMIT_DIR
-module load PAUP/4.0a168-centos64
-
-alignmentFile=&quot;svdquartets_tutorial/anomaly_zone.nex&quot;
-logFile=&quot;svdq.log&quot;
-treeFile=&quot;svdq.tre&quot;
-
-nBoot=1000
-nCpus=36
-
-date
-
-echo &quot;
-log file=${logFile};
-tonexus format=RelPHYLIP fromfile=${alignmentFile} tofile=${alignmentFile}.svdq.nex interleaved=yes replace=yes;
-exe ${alignmentFile}.svdq.nex;
-svdq bootstrap nreps=${nBoot} nthreads=${nCpus};
-saveTrees file=${treeFile};
-quit;
-&quot; | paup
-
-date</code></pre>
-<p>Adjust the email, the number of processors if needed (<code>#SBATCH -c</code> value should correspond to <code>nCpus</code> value), path and name of the input file (<code>alignmentFile</code>), and submit the script as sbatch job.</p>
+<p>Edit the <code>slurm_submissions/runSVDQ.sh</code> slurm script for your data and submit it.</p>
+<p>Adjust the email, the number of processors if needed, path and name of the input file (<code>alignmentFile</code>), and submit the script as sbatch job.</p>
 </div>
 <div id="visualizing-trees" class="section level2">
 <h2><span class="header-section-number">8.5</span> Visualizing trees</h2>

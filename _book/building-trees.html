@@ -24,7 +24,7 @@
 <meta name="author" content="Rachel Schwartz" />
 
 
-<meta name="date" content="2021-09-22" />
+<meta name="date" content="2021-10-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -183,11 +183,27 @@ This will generate plain text files of the best estimate of the phylogeny for yo
 <div id="visualizing-trees" class="section level2">
 <h2><span class="header-section-number">8.5</span> Visualizing trees</h2>
 <ul>
-<li>Download <a href="https://github.com/rambaut/figtree/releases">Figtree</a> to your personal computer.</li>
-<li>Download the file labeled RAxML_bipartitions (with the suffix for your analysis) (for the concatenation analysis) or <code>svdq.tre</code> (for the SVDQuartets multispecies coalescent analysis) to your personal computer.</li>
+<li>Download the file that starts with RAxML_bipartitions (with the suffix for your analysis) (for the concatenation analysis) or <code>svdq.tre</code> (for the SVDQuartets multispecies coalescent analysis) to your personal computer.
+<ul>
+<li>On a Mac:
+<ul>
+<li>Open a new tab in your Terminal</li>
+<li>cd to a folder on your local computer where you want to keep your results</li>
+<li>type `scp [username]<span class="citation">(<span class="citeproc-not-found" data-reference-id="ssh3.hac.uri.edu"><strong>???</strong></span>)</span>:[full path to your file] .</li>
+</ul></li>
+<li>On a PC:
+<ul>
+<li>Download <a href="https://cyberduck.io/">Cyberduck</a> to allow file transfers to your computer.</li>
+<li>Click Open Connection</li>
+<li>Select SFTP</li>
+<li>Enter <code>ssh3.hac.uri.edu</code> as the server, your username, and select your ssh key</li>
+<li>Once connected find the file in the folder and download it</li>
+</ul></li>
+</ul></li>
+<li><p>Download <a href="https://github.com/rambaut/figtree/releases">Figtree</a> to your personal computer.</p></li>
 <li>Open your tree file in Figtree</li>
-<li>Root tree using your outgroup.</li>
-<li>Look at bootstrap support on each node.</li>
+<li>Root tree using your outgroup (click on the species and click Reroot).</li>
+<li><p>Look at bootstrap support on each node by changing the Node Label to <code>label</code>.</p></li>
 </ul>
 </div>
 <div id="what-does-my-tree-mean" class="section level2">

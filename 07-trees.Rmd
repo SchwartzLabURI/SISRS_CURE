@@ -32,11 +32,23 @@ Adjust the email, the number of processors if needed, path and name of the input
 
 ## Visualizing trees
 
+* Download the file that starts with RAxML_bipartitions (with the suffix for your analysis) (for the concatenation analysis) or `svdq.tre` (for the SVDQuartets multispecies coalescent analysis) to your personal computer.
+  - On a Mac:
+    * Open a new tab in your Terminal
+    * cd to a folder on your local computer where you want to keep your results
+    * type `scp [username]@ssh3.hac.uri.edu:[full path to your file] .
+  - On a PC:
+    * Download [Cyberduck](https://cyberduck.io/) to allow file transfers to your computer.
+    * Click Open Connection
+    * Select SFTP
+    * Enter `ssh3.hac.uri.edu` as the server, your username, and select your ssh key
+    * Once connected find the file in the folder and download it
+
 * Download [Figtree](https://github.com/rambaut/figtree/releases) to your personal computer.
-* Download the file labeled RAxML_bipartitions (with the suffix for your analysis) (for the concatenation analysis) or `svdq.tre` (for the SVDQuartets multispecies coalescent analysis) to your personal computer.
+
 * Open your tree file in Figtree
-* Root tree using your outgroup.
-* Look at bootstrap support on each node.
+* Root tree using your outgroup (click on the species and click Reroot).
+* Look at bootstrap support on each node by changing the Node Label to `label`.
 
 ## What does my tree mean?
 

@@ -107,9 +107,11 @@
 <li class="chapter" data-level="8.1" data-path="building-trees.html"><a href="building-trees.html#phylogenetic-data"><i class="fa fa-check"></i><b>8.1</b> Phylogenetic Data</a></li>
 <li class="chapter" data-level="8.2" data-path="building-trees.html"><a href="building-trees.html#background-on-tree-building"><i class="fa fa-check"></i><b>8.2</b> Background on tree building</a></li>
 <li class="chapter" data-level="8.3" data-path="building-trees.html"><a href="building-trees.html#building-trees-from-your-data-concatenation"><i class="fa fa-check"></i><b>8.3</b> Building trees from your data (concatenation)</a></li>
-<li class="chapter" data-level="8.4" data-path="building-trees.html"><a href="building-trees.html#building-trees-from-your-data-multispecies-coalescent"><i class="fa fa-check"></i><b>8.4</b> Building trees from your data (Multispecies coalescent)</a></li>
-<li class="chapter" data-level="8.5" data-path="building-trees.html"><a href="building-trees.html#visualizing-trees"><i class="fa fa-check"></i><b>8.5</b> Visualizing trees</a></li>
-<li class="chapter" data-level="8.6" data-path="building-trees.html"><a href="building-trees.html#what-does-my-tree-mean"><i class="fa fa-check"></i><b>8.6</b> What does my tree mean?</a></li>
+<li class="chapter" data-level="8.4" data-path="building-trees.html"><a href="building-trees.html#visualizing-trees"><i class="fa fa-check"></i><b>8.4</b> Visualizing trees</a></li>
+<li class="chapter" data-level="8.5" data-path="building-trees.html"><a href="building-trees.html#what-does-my-tree-mean"><i class="fa fa-check"></i><b>8.5</b> What does my tree mean?</a></li>
+<li class="chapter" data-level="8.6" data-path="building-trees.html"><a href="building-trees.html#measure-of-support-on-your-tree"><i class="fa fa-check"></i><b>8.6</b> Measure of support on your tree</a></li>
+<li class="chapter" data-level="8.7" data-path="building-trees.html"><a href="building-trees.html#building-trees-from-your-data-multispecies-coalescent"><i class="fa fa-check"></i><b>8.7</b> Building trees from your data (Multispecies coalescent)</a></li>
+<li class="chapter" data-level="8.8" data-path="building-trees.html"><a href="building-trees.html#missing-data"><i class="fa fa-check"></i><b>8.8</b> Missing data</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>9</b> Results</a><ul>
 <li class="chapter" data-level="9.1" data-path="results.html"><a href="results.html#what-does-your-tree-tell-you"><i class="fa fa-check"></i><b>9.1</b> What does your tree tell you?</a></li>
@@ -169,21 +171,16 @@ If you aren’t sure what that means refer back to some of the earlier materials
 </div>
 <div id="building-trees-from-your-data-concatenation" class="section level2">
 <h2><span class="header-section-number">8.3</span> Building trees from your data (concatenation)</h2>
-<p>We will take a simple “concatenation” approach to analyzing your data.
+<p>First, we will take a simple “concatenation” approach to analyzing your data.
 That means we will analyze all the sites together and expect them to come from one evolutionary history.
 There are more complex ways to consider the data, including different histories and different models that you can try later.</p>
 <p>Edit the <code>slurm_submissions/runRaxml.sh</code> slurm script for your data and submit it.
 This will generate plain text files of the best estimate of the phylogeny for your data using a Maximum Likelihood algorithm.</p>
 </div>
-<div id="building-trees-from-your-data-multispecies-coalescent" class="section level2">
-<h2><span class="header-section-number">8.4</span> Building trees from your data (Multispecies coalescent)</h2>
-<p>Edit the <code>slurm_submissions/runSVDQ.sh</code> slurm script for your data and submit it.</p>
-<p>Adjust the email, the number of processors if needed, path and name of the input file (<code>alignmentFile</code>), and submit the script as sbatch job.</p>
-</div>
 <div id="visualizing-trees" class="section level2">
-<h2><span class="header-section-number">8.5</span> Visualizing trees</h2>
+<h2><span class="header-section-number">8.4</span> Visualizing trees</h2>
 <ul>
-<li>Download the file that starts with RAxML_bipartitions (with the suffix for your analysis) (for the concatenation analysis) or <code>svdq.tre</code> (for the SVDQuartets multispecies coalescent analysis) to your personal computer.
+<li>Download the file that starts with RAxML_bipartitions (with the suffix for your analysis) to your personal computer.
 <ul>
 <li>On a Mac:
 <ul>
@@ -207,8 +204,38 @@ This will generate plain text files of the best estimate of the phylogeny for yo
 </ul>
 </div>
 <div id="what-does-my-tree-mean" class="section level2">
-<h2><span class="header-section-number">8.6</span> What does my tree mean?</h2>
+<h2><span class="header-section-number">8.5</span> What does my tree mean?</h2>
 <p><a href="https://artic.network/how-to-read-a-tree.html" class="uri">https://artic.network/how-to-read-a-tree.html</a></p>
+</div>
+<div id="measure-of-support-on-your-tree" class="section level2">
+<h2><span class="header-section-number">8.6</span> Measure of support on your tree</h2>
+<p>You have looked at the bootstrap as a measure of support for each relationship.
+The bootstrap is an approach that asks if you resample the data many times, what proportion
+of those resampled datasets give you the same answer.
+We’ll also look at an alternate measure of support: site concordance factor (sCF).
+To think about sCF first consider that for any given node there are three ways to group the
+clades connected to it.
+To get sCF the computer checks randomly chosen sites in your alignment for support for the
+three possible groups.
+If all arrangements of groups are equally supported then the sCF would be 33%.
+If a particular arrangement is supported (i.e. one pair of clades are siblings) then the sCF value will be higher.</p>
+<p>Edit the <code>slurm_submissions/runSCF.sh</code> slurm script for your data and submit it.</p>
+<p>Download the file starting with the run name you provided and ending with <code>.cf.tree</code>.
+Open this file in FigTree.
+Compare the support in this tree with your bootstrap support.</p>
+</div>
+<div id="building-trees-from-your-data-multispecies-coalescent" class="section level2">
+<h2><span class="header-section-number">8.7</span> Building trees from your data (Multispecies coalescent)</h2>
+<p>Edit the <code>slurm_submissions/runSVDQ.sh</code> slurm script for your data and submit it.</p>
+<p>Adjust the email, the number of processors if needed, path and name of the input file (<code>alignmentFile</code>), and submit the script as sbatch job.</p>
+<p>Download the file <code>svdq.tre</code> (for the SVDQuartets multispecies coalescent analysis) to your personal computer.</p>
+<p>Open this tree in FigTree.</p>
+<p>Supports?</p>
+<p>If this tree appears different from your first tree, repeat the sCF analysis using this tree
+and changing the output file name.</p>
+</div>
+<div id="missing-data" class="section level2">
+<h2><span class="header-section-number">8.8</span> Missing data</h2>
 
 </div>
 </div>

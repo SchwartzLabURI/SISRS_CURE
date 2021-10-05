@@ -36,7 +36,7 @@ Adjust the email, the number of processors if needed, path and name of the input
   - On a Mac:
     * Open a new tab in your Terminal
     * cd to a folder on your local computer where you want to keep your results
-    * type `scp [username]@ssh3.hac.uri.edu:[full path to your file] .
+    * type `scp [username]@ssh3.hac.uri.edu:[full path to your file]` .
   - On a PC:
     * Download [Cyberduck](https://cyberduck.io/) to allow file transfers to your computer.
     * Click Open Connection

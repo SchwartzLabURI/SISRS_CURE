@@ -1,1 +1,351 @@
-../_book/research.html
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Research | Phylogenomics with SISRS</title>
+  <meta name="description" content="Step-by-step guide for research using SISRS to get orthologs for phylogenomics." />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Research | Phylogenomics with SISRS" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Step-by-step guide for research using SISRS to get orthologs for phylogenomics." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Research | Phylogenomics with SISRS" />
+  
+  <meta name="twitter:description" content="Step-by-step guide for research using SISRS to get orthologs for phylogenomics." />
+  
+
+<meta name="author" content="Rachel Schwartz" />
+
+
+<meta name="date" content="2022-05-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="getting-data.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Phylogenomics Research Course</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Getting Started</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#phylogenies"><i class="fa fa-check"></i><b>2.1</b> Phylogenies</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="research.html"><a href="research.html"><i class="fa fa-check"></i><b>3</b> Research</a><ul>
+<li class="chapter" data-level="3.1" data-path="research.html"><a href="research.html#selecting-a-group-to-study"><i class="fa fa-check"></i><b>3.1</b> Selecting a group to study</a></li>
+<li class="chapter" data-level="3.2" data-path="research.html"><a href="research.html#learning-about-your-group"><i class="fa fa-check"></i><b>3.2</b> Learning about your group</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="research.html"><a href="research.html#finding-research-articles"><i class="fa fa-check"></i><b>3.2.1</b> Finding research articles</a></li>
+<li class="chapter" data-level="3.2.2" data-path="research.html"><a href="research.html#reading-research-articles"><i class="fa fa-check"></i><b>3.2.2</b> Reading research articles</a></li>
+<li class="chapter" data-level="3.2.3" data-path="research.html"><a href="research.html#more-background-information"><i class="fa fa-check"></i><b>3.2.3</b> More background information</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="research.html"><a href="research.html#freewrite-assignment"><i class="fa fa-check"></i><b>3.3</b> Freewrite assignment</a></li>
+<li class="chapter" data-level="3.4" data-path="research.html"><a href="research.html#annotated-bibliography-assignment"><i class="fa fa-check"></i><b>3.4</b> Annotated Bibliography assignment</a></li>
+<li class="chapter" data-level="3.5" data-path="research.html"><a href="research.html#reflection-assignment"><i class="fa fa-check"></i><b>3.5</b> Reflection assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="getting-data.html"><a href="getting-data.html"><i class="fa fa-check"></i><b>4</b> Getting Data</a></li>
+<li class="chapter" data-level="5" data-path="computational-skills.html"><a href="computational-skills.html"><i class="fa fa-check"></i><b>5</b> Computational skills</a><ul>
+<li class="chapter" data-level="5.1" data-path="computational-skills.html"><a href="computational-skills.html#access-from-off-campus-optional"><i class="fa fa-check"></i><b>5.1</b> Access from off campus (optional)</a></li>
+<li class="chapter" data-level="5.2" data-path="computational-skills.html"><a href="computational-skills.html#on-a-mac"><i class="fa fa-check"></i><b>5.2</b> On a Mac</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="computational-skills.html"><a href="computational-skills.html#getting-access"><i class="fa fa-check"></i><b>5.2.1</b> Getting access</a></li>
+<li class="chapter" data-level="5.2.2" data-path="computational-skills.html"><a href="computational-skills.html#log-in-to-the-server"><i class="fa fa-check"></i><b>5.2.2</b> Log in to the server</a></li>
+<li class="chapter" data-level="5.2.3" data-path="computational-skills.html"><a href="computational-skills.html#video-tutorials"><i class="fa fa-check"></i><b>5.2.3</b> Video tutorials</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="computational-skills.html"><a href="computational-skills.html#on-a-pc"><i class="fa fa-check"></i><b>5.3</b> On a PC</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="computational-skills.html"><a href="computational-skills.html#video-tutorials-1"><i class="fa fa-check"></i><b>5.3.1</b> Video tutorials</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="computational-skills.html"><a href="computational-skills.html#basic-navigation"><i class="fa fa-check"></i><b>5.4</b> Basic navigation</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="getting-your-data.html"><a href="getting-your-data.html"><i class="fa fa-check"></i><b>6</b> Getting your data</a><ul>
+<li class="chapter" data-level="6.1" data-path="getting-your-data.html"><a href="getting-your-data.html#download"><i class="fa fa-check"></i><b>6.1</b> Download</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="getting-your-data-1.html"><a href="getting-your-data-1.html"><i class="fa fa-check"></i><b>7</b> Getting your data</a><ul>
+<li class="chapter" data-level="7.1" data-path="getting-your-data-1.html"><a href="getting-your-data-1.html#download-1"><i class="fa fa-check"></i><b>7.1</b> Download</a></li>
+<li class="chapter" data-level="7.2" data-path="getting-your-data-1.html"><a href="getting-your-data-1.html#sisrs"><i class="fa fa-check"></i><b>7.2</b> SISRS</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="phylogenetic-markers.html"><a href="phylogenetic-markers.html"><i class="fa fa-check"></i><b>8</b> Phylogenetic markers</a><ul>
+<li class="chapter" data-level="8.1" data-path="phylogenetic-markers.html"><a href="phylogenetic-markers.html#sisrs-1"><i class="fa fa-check"></i><b>8.1</b> SISRS</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="building-trees.html"><a href="building-trees.html"><i class="fa fa-check"></i><b>9</b> Building Trees</a><ul>
+<li class="chapter" data-level="9.1" data-path="building-trees.html"><a href="building-trees.html#background-on-tree-building"><i class="fa fa-check"></i><b>9.1</b> Background on tree building</a></li>
+<li class="chapter" data-level="9.2" data-path="building-trees.html"><a href="building-trees.html#building-trees-from-your-data"><i class="fa fa-check"></i><b>9.2</b> Building trees from your data</a></li>
+<li class="chapter" data-level="9.3" data-path="building-trees.html"><a href="building-trees.html#visualizing-trees"><i class="fa fa-check"></i><b>9.3</b> Visualizing trees</a></li>
+<li class="chapter" data-level="9.4" data-path="building-trees.html"><a href="building-trees.html#what-does-my-tree-mean"><i class="fa fa-check"></i><b>9.4</b> What does my tree mean?</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>10</b> Results</a><ul>
+<li class="chapter" data-level="10.1" data-path="results.html"><a href="results.html#what-does-your-tree-tell-you"><i class="fa fa-check"></i><b>10.1</b> What does your tree tell you?</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="sharing-your-results.html"><a href="sharing-your-results.html"><i class="fa fa-check"></i><b>11</b> Sharing your results</a><ul>
+<li class="chapter" data-level="11.1" data-path="sharing-your-results.html"><a href="sharing-your-results.html#start-reading"><i class="fa fa-check"></i><b>11.1</b> Start reading</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="sharing-your-results.html"><a href="sharing-your-results.html#develop-a-bibliography"><i class="fa fa-check"></i><b>11.1.1</b> Develop a bibliography</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="sharing-your-results.html"><a href="sharing-your-results.html#presentation"><i class="fa fa-check"></i><b>11.2</b> Presentation</a></li>
+<li class="chapter" data-level="11.3" data-path="sharing-your-results.html"><a href="sharing-your-results.html#writing-a-paper"><i class="fa fa-check"></i><b>11.3</b> Writing a paper</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="sharing-your-results.html"><a href="sharing-your-results.html#intro"><i class="fa fa-check"></i><b>11.3.1</b> Intro</a></li>
+<li class="chapter" data-level="11.3.2" data-path="sharing-your-results.html"><a href="sharing-your-results.html#methods"><i class="fa fa-check"></i><b>11.3.2</b> Methods</a></li>
+<li class="chapter" data-level="11.3.3" data-path="sharing-your-results.html"><a href="sharing-your-results.html#results-1"><i class="fa fa-check"></i><b>11.3.3</b> Results</a></li>
+<li class="chapter" data-level="11.3.4" data-path="sharing-your-results.html"><a href="sharing-your-results.html#discussion"><i class="fa fa-check"></i><b>11.3.4</b> Discussion</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i>Appendix</a><ul>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#research-ideas"><i class="fa fa-check"></i>Research Ideas</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="citation-tracker-exercise.html"><a href="citation-tracker-exercise.html"><i class="fa fa-check"></i>Citation Tracker Exercise</a></li>
+<li class="chapter" data-level="" data-path="cheatsheet.html"><a href="cheatsheet.html"><i class="fa fa-check"></i>Cheatsheet</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Phylogenomics with SISRS</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="research" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Chapter 3</span> Research<a href="research.html#research" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="selecting-a-group-to-study" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.1</span> Selecting a group to study<a href="research.html#selecting-a-group-to-study" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now that you have a sense of why phylogenies are so important
+you can start to think about a group whose evolutionary history you might like to investigate.
+Watch <a href="https://www.youtube.com/watch?v=cVaw7nF72Aw">this video</a> to understand the motivation behind phylogenetic research.
+You will see that our understanding of how species are related is constantly changing.
+That means that you can play a role you can play in determining how evolution happened.</p>
+<p>You can pick any group to study or ask your instructor for suggestions.
+Once you pick a group you’ll need to investigate it a bit more to determine
+whether you can narrow your research to address particularly interesting research questions,
+and then determine whether there are data to help you answer those questions.
+You might consider picking a group that is studied by URI faculty.</p>
+<p>If you still need ideas <a href="research-ideas.html">click here</a>.</p>
+</div>
+<div id="learning-about-your-group" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.2</span> Learning about your group<a href="research.html#learning-about-your-group" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You will need to do some background research to learn about
+the group you propose to study, and to provide motivation of your work.
+Check out the URI Library’s <a href="https://www.youtube.com/watch?v=v5AWzB_CKIs&amp;t=241s">Basics of College Level Research</a>.</p>
+<div id="finding-research-articles" class="section level3 hasAnchor">
+<h3><span class="header-section-number">3.2.1</span> Finding research articles<a href="research.html#finding-research-articles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To get started find out something about your group.
+You can start with Google, although you should rapidly move on to searching the primary literature.
+Learn about <a href="https://www.youtube.com/watch?v=IZzX3VcyYLk&amp;t=147s">scholarly and popular sources</a> to understand why you need to go beyond popular or secondary literature.
+Also check out the URI Library’s discussion on <a href="https://www.youtube.com/watch?v=gpOjKqUkMNY&amp;t=96s">why not just search Google</a>.
+For general suggestions on finding literature on your topic see the URI Library’s guide to <a href="https://www.youtube.com/watch?v=xbL3OiKZbqM&amp;t=174s">finding journal articles</a>.</p>
+<p>The URI Library offers a variety of databases for research, but Google Scholar can be a good way to find literature on your topic.</p>
+<p>How to use Google Scholar:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=B7bUS9TYvRU">https://www.youtube.com/watch?v=B7bUS9TYvRU</a></li>
+<li><a href="https://www.youtube.com/watch?v=6vSE-_iq7NE">https://www.youtube.com/watch?v=6vSE-_iq7NE</a></li>
+<li><a href="https://uri.libguides.com/google/gschol">URI’s guide to Google Scholar</a></li>
+</ul>
+<p>If you are struggling to find papers that seem relevant to your research topic try the URI Library’s guide to <a href="https://www.youtube.com/watch?v=vpw8aysfdng">developing an effective search strategy</a>.</p>
+<p>When you find an article you want, you can access it as a member of the URI community.
+However, if you are off campus the journal may not recognize you.
+In Google Scholar click the menu bar in the upper left and choose settings.
+Search for the University of Rhode Island and select URI library.
+Google Scholar will now have Search @ URI Libraries on the right if there’s an article you want.</p>
+<p>If you still have problems you may need to search for you article via the library website.</p>
+<ul>
+<li>Go to <a href="https://web.uri.edu/library/">https://web.uri.edu/library/</a>.</li>
+<li>Under Find Resources paste the name of an article of interest and Search.</li>
+<li>Find the online resource that allows you to have access and sign in with your URI login.</li>
+<li>If URI has access to the article you should be able to read it.</li>
+<li>You may need to repeat your search on the URI website for other articles depending on your connection.</li>
+</ul>
+</div>
+<div id="reading-research-articles" class="section level3 hasAnchor">
+<h3><span class="header-section-number">3.2.2</span> Reading research articles<a href="research.html#reading-research-articles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Once you locate a paper to read you need to read it.
+Check out these recommendations on how to read a paper efficiently and effectively:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Gv5ku0eoY6k">https://www.youtube.com/watch?v=Gv5ku0eoY6k</a></li>
+<li><a href="https://www.youtube.com/watch?v=IeaD0ZaUJ3Y">https://www.youtube.com/watch?v=IeaD0ZaUJ3Y</a></li>
+</ul>
+<p>Continue to search for and read background material using the <a href="citation-tracker-exercise.html">Citation Tracking Activity</a>.</p>
+<p>At this point you may have picked a group to study, and hopefully you have a good reason for this group.
+Keep in mind that you may be fascinated by a particular group of species, but you still have to convince others to be equally fascinated.
+If you aren’t sure, try explaining your project to a friend or roommate.
+Also check out <a href="research-ideas.html">past projects</a> for example research questions.</p>
+</div>
+<div id="more-background-information" class="section level3 hasAnchor">
+<h3><span class="header-section-number">3.2.3</span> More background information<a href="research.html#more-background-information" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>At this point you should have a group of species and a (possibly vague) question.
+You won’t have everything pinned down precisely, but write down what you have.
+Now let’s research your group a bit more.
+First, find out more about your group, particularly the number of species and its age,
+by looking at Wikipedia and searching Google.
+If you picked a group that has a lot of species (e.g. birds, mammals),
+see if you can pick a smaller clade within your group of interest.
+You can also find out more about the species in your group by searching
+the <a href="https://tree.opentreeoflife.org/">Open Tree of Life</a>
+and <a href="http://timetree.org/">TimeTree</a>.</p>
+</div>
+</div>
+<div id="freewrite-assignment" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.3</span> Freewrite assignment<a href="research.html#freewrite-assignment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>At this point you should have a lot of ideas in your head.
+Now is the time to write them down.
+When scientists plan their research project they typically do a lot of writing.
+In this end this kind of writing turns into a formal research proposal,
+but the process of shaping that proposal usually starts with lots of notes about
+(1) what the researcher thinks the question is at the beginning, and
+(2) what is known in the field from reading a lot of papers.</p>
+<p>You are going to work through this process now to make a plan for your own research.
+First, write 1-2 pages of what you think your question is, why it’s interesting,
+and what is known in the field.
+If writing makes you think your question has already been answered, or needs more work before you
+can answer it, write all that down.
+You have two options here, first to truly freewrite your thoughts and see how they evolve and change,
+and second to go back and change your question if you discover it needs refinement.
+Either way, don’t get bogged down in details or grammar - try to get your ideas and background onto the paper.
+You should use this assignment to seek your plan and question yourself as to whether it will be successful.
+Think about this piece of work like an artist’s sketchbook that requires multiple tries to produce something that seems good.</p>
+<p>We will use this writing for discussion in class where you will have a chance to get comments so that you can have the best research plan moving forward.
+A successful freewrite will make you feel like you have a question and plan that will stand up to skeptical questioning by your peers.</p>
+</div>
+<div id="annotated-bibliography-assignment" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.4</span> Annotated Bibliography assignment<a href="research.html#annotated-bibliography-assignment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once you really know what you want to work on,
+you should make sure you understand the background to your research.
+That means reading the primary literature in more depth.
+An annotated bibliography can help you organize your understanding of this material.</p>
+<p>Develop an annotated bibliography of at least 5 sources.
+Note that you may need to skim 10-20 papers before settling on 5 to read in depth.
+See suggestions above for how to find and read papers.
+Your annotated bibliography should include the full citation (and probably a link for later use) followed by a 1-2 paragraph summary and/or bullets of the important points (particularly results) in the article as they relate to your research.
+The format is not critical.
+Note that an annotated bibliography is not an abstract.
+The annotated bibliography is for you to use later so take notes on what’s important for your research.</p>
+<p>Here are some examples and references:</p>
+<ul>
+<li><a href="https://owl.purdue.edu/owl/general_writing/common_writing_assignments/annotated_bibliographies/annotated_bibliography_samples.html">https://owl.purdue.edu/owl/general_writing/common_writing_assignments/annotated_bibliographies/annotated_bibliography_samples.html</a></li>
+<li><a href="https://guides.library.cornell.edu/annotatedbibliography">https://guides.library.cornell.edu/annotatedbibliography</a></li>
+</ul>
+</div>
+<div id="reflection-assignment" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.5</span> Reflection assignment<a href="research.html#reflection-assignment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Write a short reflection on your annotatated bibliography.</p>
+<ul>
+<li>Why did you select the papers you chose to read more in depth?</li>
+<li>Why did you feel that the remaining papers were less relevant?</li>
+<li>Do you feel that your research question is strong and well motivated? Explain why.</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="getting-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-literature.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Cheatsheet | Phylogenomics with SISRS</title>
   <meta name="description" content="Step-by-step guide for research using SISRS to get orthologs for phylogenomics." />
-  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Cheatsheet | Phylogenomics with SISRS" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Step-by-step guide for research using SISRS to get orthologs for phylogenomics." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Rachel Schwartz" />
 
 
-<meta name="date" content="2021-08-25" />
+<meta name="date" content="2022-05-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,8 @@
   
 <link rel="prev" href="citation-tracker-exercise.html"/>
 
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,9 +49,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -93,36 +93,42 @@
 <li class="chapter" data-level="5.2" data-path="computational-skills.html"><a href="computational-skills.html#on-a-mac"><i class="fa fa-check"></i><b>5.2</b> On a Mac</a><ul>
 <li class="chapter" data-level="5.2.1" data-path="computational-skills.html"><a href="computational-skills.html#getting-access"><i class="fa fa-check"></i><b>5.2.1</b> Getting access</a></li>
 <li class="chapter" data-level="5.2.2" data-path="computational-skills.html"><a href="computational-skills.html#log-in-to-the-server"><i class="fa fa-check"></i><b>5.2.2</b> Log in to the server</a></li>
+<li class="chapter" data-level="5.2.3" data-path="computational-skills.html"><a href="computational-skills.html#video-tutorials"><i class="fa fa-check"></i><b>5.2.3</b> Video tutorials</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="computational-skills.html"><a href="computational-skills.html#on-a-pc"><i class="fa fa-check"></i><b>5.3</b> On a PC</a></li>
+<li class="chapter" data-level="5.3" data-path="computational-skills.html"><a href="computational-skills.html#on-a-pc"><i class="fa fa-check"></i><b>5.3</b> On a PC</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="computational-skills.html"><a href="computational-skills.html#video-tutorials-1"><i class="fa fa-check"></i><b>5.3.1</b> Video tutorials</a></li>
+</ul></li>
 <li class="chapter" data-level="5.4" data-path="computational-skills.html"><a href="computational-skills.html#basic-navigation"><i class="fa fa-check"></i><b>5.4</b> Basic navigation</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="getting-your-data.html"><a href="getting-your-data.html"><i class="fa fa-check"></i><b>6</b> Getting your data</a><ul>
 <li class="chapter" data-level="6.1" data-path="getting-your-data.html"><a href="getting-your-data.html#download"><i class="fa fa-check"></i><b>6.1</b> Download</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="phylogenetic-markers.html"><a href="phylogenetic-markers.html"><i class="fa fa-check"></i><b>7</b> Phylogenetic markers</a><ul>
-<li class="chapter" data-level="7.1" data-path="phylogenetic-markers.html"><a href="phylogenetic-markers.html#sisrs"><i class="fa fa-check"></i><b>7.1</b> SISRS</a></li>
+<li class="chapter" data-level="7" data-path="getting-your-data-1.html"><a href="getting-your-data-1.html"><i class="fa fa-check"></i><b>7</b> Getting your data</a><ul>
+<li class="chapter" data-level="7.1" data-path="getting-your-data-1.html"><a href="getting-your-data-1.html#download-1"><i class="fa fa-check"></i><b>7.1</b> Download</a></li>
+<li class="chapter" data-level="7.2" data-path="getting-your-data-1.html"><a href="getting-your-data-1.html#sisrs"><i class="fa fa-check"></i><b>7.2</b> SISRS</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="building-trees.html"><a href="building-trees.html"><i class="fa fa-check"></i><b>8</b> Building Trees</a><ul>
-<li class="chapter" data-level="8.1" data-path="building-trees.html"><a href="building-trees.html#phylogenetic-data"><i class="fa fa-check"></i><b>8.1</b> Phylogenetic Data</a></li>
-<li class="chapter" data-level="8.2" data-path="building-trees.html"><a href="building-trees.html#background-on-tree-building"><i class="fa fa-check"></i><b>8.2</b> Background on tree building</a></li>
-<li class="chapter" data-level="8.3" data-path="building-trees.html"><a href="building-trees.html#building-trees-from-your-data"><i class="fa fa-check"></i><b>8.3</b> Building trees from your data</a></li>
-<li class="chapter" data-level="8.4" data-path="building-trees.html"><a href="building-trees.html#visualizing-trees"><i class="fa fa-check"></i><b>8.4</b> Visualizing trees</a></li>
-<li class="chapter" data-level="8.5" data-path="building-trees.html"><a href="building-trees.html#what-does-my-tree-mean"><i class="fa fa-check"></i><b>8.5</b> What does my tree mean?</a></li>
+<li class="chapter" data-level="8" data-path="phylogenetic-markers.html"><a href="phylogenetic-markers.html"><i class="fa fa-check"></i><b>8</b> Phylogenetic markers</a><ul>
+<li class="chapter" data-level="8.1" data-path="phylogenetic-markers.html"><a href="phylogenetic-markers.html#sisrs-1"><i class="fa fa-check"></i><b>8.1</b> SISRS</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>9</b> Results</a><ul>
-<li class="chapter" data-level="9.1" data-path="results.html"><a href="results.html#what-does-your-tree-tell-you"><i class="fa fa-check"></i><b>9.1</b> What does your tree tell you?</a></li>
+<li class="chapter" data-level="9" data-path="building-trees.html"><a href="building-trees.html"><i class="fa fa-check"></i><b>9</b> Building Trees</a><ul>
+<li class="chapter" data-level="9.1" data-path="building-trees.html"><a href="building-trees.html#background-on-tree-building"><i class="fa fa-check"></i><b>9.1</b> Background on tree building</a></li>
+<li class="chapter" data-level="9.2" data-path="building-trees.html"><a href="building-trees.html#building-trees-from-your-data"><i class="fa fa-check"></i><b>9.2</b> Building trees from your data</a></li>
+<li class="chapter" data-level="9.3" data-path="building-trees.html"><a href="building-trees.html#visualizing-trees"><i class="fa fa-check"></i><b>9.3</b> Visualizing trees</a></li>
+<li class="chapter" data-level="9.4" data-path="building-trees.html"><a href="building-trees.html#what-does-my-tree-mean"><i class="fa fa-check"></i><b>9.4</b> What does my tree mean?</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="sharing-your-results.html"><a href="sharing-your-results.html"><i class="fa fa-check"></i><b>10</b> Sharing your results</a><ul>
-<li class="chapter" data-level="10.1" data-path="sharing-your-results.html"><a href="sharing-your-results.html#start-reading"><i class="fa fa-check"></i><b>10.1</b> Start reading</a><ul>
-<li class="chapter" data-level="10.1.1" data-path="sharing-your-results.html"><a href="sharing-your-results.html#develop-a-bibliography"><i class="fa fa-check"></i><b>10.1.1</b> Develop a bibliography</a></li>
+<li class="chapter" data-level="10" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>10</b> Results</a><ul>
+<li class="chapter" data-level="10.1" data-path="results.html"><a href="results.html#what-does-your-tree-tell-you"><i class="fa fa-check"></i><b>10.1</b> What does your tree tell you?</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="sharing-your-results.html"><a href="sharing-your-results.html#presentation"><i class="fa fa-check"></i><b>10.2</b> Presentation</a></li>
-<li class="chapter" data-level="10.3" data-path="sharing-your-results.html"><a href="sharing-your-results.html#writing-a-paper"><i class="fa fa-check"></i><b>10.3</b> Writing a paper</a><ul>
-<li class="chapter" data-level="10.3.1" data-path="sharing-your-results.html"><a href="sharing-your-results.html#intro"><i class="fa fa-check"></i><b>10.3.1</b> Intro</a></li>
-<li class="chapter" data-level="10.3.2" data-path="sharing-your-results.html"><a href="sharing-your-results.html#methods"><i class="fa fa-check"></i><b>10.3.2</b> Methods</a></li>
-<li class="chapter" data-level="10.3.3" data-path="sharing-your-results.html"><a href="sharing-your-results.html#results-1"><i class="fa fa-check"></i><b>10.3.3</b> Results</a></li>
-<li class="chapter" data-level="10.3.4" data-path="sharing-your-results.html"><a href="sharing-your-results.html#discussion"><i class="fa fa-check"></i><b>10.3.4</b> Discussion</a></li>
+<li class="chapter" data-level="11" data-path="sharing-your-results.html"><a href="sharing-your-results.html"><i class="fa fa-check"></i><b>11</b> Sharing your results</a><ul>
+<li class="chapter" data-level="11.1" data-path="sharing-your-results.html"><a href="sharing-your-results.html#start-reading"><i class="fa fa-check"></i><b>11.1</b> Start reading</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="sharing-your-results.html"><a href="sharing-your-results.html#develop-a-bibliography"><i class="fa fa-check"></i><b>11.1.1</b> Develop a bibliography</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="sharing-your-results.html"><a href="sharing-your-results.html#presentation"><i class="fa fa-check"></i><b>11.2</b> Presentation</a></li>
+<li class="chapter" data-level="11.3" data-path="sharing-your-results.html"><a href="sharing-your-results.html#writing-a-paper"><i class="fa fa-check"></i><b>11.3</b> Writing a paper</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="sharing-your-results.html"><a href="sharing-your-results.html#intro"><i class="fa fa-check"></i><b>11.3.1</b> Intro</a></li>
+<li class="chapter" data-level="11.3.2" data-path="sharing-your-results.html"><a href="sharing-your-results.html#methods"><i class="fa fa-check"></i><b>11.3.2</b> Methods</a></li>
+<li class="chapter" data-level="11.3.3" data-path="sharing-your-results.html"><a href="sharing-your-results.html#results-1"><i class="fa fa-check"></i><b>11.3.3</b> Results</a></li>
+<li class="chapter" data-level="11.3.4" data-path="sharing-your-results.html"><a href="sharing-your-results.html#discussion"><i class="fa fa-check"></i><b>11.3.4</b> Discussion</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i>Appendix</a><ul>
@@ -150,8 +156,8 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="cheatsheet" class="section level1 unnumbered">
-<h1>Cheatsheet</h1>
+<div id="cheatsheet" class="section level1 unnumbered hasAnchor">
+<h1>Cheatsheet<a href="cheatsheet.html#cheatsheet" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><code>pwd</code>: Print Working Directory: prints the path to the current folder</p>
 <p><code>cd</code> [path to folder]: Change Directory</p>
 <p><code>mkdir</code> [name of folder]: MaKe Directory</p>
@@ -169,7 +175,6 @@
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -188,6 +193,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -208,6 +214,10 @@ gitbook.start({
 "text": null
 },
 "download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

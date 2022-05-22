@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Computational skills | Phylogenomics with SISRS</title>
+  <title>Chapter 7 Getting your data | Phylogenomics with SISRS</title>
   <meta name="description" content="Step-by-step guide for research using SISRS to get orthologs for phylogenomics." />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Computational skills | Phylogenomics with SISRS" />
+  <meta property="og:title" content="Chapter 7 Getting your data | Phylogenomics with SISRS" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Step-by-step guide for research using SISRS to get orthologs for phylogenomics." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Computational skills | Phylogenomics with SISRS" />
+  <meta name="twitter:title" content="Chapter 7 Getting your data | Phylogenomics with SISRS" />
   
   <meta name="twitter:description" content="Step-by-step guide for research using SISRS to get orthologs for phylogenomics." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="getting-data.html"/>
-<link rel="next" href="getting-your-data.html"/>
+<link rel="prev" href="getting-your-data.html"/>
+<link rel="next" href="phylogenetic-markers.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -156,105 +156,23 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="computational-skills" class="section level1 hasAnchor">
-<h1><span class="header-section-number">Chapter 5</span> Computational skills<a href="computational-skills.html#computational-skills" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>The data you are working with is too large to analyze by hand.
-For example, the human genome is 3.2 billion bases.
-It would be hard to compare all that data to data from other species just using your eyes.
-Instead we’re going to need to learn some basic programming skills
-so we can tell the computer how to work with our data.</p>
-<p>First, you’ll have noticed that the computer we’re using doesn’t have the graphical interface
-you usually use (like a PC or Mac).
-That means you have to type in your commands - you can’t point and click.
-This actually has a hidden benefit because it’s easy to write down what you did in
-a line of text rather than having to try to explain where to click on each step.</p>
-<p>Let’s start by learning how to log in the our server and run commands without clicking.</p>
-<div id="access-from-off-campus-optional" class="section level2 hasAnchor">
-<h2><span class="header-section-number">5.1</span> Access from off campus (optional)<a href="computational-skills.html#access-from-off-campus-optional" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li><p>Please go to <a href="https://security.uri.edu/duo/">https://security.uri.edu/duo/</a>. There you will find instructions detailing how to enroll in DUO andset up Cisco AnyConnect.</p></li>
-<li><p>Make sure to follow the directions step by step and make a note of any issues or roadblocks so that you can report them to ITS Security Services.</p></li>
-<li><p>After installing and connecting to the VPN, please verify that you can connect to your specific network resources from home that you need to access.</p></li>
-<li><p>If you need to request VPN access prior to following these instructions see <a href="https://security.uri.edu/vpn/">https://security.uri.edu/vpn/</a></p></li>
-</ul>
+<div id="getting-your-data-1" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Chapter 7</span> Getting your data<a href="getting-your-data-1.html#getting-your-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="download-1" class="section level2 hasAnchor">
+<h2><span class="header-section-number">7.1</span> Download<a href="getting-your-data-1.html#download-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Include an outgroup</p>
+<p>Upload your file</p>
+<p>go to 03</p>
+<p>run script to download files</p>
+<p>exit to main</p>
+<p>cd to /data/</p>
 </div>
-<div id="on-a-mac" class="section level2 hasAnchor">
-<h2><span class="header-section-number">5.2</span> On a Mac<a href="computational-skills.html#on-a-mac" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="getting-access" class="section level3 hasAnchor">
-<h3><span class="header-section-number">5.2.1</span> Getting access<a href="computational-skills.html#getting-access" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>open your Terminal (you may need to search for it)</li>
-<li>follow the instructions under Generating an SSH Key at <a href="https://web.uri.edu/hpc-research-computing/using-andromeda/">https://web.uri.edu/hpc-research-computing/using-andromeda/</a></li>
-</ul>
-</div>
-<div id="log-in-to-the-server" class="section level3 hasAnchor">
-<h3><span class="header-section-number">5.2.2</span> Log in to the server<a href="computational-skills.html#log-in-to-the-server" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>In your Terminal at the prompt type <code>ssh -l username ssh3.hac.uri.edu</code> , replacing <code>username</code> with the first part of your email address.</li>
-<li>You should see a prompt with <code>ssh3</code></li>
-</ul>
-</div>
-<div id="video-tutorials" class="section level3 hasAnchor">
-<h3><span class="header-section-number">5.2.3</span> Video tutorials<a href="computational-skills.html#video-tutorials" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>For a review or clarification of the above and some information you will use later, check out the <a href="URI%20HPC%20Training%20Videos">https://its.uri.edu/research-computing-center/research-seminars/</a> (scroll down past Seminars to Training).</p>
-</div>
-</div>
-<div id="on-a-pc" class="section level2 hasAnchor">
-<h2><span class="header-section-number">5.3</span> On a PC<a href="computational-skills.html#on-a-pc" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>Download and install <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">Putty</a>.</li>
-<li>open Putty</li>
-<li>follow the instructions under Generating an SSH Key at <a href="https://web.uri.edu/hpc-research-computing/using-andromeda/">https://web.uri.edu/hpc-research-computing/using-andromeda/</a></li>
-<li>In the box marked Host Name type <code>ssh3.hac.uri.edu</code>, replacing username with the first part of your email address.</li>
-<li>Use your email username to log in</li>
-<li>You should see a prompt with <code>ssh3</code></li>
-</ul>
-<div id="video-tutorials-1" class="section level3 hasAnchor">
-<h3><span class="header-section-number">5.3.1</span> Video tutorials<a href="computational-skills.html#video-tutorials-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>For a review or clarification of the above and some information you will use later, check out the <a href="URI%20HPC%20Training%20Videos">https://its.uri.edu/research-computing-center/research-seminars/</a> (scroll down past Seminars to Training).</p>
-</div>
-</div>
-<div id="basic-navigation" class="section level2 hasAnchor">
-<h2><span class="header-section-number">5.4</span> Basic navigation<a href="computational-skills.html#basic-navigation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You are now logged in to Andromeda, which is a cluster of computers that can be used for research.
-First, you’ll need to learn to navigate around only by typing.
-Computing clusters typically require you to type all the commands.</p>
-<p>For example, to list all the files in your home folder (where you are when you log in) type <code>ls</code>.
-There probably isn’t anything in this folder right now.
-This is just like opening a folder in a Finder window on a Mac or a folder on a PC,
-except you had to type the command instead of simply double clicking.</p>
-<p>Second (and to help you get used to typing instead of clicking), let’s find out
-where we are in the folder structure.
-You should be in your home folder, which is inside another folder,
-and so on and so forth.
-Think of it as a highly organized filing cabinet, and you will need to move in between folders
-to access files.
-Type <code>pwd</code> to see the folder you are in.
-You’ll see your folder at the end, preceeded by a slash, preceeded by another folder, and so on.</p>
-<p>Your home folder is on a relatively small disk, so for all of our subsequent work we will use
-a large storage disk.
-This disk contains everyone’s data, organized by research lab.
-You change the directory using the <code>cd</code> command.
-To get to the main folder for the Schwartz lab you need to changed directories
-using the <code>cd</code> command.
-Unlike the prior commands you learned, but like most commands you’ll use,
-this command also takes an argument, which is another “word” that comes after this command.
-In this case you need the argument is the “path” to the folder.
-Type <code>cd /data/schwartzlab</code>.</p>
-<p>Let’s start by making a new folder to put your work in.
-Use the <code>mkdir</code> command to make a new directory.
-When you make a directory you need to name it, so instead of just
-<code>mkdir</code> you need <code>mkdir newfolder</code> or some other folder name.
-This is a shared lab folder so you should make a folder with your username.
-For example I might type <code>mkdir rsschwartz</code>.
-From now on I will refer to this as your main folder.</p>
-<p>Move into your folder (use <code>cd</code>) and make a new folder called data.
-Now that you have a new folder move into it.
-Type <code>pwd</code> again.
-Notice what folder you are in.
-To go back to the folder containing your current folder type <code>cd ..</code>, which will take you one level up in the folder hierarchy.
-Type <code>pwd</code> again to see where you are now.</p>
-<p>Now that you have seen a few commands check out the <a href="cheatsheet.html">Cheatsheet</a> of commands at the end of the book for future reference.</p>
+<div id="sisrs" class="section level2 hasAnchor">
+<h2><span class="header-section-number">7.2</span> SISRS<a href="getting-your-data-1.html#sisrs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>clone sisrs</p>
+<p>learn job submission</p>
+<p><a href="https://hpc-carpentry.github.io/hpc-intro/" class="uri">https://hpc-carpentry.github.io/hpc-intro/</a></p>
+<p>run each script</p>
 
 </div>
 </div>
@@ -263,8 +181,8 @@ Type <code>pwd</code> again to see where you are now.</p>
           </div>
         </div>
       </div>
-<a href="getting-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="getting-your-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="getting-your-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="phylogenetic-markers.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -295,7 +213,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-andromeda.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-references.Rmd",
 "text": "Edit"
 },
 "history": {

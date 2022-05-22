@@ -1,1 +1,242 @@
-../_book/methods.html
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Methods | Phylogenomics with SISRS</title>
+  <meta name="description" content="Step-by-step guide for research using SISRS to get orthologs for phylogenomics." />
+  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Methods | Phylogenomics with SISRS" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Step-by-step guide for research using SISRS to get orthologs for phylogenomics." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Methods | Phylogenomics with SISRS" />
+  
+  <meta name="twitter:description" content="Step-by-step guide for research using SISRS to get orthologs for phylogenomics." />
+  
+
+<meta name="author" content="Rachel Schwartz" />
+
+
+<meta name="date" content="2021-08-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="research.html"/>
+<link rel="next" href="computational-skills.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Phylogenomics Research Course</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Getting Started</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#phylogenies"><i class="fa fa-check"></i><b>2.1</b> Phylogenies</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="research.html"><a href="research.html"><i class="fa fa-check"></i><b>3</b> Research</a><ul>
+<li class="chapter" data-level="3.1" data-path="research.html"><a href="research.html#annotated-bibliography-assignment"><i class="fa fa-check"></i><b>3.1</b> Annotated Bibliography assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
+<li class="chapter" data-level="5" data-path="computational-skills.html"><a href="computational-skills.html"><i class="fa fa-check"></i><b>5</b> Computational skills</a><ul>
+<li class="chapter" data-level="5.1" data-path="computational-skills.html"><a href="computational-skills.html#access-from-off-campus"><i class="fa fa-check"></i><b>5.1</b> Access from off campus</a></li>
+<li class="chapter" data-level="5.2" data-path="computational-skills.html"><a href="computational-skills.html#on-a-mac"><i class="fa fa-check"></i><b>5.2</b> On a Mac</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="computational-skills.html"><a href="computational-skills.html#getting-access"><i class="fa fa-check"></i><b>5.2.1</b> Getting access</a></li>
+<li class="chapter" data-level="5.2.2" data-path="computational-skills.html"><a href="computational-skills.html#log-in-to-the-server"><i class="fa fa-check"></i><b>5.2.2</b> Log in to the server</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="computational-skills.html"><a href="computational-skills.html#on-a-pc"><i class="fa fa-check"></i><b>5.3</b> On a PC</a></li>
+<li class="chapter" data-level="5.4" data-path="computational-skills.html"><a href="computational-skills.html#basic-navigation"><i class="fa fa-check"></i><b>5.4</b> Basic navigation</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="getting-your-data.html"><a href="getting-your-data.html"><i class="fa fa-check"></i><b>6</b> Getting your data</a><ul>
+<li class="chapter" data-level="6.1" data-path="getting-your-data.html"><a href="getting-your-data.html#download"><i class="fa fa-check"></i><b>6.1</b> Download</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="phylogenetic-markers.html"><a href="phylogenetic-markers.html"><i class="fa fa-check"></i><b>7</b> Phylogenetic markers</a><ul>
+<li class="chapter" data-level="7.1" data-path="phylogenetic-markers.html"><a href="phylogenetic-markers.html#sisrs"><i class="fa fa-check"></i><b>7.1</b> SISRS</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="building-trees.html"><a href="building-trees.html"><i class="fa fa-check"></i><b>8</b> Building Trees</a><ul>
+<li class="chapter" data-level="8.1" data-path="building-trees.html"><a href="building-trees.html#phylogenetic-data"><i class="fa fa-check"></i><b>8.1</b> Phylogenetic Data</a></li>
+<li class="chapter" data-level="8.2" data-path="building-trees.html"><a href="building-trees.html#background-on-tree-building"><i class="fa fa-check"></i><b>8.2</b> Background on tree building</a></li>
+<li class="chapter" data-level="8.3" data-path="building-trees.html"><a href="building-trees.html#building-trees-from-your-data"><i class="fa fa-check"></i><b>8.3</b> Building trees from your data</a></li>
+<li class="chapter" data-level="8.4" data-path="building-trees.html"><a href="building-trees.html#visualizing-trees"><i class="fa fa-check"></i><b>8.4</b> Visualizing trees</a></li>
+<li class="chapter" data-level="8.5" data-path="building-trees.html"><a href="building-trees.html#what-does-my-tree-mean"><i class="fa fa-check"></i><b>8.5</b> What does my tree mean?</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>9</b> Results</a><ul>
+<li class="chapter" data-level="9.1" data-path="results.html"><a href="results.html#what-does-your-tree-tell-you"><i class="fa fa-check"></i><b>9.1</b> What does your tree tell you?</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="sharing-your-results.html"><a href="sharing-your-results.html"><i class="fa fa-check"></i><b>10</b> Sharing your results</a><ul>
+<li class="chapter" data-level="10.1" data-path="sharing-your-results.html"><a href="sharing-your-results.html#start-reading"><i class="fa fa-check"></i><b>10.1</b> Start reading</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="sharing-your-results.html"><a href="sharing-your-results.html#develop-a-bibliography"><i class="fa fa-check"></i><b>10.1.1</b> Develop a bibliography</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="sharing-your-results.html"><a href="sharing-your-results.html#presentation"><i class="fa fa-check"></i><b>10.2</b> Presentation</a></li>
+<li class="chapter" data-level="10.3" data-path="sharing-your-results.html"><a href="sharing-your-results.html#writing-a-paper"><i class="fa fa-check"></i><b>10.3</b> Writing a paper</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="sharing-your-results.html"><a href="sharing-your-results.html#intro"><i class="fa fa-check"></i><b>10.3.1</b> Intro</a></li>
+<li class="chapter" data-level="10.3.2" data-path="sharing-your-results.html"><a href="sharing-your-results.html#methods-1"><i class="fa fa-check"></i><b>10.3.2</b> Methods</a></li>
+<li class="chapter" data-level="10.3.3" data-path="sharing-your-results.html"><a href="sharing-your-results.html#results-1"><i class="fa fa-check"></i><b>10.3.3</b> Results</a></li>
+<li class="chapter" data-level="10.3.4" data-path="sharing-your-results.html"><a href="sharing-your-results.html#discussion"><i class="fa fa-check"></i><b>10.3.4</b> Discussion</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i>Appendix</a><ul>
+<li class="chapter" data-level="10.4" data-path="appendix.html"><a href="appendix.html#research-ideas"><i class="fa fa-check"></i><b>10.4</b> Research Ideas</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="citation-tracker-exercise.html"><a href="citation-tracker-exercise.html"><i class="fa fa-check"></i>Citation Tracker Exercise</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Phylogenomics with SISRS</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="methods" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Methods</h1>
+<p>Once you have settled on a group that you are interested in studying you need to find out
+if there are data to help you answer your research questions.
+We’ll be using genome sequence data to determine the species relationships in your group.
+Read the following to learn more about sequencing and molecular phylogenetics:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=fCd6B5HRaZ8">2nd generation sequencing</a></li>
+<li><a href="https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-phylogenetics/why-use-molecular-data/">Learn more about how molecular data is used in phylogenetics</a>.</li>
+<li><a href="https://www.ncbi.nlm.nih.gov/books/NBK21122/">Genomes ch. 16</a></li>
+</ul>
+<p>To acquire molecular data to compare the species in your group
+you either need to do a lot of sequencing, or find sequencing someone else has done.
+Becuase sequencing takes time and money we’ll try using data that is already available
+and just hasn’t been analyzed to answer the questions you are interested in.</p>
+<ol style="list-style-type: decimal">
+<li>Go to the <a href="https://www.ebi.ac.uk/ena/browser/advanced-search">European Nucleotide Archive</a> <em>add background</em></li>
+<li>Select: Data type: Raw Reads</li>
+<li>Query: pick taxonomy (include subordinate)</li>
+<li>Add to query box: <code>AND instrument_platform=&quot;ILLUMINA&quot; AND (library_strategy=&quot;RNA-Seq&quot; OR library_strategy=&quot;WGS&quot;)</code></li>
+<li>Fields: base_count, fastq_bytes, fastq_ftp, read_count, scientific_name, tax_id</li>
+<li>Click Download report tsv</li>
+</ol>
+<p>Now you have a list of available data and relevant information to get it.
+It should look the same as what you saw in your browser.
+You can open this file in Excel or Google Sheets.</p>
+<p>It might look like you have a lot of data, but it’s actually hard to tell from this page.
+You might have a lot of data for one or a few species and not enough to analyze your whole group.
+To figure out which data you will need sort this list of samples by scientific_name.
+For each species (scientific_name column) you will need about 10 times the amount of bases as the size of the genome
+(i.e. you should have on average about 10 sequence fragments covering each base in the genome).
+To figure out how many bases you need use Google and Google Scholar to find the size of the genome of one of your species.
+Now that you know how many bases you need select the samples you want (for a total of 10x coverage) and save those in a separate sheet.</p>
+<p>The video on sequencing explains how the two ends of each genome fragment are sequenced.
+That means that most of your samples have two files to download.
+These are both listed in the fastq_ftp column.
+Highlight the fastq_ftp column, right-click, and select insert.
+Use Text-to-column in the Data menu to separate the column in two based on a semicolon.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="research.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="computational-skills.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-method.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

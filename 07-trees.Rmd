@@ -1,85 +1,24 @@
 # Building Trees
 
-## Phylogenetic Data
-
-You now have alignments of variable sites useful for building phylogenies.
-If you aren't sure what that means refer back to some of the earlier materials.
-
 ## Background on tree building
 
-Read more on phylogenies:
+[Background](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-a-phylogeny/aspects-of-phylogenies/)
 
-* [Background](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-a-phylogeny/aspects-of-phylogenies/)
+https://zageno.com/l/guide-to-different-methods-of-phylogenetic-tree-construction?utm_source=facebook&utm_medium=article&utm_campaign=r_phylogenetic_tree_construction
 
-* https://zageno.com/l/guide-to-different-methods-of-phylogenetic-tree-construction
+https://www.youtube.com/playlist?list=PLZv47g5zgNKVcBDLTZzA6VT5bSHYr5KGj
 
-* https://www.youtube.com/playlist?list=PLZv47g5zgNKVcBDLTZzA6VT5bSHYr5KGj
+## Building trees from your data
 
-## Building trees from your data (concatenation)
-
-First, we will take a simple "concatenation" approach to analyzing your data.
-That means we will analyze all the sites together and expect them to come from one evolutionary history.
-There are more complex ways to consider the data, including different histories and different models that you can try later.
-
-Edit the `slurm_submissions/runRaxml.sh` slurm script for your data and submit it.
-This will generate plain text files of the best estimate of the phylogeny for your data using a Maximum Likelihood algorithm.
+Run IQTree or RAxML
+Run other methods
+Different group members should research different approaches
 
 ## Visualizing trees
 
-* Download the file that starts with RAxML_bipartitions (with the suffix for your analysis) to your personal computer.
-  - On a Mac:
-    * Open a new tab in your Terminal
-    * cd to a folder on your local computer where you want to keep your results
-    * type `scp [username]@ssh3.hac.uri.edu:[full path to your file]` .
-  - On a PC:
-    * Download [Cyberduck](https://cyberduck.io/) to allow file transfers to your computer.
-    * Click Open Connection
-    * Select SFTP
-    * Enter `ssh3.hac.uri.edu` as the server, your username, and select your ssh key
-    * Once connected find the file in the folder and download it
-
-* Download [Figtree](https://github.com/rambaut/figtree/releases) to your personal computer.
-
-* Open your tree file in Figtree
-* Root tree using your outgroup (click on the species and click Reroot).
-* Look at bootstrap support on each node by changing the Node Label to `label`.
+R - ape etc
+Compare results
 
 ## What does my tree mean?
 
 https://artic.network/how-to-read-a-tree.html
-
-## Measure of support on your tree
-
-You have looked at the bootstrap as a measure of support for each relationship.
-The bootstrap is an approach that asks if you resample the data many times, what proportion
-of those resampled datasets give you the same answer.
-We'll also look at an alternate measure of support: site concordance factor (sCF).
-To think about sCF first consider that for any given node there are three ways to group the
-clades connected to it.
-To get sCF the computer checks randomly chosen sites in your alignment for support for the
-three possible groups.
-If all arrangements of groups are equally supported then the sCF would be 33%.
-If a particular arrangement is supported (i.e. one pair of clades are siblings) then the sCF value will be higher.
-
-Edit the `slurm_submissions/runSCF.sh` slurm script for your data and submit it.
-
-Download the file starting with the run name you provided and ending with `.cf.tree`.
-Open this file in FigTree.
-Compare the support in this tree with your bootstrap support.
-
-## Building trees from your data (Multispecies coalescent)
-
-Edit the `slurm_submissions/runSVDQ.sh` slurm script for your data and submit it.
-
-Adjust the email, the number of processors if needed, path and name of the input file (`alignmentFile`), and submit the script as sbatch job.
-
-Download the file `svdq.tre` (for the SVDQuartets multispecies coalescent analysis) to your personal computer.
-
-Open this tree in FigTree.
-
-Supports?
-
-If this tree appears different from your first tree, repeat the sCF analysis using this tree
-and changing the output file name.
-
-## Missing data

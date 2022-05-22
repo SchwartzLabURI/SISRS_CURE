@@ -36,6 +36,10 @@ Let's start by learning how to log in the our server and run commands without cl
 * In your Terminal at the prompt type `ssh -l username ssh3.hac.uri.edu` , replacing `username` with the first part of your email address.
 * You should see a prompt with `ssh3`
 
+### Video tutorials
+
+For a review or clarification of the above and some information you will use later, check out the [https://its.uri.edu/research-computing-center/research-seminars/](URI HPC Training Videos) (scroll down past Seminars to Training).
+
 ## On a PC
 
 * Download and install [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/). 
@@ -44,6 +48,10 @@ Let's start by learning how to log in the our server and run commands without cl
 * In the box marked Host Name type `ssh3.hac.uri.edu`, replacing username with the first part of your email address.
 * Use your email username to log in
 * You should see a prompt with `ssh3`
+
+### Video tutorials
+
+For a review or clarification of the above and some information you will use later, check out the [https://its.uri.edu/research-computing-center/research-seminars/](URI HPC Training Videos) (scroll down past Seminars to Training).
 
 ## Basic navigation
 

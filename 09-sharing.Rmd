@@ -20,6 +20,8 @@ Great example: https://www.youtube.com/watch?v=fZ0NzM6g7jk
 
 ## Writing a paper
 
+Start by reading [this chapter](https://bookdown.org/pkaldunn/Book/WritingResearch.html).
+
 Your presentation forms a great outline for your final paper.
 Start by writing down everything you said for your presentation. Try noting different subsections.
 You might have to read more to completely elaborate on what you want to communicate.
@@ -30,11 +32,31 @@ Example paper: https://www.scopus.com/record/display.uri?eid=2-s2.0-85030790294&
 
 https://writing-speech.dartmouth.edu/learning/materials/sources-and-citations-dartmouth
 
-### Intro
-
 ### Methods
+
+Start by writing down your methods. You know what you did so this is usually the best place to start.
+
+Watch the following for ideas:
 https://www.youtube.com/watch?v=JzWUmkxlbEw
 
 ### Results
 
+Next, write your results.
+Start by putting your phylogeny in your paper.
+Based on your presentation you should know what you observe here.
+
+### Intro
+
+Move on to your Introduction.
+Before you write anything new, go back to what you wrote at the beginning of this course.
+What information is important about your group?
+What were your initial hypotheses about relationships?
+What conflicts in prior results were you interested in?
+Were their traits whose evolutionary process was in question?
+
 ### Discussion
+
+Finally, wrap up the paper.
+What conclusions have you made that you want to share with readers?
+You should recap some of the same questions that came up in your introduction.
+Do you have answers now?

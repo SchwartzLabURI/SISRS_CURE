@@ -2,7 +2,6 @@
 
 Once you have settled on a group that you are interested in studying you need to find out
 if there are data to help you answer your research questions.
-Read chapters 1-5 to learn more [about the research process generally](https://bookdown.org/pkaldunn/Book/Intro.html).
 We'll be using genome sequence data to determine the species relationships in your group.
 Read the following to learn more about sequencing and molecular phylogenetics:
 

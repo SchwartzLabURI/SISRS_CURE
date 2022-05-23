@@ -1,5 +1,7 @@
 # Research
 
+Read chapters 1-5 to learn more [about the research process generally](https://bookdown.org/pkaldunn/Book/Intro.html).
+
 ## Selecting a group to study
 
 Now that you have a sense of why phylogenies are so important

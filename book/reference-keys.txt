@@ -48,6 +48,3 @@ methods
 results-1
 intro
 discussion
-getting-your-data-1
-download-1
-sisrs-1

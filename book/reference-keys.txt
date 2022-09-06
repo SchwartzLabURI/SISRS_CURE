@@ -6,6 +6,7 @@ selecting-a-group-to-study
 learning-about-your-group
 finding-research-articles
 reading-research-articles
+reading-for-your-research
 more-background-information
 freewrite-assignment
 annotated-bibliography-assignment

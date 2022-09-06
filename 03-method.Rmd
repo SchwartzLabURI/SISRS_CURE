@@ -6,7 +6,6 @@ We'll be using genome sequence data to determine the species relationships in yo
 Read the following to learn more about sequencing and molecular phylogenetics:
 
 * [2nd generation sequencing](https://www.youtube.com/watch?v=fCd6B5HRaZ8)
-* [Learn more about how molecular data is used in phylogenetics](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-phylogenetics/why-use-molecular-data/).
 * [Genomes ch. 16](https://www.ncbi.nlm.nih.gov/books/NBK21122/)
 
 To acquire molecular data to compare the species in your group 

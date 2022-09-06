@@ -6,8 +6,7 @@ Read chapters 1-5 to learn more [about the research process generally](https://b
 
 Now that you have a sense of why phylogenies are so important
 you can start to think about a group whose evolutionary history you might like to investigate.
-Watch [this video](https://www.youtube.com/watch?v=cVaw7nF72Aw) to understand the motivation behind phylogenetic research.
-You will see that our understanding of how species are related is constantly changing.
+Our understanding of how species are related is constantly changing.
 That means that you can play a role you can play in determining how evolution happened.
 
 You can pick any group to study or ask your instructor for suggestions.
@@ -64,25 +63,26 @@ Check out these recommendations on how to read a paper efficiently and effective
 * [https://www.youtube.com/watch?v=Gv5ku0eoY6k](https://www.youtube.com/watch?v=Gv5ku0eoY6k)
 * [https://www.youtube.com/watch?v=IeaD0ZaUJ3Y](https://www.youtube.com/watch?v=IeaD0ZaUJ3Y)
 
-Continue to search for and read background material using the [Citation Tracking Activity](citation-tracker-exercise.html). 
+### Reading for your research
 
-At this point you may have picked a group to study, and hopefully you have a good reason for this group.
+In class we will start to search for and read background material using the [Citation Tracking Activity](citation-tracker-exercise.html). 
+
+After some background research you may have a preliminary idea of which group to study, and hopefully you have a good reason for this group.
 Keep in mind that you may be fascinated by a particular group of species, but you still have to convince others to be equally fascinated.
 If you aren't sure, try explaining your project to a friend or roommate.
 Also check out [past projects](research-ideas.html) for example research questions.
 
 ### More background information
 
-At this point you should have a group of species and a (possibly vague) question.
+Now that you have a group of species and a (possibly vague) question you can begin to write your ideas.
 You won't have everything pinned down precisely, but write down what you have.
-Now let's research your group a bit more.
+Let's research your group a bit more.
 First, find out more about your group, particularly the number of species and its age,
 by looking at Wikipedia and searching Google.
 If you picked a group that has a lot of species (e.g. birds, mammals),
 see if you can pick a smaller clade within your group of interest.
 You can also find out more about the species in your group by searching
-the [Open Tree of Life](https://tree.opentreeoflife.org/)
-and [TimeTree](http://timetree.org/).
+the [TimeTree](http://timetree.org/).
 
 ## Freewrite assignment
 

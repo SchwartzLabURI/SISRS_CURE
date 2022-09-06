@@ -2,11 +2,14 @@
 
 ## Background on tree building
 
-[Background](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-a-phylogeny/aspects-of-phylogenies/)
+Watch the following videos on [phylogenetic tree construction](https://www.youtube.com/playlist?list=PLZv47g5zgNKVcBDLTZzA6VT5bSHYr5KGj)
+- Video 1: review
+- Video 2: Tree building (UPGMA)
+- Video 6: Tree building (NJ)
+- Video 5: Tree building (parsimony)
 
-https://zageno.com/l/guide-to-different-methods-of-phylogenetic-tree-construction?utm_source=facebook&utm_medium=article&utm_campaign=r_phylogenetic_tree_construction
-
-https://www.youtube.com/playlist?list=PLZv47g5zgNKVcBDLTZzA6VT5bSHYr5KGj
+Don't worry about the details - I just want you to get a sense of different methods of tree building rather than viewing this process as a "black box" where you just put your data into a computer program and get an answer. For a summary read
+[A brief guide to the different methods of phylogenetic tree construction](https://zageno.com/l/guide-to-different-methods-of-phylogenetic-tree-construction)
 
 ## Building trees from your data
 

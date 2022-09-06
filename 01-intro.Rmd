@@ -1,21 +1,20 @@
 # Introduction 
 
 In this class we are going to conduct a research project using genomic data to figure out how a set of species are related (i.e. build phylogenies).
-Start by watching this [introduction to animal evolution](https://www.youtube.com/watch?v=zgM0F6UmC70).
+Start by watching the Preview and episodes 1, 5, 12, and 14 in this [series on animal evolution](https://www.youtube.com/watch?v=zgM0F6UmC70).
 
 ## Phylogenies
 
-If you're familiar with the basics of evolution you're probably familiar with phylogenies:
-the tree-like structure that allows you to tell how closely related species are.
-For example, here is a simply phylogeny of some groups of vertebrates:
+For a more detailed explanation of phylogenies go through the following [course](https://www.ebi.ac.uk/training/online/courses/introduction-to-phylogenetics/#vf-tabs__section--contents).  
+
+Now that you've seen some phylogenies and how they are used, here's another example of a simply phylogeny of some groups of vertebrates.
+Remember, 
+the tree-like structure allows you to tell how closely related species are.
 
 ![](https://cdn.britannica.com/83/199483-050-7A240BE2.jpg)
 
-To gain further understanding of phylogenies and phylogenetics check out  
+Use this phylogeny to practive tracing back who shares recent and not-so-recent common ancestors.
+For example, do mammals and birds share a common ancestor more recently than snakes and mammals?
+Also practice using the noted trait evolution to think about which groups have which characteristics.
 
-1. [A brief description of phylogenetics](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-phylogenetics/).  
-2. [Importance of phylogenetics](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/why-is-phylogenetics-important/)  
-3. [Phylogenies](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-a-phylogeny/)  
-4. [Example phylogeny: a family tree](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-a-phylogeny/the-example-of-a-family-tree/)  
-5. [Phylogenies as evolutionary history](https://www.ebi.ac.uk/training-beta/online/courses/introduction-to-phylogenetics/what-is-a-phylogeny/interpreting-patterns-of-relatedness/)  
-6. [Phylogenies as a tool](https://evolution.berkeley.edu/evolibrary/article/evo_10)
+If you'd like a little more practice, here's another [resource](https://evolution.berkeley.edu/evolution-101/the-history-of-life-looking-at-the-patterns/).

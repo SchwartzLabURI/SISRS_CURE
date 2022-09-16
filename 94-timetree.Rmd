@@ -1,0 +1,10 @@
+# Citations using TimeTree {-}
+
+An alternate point to start for phylogenetic research is the website [TimeTree](http://timetree.org/).
+
+1. Put the scientific name of your group in the Specify a Group of Taxa box. You may need to look up your group first on Google or Wikipedia.
+2. Click Search then Show Timetree
+3. Look for ambiguities in the tree (shown as multiple branches coming from a single node). Don't worry if you don't see any though. If only results from a single study are entered the results would appear unambiguous even if uncertainties can be found.
+4. Pick a couple of taxon names and write them down. Try to encompass the history of your group.
+5. Go back to the main TimeTree page and enter your taxa in the boxes for Specify 2 Taxon Names.
+6. Scroll down for the literature that supports the resulting phylogeny.

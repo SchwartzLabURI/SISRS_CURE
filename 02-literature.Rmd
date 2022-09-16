@@ -41,6 +41,8 @@ How to use Google Scholar:
 
 If you are struggling to find papers that seem relevant to your research topic try the URI Library's guide to [developing an effective search strategy](https://www.youtube.com/watch?v=vpw8aysfdng).
 
+An alternate point to start looking for papers with phylogenies for your research is outlined [here](citations-using-timetree.html).
+
 When you find an article you want, you can access it as a member of the URI community.
 However, if you are off campus the journal may not recognize you.
 In Google Scholar click the menu bar in the upper left and choose settings.

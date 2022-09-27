@@ -12,6 +12,7 @@ freewrite-assignment
 annotated-bibliography-assignment
 reflection-assignment
 getting-data
+example-data-and-trees
 computational-skills
 access-from-off-campus-optional
 on-a-mac

@@ -41,7 +41,7 @@ Use Text-to-column in the Data menu to separate the column in two based on a sem
 Once you are satisfied with the species you can work,
 use Google to find a species that is related, but not included in,
 your group. For example, if you are studying Primates you might select a rabbit as a related species.
-Go back to the ENA and find data for this species and add the appropriate lines to your download script.
+Go back to the ENA and find data for this species and add the appropriate information to your spreadsheet.
 
 ## Example data and trees
 

@@ -55,6 +55,7 @@ Before we get into working with large data, let's take a look at a smaller more 
 * Experiment with different tree building options
 
 Look at the tree produced by this method.
+
 * What species are the most distantly related? Is this tree accurate according to what you know?
 * Select the ancestor of the group that should be most distantly related to all other groups. Click root. How does this change your understanding of the tree and relationships?
 * Select a node in the tree and click swap siblings. Does this change the tree?
@@ -62,5 +63,5 @@ Look at the tree produced by this method.
   * that have no information
   * with information that matches the tree
   * with information that contradicts the tree - how would you interpret this?
-* Repeat you analysis. This time click Resample Tree. How did this change the tree? Note the numbers on each node, which are a measure of the confidence that the decendents of that node share this common ancestor.
+* Repeat your analysis. This time click Resample Tree. How did this change the tree? Note the numbers on each node, which are a measure of the confidence that the decendents of that node share this common ancestor.
 

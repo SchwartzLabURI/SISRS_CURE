@@ -18,9 +18,7 @@ access-from-off-campus-optional
 on-a-mac
 getting-access
 log-in-to-the-server
-video-tutorials
 on-a-pc
-video-tutorials-1
 basic-navigation
 getting-your-data
 download

@@ -1,6 +1,7 @@
 getting-started
 introduction
 phylogenies
+resources
 research
 selecting-a-group-to-study
 learning-about-your-group

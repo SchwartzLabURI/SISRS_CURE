@@ -19,7 +19,7 @@ Commands in your shell script and just like commands on the command line.
 For each file you want to download type the following (separated by spaces) on a single line:
 
 * `wget`
-* The ftp link
+* The ftp link (make sure it is not preceed by http://)
 * `-P`
 * the scientific name (as one word without spaces)
 

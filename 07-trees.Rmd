@@ -3,6 +3,7 @@
 ## Background on tree building
 
 Watch the following videos on [phylogenetic tree construction](https://www.youtube.com/playlist?list=PLZv47g5zgNKVcBDLTZzA6VT5bSHYr5KGj)
+
 - Video 1: review
 - Video 2: Tree building (UPGMA)
 - Video 6: Tree building (NJ)
@@ -39,7 +40,7 @@ First figure out the complete path of your file using `pwd`.
 
 #### On a PC
 
-See Transfering Data on [URI's HPC Instructions](https://web.uri.edu/hpc-research-computing/using-andromeda/). 
+See Transfering Data on [URI's HPC Instructions](https://its.uri.edu/research-computing/using-andromeda/#transfer). 
 
 ### Visualize your tree
 

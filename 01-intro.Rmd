@@ -18,3 +18,7 @@ For example, do mammals and birds share a common ancestor more recently than sna
 Also practice using the noted trait evolution to think about which groups have which characteristics.
 
 If you'd like a little more practice, here's another [resource](https://evolution.berkeley.edu/evolution-101/the-history-of-life-looking-at-the-patterns/).
+
+## Resources
+
+I recommend obtaining a copy of Baum & Smith: Tree Thinking and will note recommended readings along the way.

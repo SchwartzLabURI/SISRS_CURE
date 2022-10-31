@@ -23,7 +23,7 @@
 <meta name="author" content="Rachel Schwartz" />
 
 
-<meta name="date" content="2022-10-19" />
+<meta name="date" content="2022-10-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,9 +178,9 @@ you either need to do a lot of sequencing, or find sequencing someone else has d
 Becuase sequencing takes time and money we’ll try using data that is already available
 and just hasn’t been analyzed to answer the questions you are interested in.</p>
 <ol style="list-style-type: decimal">
-<li>Go to the <a href="https://www.ebi.ac.uk/ena/browser/advanced-search">European Nucleotide Archive</a> <a href="https://www.ebi.ac.uk/ena/browser/about">Learn more about ENA here</a></li>
-<li>Select: Data type: Raw Reads</li>
-<li>Query: pick taxonomy (include subordinate)</li>
+<li>Go to the <a href="https://www.ebi.ac.uk/ena/browser/advanced-search">European Nucleotide Archive</a> (<a href="https://www.ebi.ac.uk/ena/browser/about">Learn more about ENA here</a>)</li>
+<li>Select: Data type: Raw Reads (click next)</li>
+<li>Query: Select Taxonomy, Select filter: NCBI Taxonomy, Type a taxon name in the search box, and select ‘include subordinate’</li>
 <li>Add to query box: <code>AND instrument_platform=&quot;ILLUMINA&quot; AND (library_strategy=&quot;RNA-Seq&quot; OR library_strategy=&quot;WGS&quot;)</code></li>
 <li>Fields: scientific_name, base_count, fastq_ftp</li>
 <li>Click Download report tsv</li>

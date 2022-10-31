@@ -15,9 +15,9 @@ and just hasn't been analyzed to answer the questions you are interested in.
 
 1. Go to the [European Nucleotide Archive](https://www.ebi.ac.uk/ena/browser/advanced-search) ([Learn more about ENA here](https://www.ebi.ac.uk/ena/browser/about))
 2. Select: Data type: Raw Reads (click next)
-3. Query: Select Taxonomy, Select filter: NCBI Taxonomy, Type a taxon name in the search box, and select 'include subordinate'
-4. Add to query box: ` AND instrument_platform="ILLUMINA" AND (library_strategy="RNA-Seq" OR library_strategy="WGS")`
-5. Fields: scientific_name, base_count, fastq_ftp
+3. Query: Select Taxonomy, Select filter: NCBI Taxonomy, Type a taxon name in the search box and select the correct group from the dropdown menu, select 'include subordinate'
+4. Add to query box: ` AND instrument_platform="ILLUMINA" AND (library_strategy="RNA-Seq" OR library_strategy="WGS")` (click next twice)
+5. Manually select fields: scientific_name, base_count, fastq_ftp (click the right arrow after each to put it in the Selected Fields box) (click search)
 6. Click Download report tsv
 
 Now you have a list of available data and relevant information to get it.

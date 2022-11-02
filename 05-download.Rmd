@@ -10,7 +10,9 @@ First we need to create a **script** to make this happen.
 A script is a detailed set of instructions for the computer to follow.
 Your script is going to be a series of instructions to download files and put them in particular folders so you can access them.
 We are going to use the program `nano`, which is built into the system, to write this script.
-Type `nano download_data.sh`.
+
+* Type `nano download_data.sh`.
+
 Again, we have a command followed by an argument (in this case the name of the file we are creating).
 Notice how the file ends in `.sh`.
 Just like you have files that end in `.xls` or `.doc` this tells the computer the file is a shell script.
@@ -23,11 +25,11 @@ For each file you want to download type the following (separated by spaces) on a
 * `-P`
 * the scientific name (as one word without spaces)
 
-Repeat with the second ftp link for the sample if it has one.
+* Repeat with the second ftp link for the sample if it has one.
 
-Repeat this process for each sample you want to download.
+* Repeat this process for each sample you want to download.
 
-Exit `nano` using `ctrl-x` and save your changes.
+* Exit `nano` using `ctrl-x` and save your changes.
 
 There are many people doing work on the cluster so we need take advantage of the computing power of the cluster
 so that each student in the class can run their analysis on a separate computer.
@@ -47,10 +49,7 @@ cd $SLURM_SUBMIT_DIR
 
 ```
 
-Replace the email address on the second-to-last line with yours.
-
-Quit nano and save.
-
-Submit your job as `sbatch download_data.sh`.
-
-You can monitor the progress of your download by listing the contents of your `data` folder and the contents of the folders inside it.
+* Replace the email address on the second-to-last line with yours.
+* Quit nano and save.
+* Submit your job as `sbatch download_data.sh`.
+* Monitor the progress of your download by listing the contents of your `data` folder and the contents of the folders inside it.

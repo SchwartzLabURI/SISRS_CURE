@@ -23,7 +23,7 @@
 <meta name="author" content="Rachel Schwartz" />
 
 
-<meta name="date" content="2022-10-30" />
+<meta name="date" content="2022-11-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -167,21 +167,39 @@
 <h1><span class="header-section-number">Chapter 7</span> Phylogenetic markers<a href="phylogenetic-markers.html#phylogenetic-markers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="sisrs" class="section level2 hasAnchor">
 <h2><span class="header-section-number">7.1</span> SISRS<a href="phylogenetic-markers.html#sisrs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In your main folder (cd back there if you need to) type</p>
-<p><code>git clone https://github.com/SchwartzLabURI/SISRS.git</code> to download the software we will use to analyze your data.
-Since you only have to do this once don’t worry about details beyond the idea that you are downloading a program.</p>
-<p>Now we need to work with scripts (just like before) to run each step of the analysis.
-Move into the SISRS folder and then the scripts folder inside that.
-Slurm is the name of the software used to keep track of all the jobs you submit.
-Use nano to open <code>slurm_submissions/1_submit.slurm</code>.
-Change all the lines marked <code>CHANGE</code> to be relevant to your work.
-Exit nano and save the script.</p>
-<p>Submit your first job as <code>sbatch slurm_submissions/1_submit.slurm</code>.
-You will get an email when your job is done.</p>
-<p>Continue to edit scripts and submit jobs for steps 2, 3, 4, 5, 6, 6b, 6c, 6d, and 7, changing the information as with the first script.
-Wait for each script to report that it has completed before continuing to the next step and do not continue if your recieve any error messages.
-You will also need to change the ntasks-per-node line to 20 and use 20 processors any time that information is requested. Look for lines marked CHANGE.
-At the last step list several numbers for the missing flag in the range of approximately half of your species.</p>
+<p>In your main folder (cd back there if you need to) download the software we will use to analyze your data.</p>
+<ul>
+<li>Type <code>git clone https://github.com/SchwartzLabURI/SISRS.git</code></li>
+</ul>
+<p>Since you only have to do this once don’t worry about details beyond the idea that you are downloading a program.</p>
+<p>Now we need to work with scripts (just like before) to run each step of the analysis.</p>
+<ul>
+<li>Move into the SISRS folder</li>
+<li>Move into the scripts folder</li>
+</ul>
+<p>Slurm is the name of the software used to keep track of all the jobs you submit.</p>
+<ul>
+<li>Use nano to open <code>slurm_submissions/1_submit.slurm</code>.</li>
+<li>Change all the lines marked <code>CHANGE</code> to be relevant to your work.</li>
+<li>Exit nano and save the script.</li>
+<li>Submit your first job as <code>sbatch slurm_submissions/1_submit.slurm</code>.</li>
+</ul>
+<p>You will get an email when your job is done.</p>
+<p>Continue to edit scripts and submit jobs, changing the information as with the first script. For the ntasks-per-node line use 36 processors any time that information is requested.</p>
+<p><strong>Wait for each script to report that it has completed before continuing to the next step and do not continue if your recieve any error messages.</strong></p>
+<ul>
+<li>slurm_submissions/1_submit.slurm</li>
+<li>slurm_submissions/2_submit.slurm</li>
+<li>slurm_submissions/3_submit.slurm</li>
+<li>slurm_submissions/4_submit.slurm</li>
+<li>slurm_submissions/5_submit.slurm</li>
+<li>slurm_submissions/6_submit_array.slurm</li>
+<li>slurm_submissions/6b_submit_array.slurm</li>
+<li>slurm_submissions/6c_submit_array.slurm</li>
+<li>slurm_submissions/6d_submit_array.slurm</li>
+<li>slurm_submissions/7_submit.slurm</li>
+</ul>
+<p><strong>For step 7 list several numbers for the missing flag in the range of approximately half of your species.</strong></p>
 <div id="what-sisrs-does" class="section level3 hasAnchor">
 <h3><span class="header-section-number">7.1.1</span> What SISRS does<a href="phylogenetic-markers.html#what-sisrs-does" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The software we have just used automates the process of identifying orthologous genetic markers.

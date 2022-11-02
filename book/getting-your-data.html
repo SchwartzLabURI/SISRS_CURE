@@ -23,7 +23,7 @@
 <meta name="author" content="Rachel Schwartz" />
 
 
-<meta name="date" content="2022-10-30" />
+<meta name="date" content="2022-11-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -173,9 +173,11 @@ If you aren’t continuing from the last chapter you may need to use the full pa
 First we need to create a <strong>script</strong> to make this happen.
 A script is a detailed set of instructions for the computer to follow.
 Your script is going to be a series of instructions to download files and put them in particular folders so you can access them.
-We are going to use the program <code>nano</code>, which is built into the system, to write this script.
-Type <code>nano download_data.sh</code>.
-Again, we have a command followed by an argument (in this case the name of the file we are creating).
+We are going to use the program <code>nano</code>, which is built into the system, to write this script.</p>
+<ul>
+<li>Type <code>nano download_data.sh</code>.</li>
+</ul>
+<p>Again, we have a command followed by an argument (in this case the name of the file we are creating).
 Notice how the file ends in <code>.sh</code>.
 Just like you have files that end in <code>.xls</code> or <code>.doc</code> this tells the computer the file is a shell script.</p>
 <p>Commands in your shell script and just like commands on the command line.
@@ -184,11 +186,11 @@ For each file you want to download type the following (separated by spaces) on a
 <li><code>wget</code></li>
 <li>The ftp link (make sure it is not preceed by <a href="http://" class="uri">http://</a>)</li>
 <li><code>-P</code></li>
-<li>the scientific name (as one word without spaces)</li>
+<li><p>the scientific name (as one word without spaces)</p></li>
+<li><p>Repeat with the second ftp link for the sample if it has one.</p></li>
+<li><p>Repeat this process for each sample you want to download.</p></li>
+<li><p>Exit <code>nano</code> using <code>ctrl-x</code> and save your changes.</p></li>
 </ul>
-<p>Repeat with the second ftp link for the sample if it has one.</p>
-<p>Repeat this process for each sample you want to download.</p>
-<p>Exit <code>nano</code> using <code>ctrl-x</code> and save your changes.</p>
 <p>There are many people doing work on the cluster so we need take advantage of the computing power of the cluster
 so that each student in the class can run their analysis on a separate computer.
 When you log in to the cluster you are on the “head node”.
@@ -203,10 +205,12 @@ In order to communicate information about your job to the cluster you need to ad
 
 cd $SLURM_SUBMIT_DIR
 </code></pre>
-<p>Replace the email address on the second-to-last line with yours.</p>
-<p>Quit nano and save.</p>
-<p>Submit your job as <code>sbatch download_data.sh</code>.</p>
-<p>You can monitor the progress of your download by listing the contents of your <code>data</code> folder and the contents of the folders inside it.</p>
+<ul>
+<li>Replace the email address on the second-to-last line with yours.</li>
+<li>Quit nano and save.</li>
+<li>Submit your job as <code>sbatch download_data.sh</code>.</li>
+<li>Monitor the progress of your download by listing the contents of your <code>data</code> folder and the contents of the folders inside it.</li>
+</ul>
 
 </div>
 </div>

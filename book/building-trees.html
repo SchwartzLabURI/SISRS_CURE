@@ -23,7 +23,7 @@
 <meta name="author" content="Rachel Schwartz" />
 
 
-<meta name="date" content="2022-11-02" />
+<meta name="date" content="2022-11-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -187,9 +187,12 @@ The software will try lots of different phylogenies and pick the case where the 
 When the software runs it will also try resampling the data to see how much support we have for each relationship we estimate.</p>
 <ul>
 <li>Use <code>nano</code> to open <code>runRAxML.sh</code> in the <code>slurm_submissions</code> folder.</li>
-<li>Change the email address and add the necessary file information.</li>
+<li>Change all lines marked CHANGE
+<ul>
+<li>The path to the alignment file should be the full path to one of the files labeled alignment_pi_m1_nogap.phylip-relaxed (yours may have a different number after m)</li>
+<li>To determine which of the m files to use, use <code>head -1</code> followed by the path to the file - you should have a value of at least several thousand as the second number. Try a file with a larger m value as needed.</li>
+</ul></li>
 <li>Submit the script as a slurm job.</li>
-<li>Repeat for different datasets with different amounts of missing data.</li>
 </ul>
 </div>
 </div>
@@ -201,9 +204,9 @@ When the software runs it will also try resampling the data to see how much supp
 <div id="on-a-mac-1" class="section level4 hasAnchor">
 <h4><span class="header-section-number">8.3.1.1</span> On a Mac<a href="building-trees.html#on-a-mac-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
-<li>Make a new terminal window.</li>
+<li>Make a new terminal window. You are currently on you local computer.</li>
 <li><code>cd</code> to a local folder where you will work on this project (make a new folder if you need to)</li>
-<li>type <code>scp username@ssh3.hac.uri.edu:path/filename .</code> (replacing username with your username, path with the path you just found and filename with the name of the output from raxml, which should start with RAxML_bipartitions)</li>
+<li>type <code>scp username@ssh3.hac.uri.edu:path/filename .</code> (replacing username with your username, path with the path you just found, and filename with the name of the output from raxml, which should start with RAxML_bipartitions)</li>
 </ul>
 </div>
 <div id="on-a-pc-1" class="section level4 hasAnchor">
@@ -247,7 +250,7 @@ This method is implemented in SVDQuartets.</p>
 However, bootstrap resampling can have limitations when using larger datasets.
 An alternative approach is to examine the proportion of sites that support each alternative hypothesis given a tree,
 similar to the SVDQ approach.
-You can calculate SCF support by editing the <code>runSCF.sh</code> script and inputing your tree and your alignment.
+You can calculate SCF support by editing the <code>runSCF.sh</code> script and inputting your tree and your alignment.
 If you estimated different trees using the above methods you may try more than one.</p>
 
 </div>

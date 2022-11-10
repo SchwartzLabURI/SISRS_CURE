@@ -22,9 +22,10 @@ The software will try lots of different phylogenies and pick the case where the 
 When the software runs it will also try resampling the data to see how much support we have for each relationship we estimate.
 
 * Use `nano` to open `runRAxML.sh` in the `slurm_submissions` folder.
-* Change the email address and add the necessary file information.
+* Change all lines marked CHANGE
+  - The path to the alignment file should be the full path to one of the files labeled alignment_pi_m1_nogap.phylip-relaxed (yours may have a different number after m)
+  - To determine which of the m files to use, use `head -1` followed by the path to the file - you should have a value of at least several thousand as the second number. Try a file with a larger m value as needed. 
 * Submit the script as a slurm job.
-* Repeat for different datasets with different amounts of missing data.
 
 ## Visualizing trees
 
@@ -34,9 +35,9 @@ First figure out the complete path of your file using `pwd`.
 
 #### On a Mac
 
-* Make a new terminal window. 
+* Make a new terminal window. You are currently on you local computer. 
 * `cd` to a local folder where you will work on this project (make a new folder if you need to)
-* type `scp username@ssh3.hac.uri.edu:path/filename .` (replacing username with your username, path with the path you just found and filename with the name of the output from raxml, which should start with RAxML_bipartitions)
+* type `scp username@ssh3.hac.uri.edu:path/filename .` (replacing username with your username, path with the path you just found, and filename with the name of the output from raxml, which should start with RAxML_bipartitions)
 
 #### On a PC
 
@@ -74,6 +75,6 @@ The bootstrap approach automatically implemented by RAxML is one method of deter
 However, bootstrap resampling can have limitations when using larger datasets.
 An alternative approach is to examine the proportion of sites that support each alternative hypothesis given a tree,
 similar to the SVDQ approach. 
-You can calculate SCF support by editing the `runSCF.sh` script and inputing your tree and your alignment.
+You can calculate SCF support by editing the `runSCF.sh` script and inputting your tree and your alignment.
 If you estimated different trees using the above methods you may try more than one.
 

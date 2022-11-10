@@ -2,7 +2,7 @@
 
 ## Download
 
-Move into your data folder in your main folder with `cd`.
+* Move into your `data` folder in your main folder with `cd`.
 If you aren't continuing from the last chapter you may need to use the full path to your main folder.
 
 Our next step will be to download the data you want to work with onto Bluewaves.

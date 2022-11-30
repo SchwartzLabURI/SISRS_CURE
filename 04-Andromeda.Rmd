@@ -57,9 +57,7 @@ You should be in your home folder, which is inside another folder,
 and so on and so forth.
 Think of it as a highly organized filing cabinet, and you will need to move in between folders
 to access files.
-
-* Type `pwd` to see the folder you are in.
-
+Type `pwd` to see the folder you are in.
 You'll see your folder at the end, preceeded by a slash, preceeded by another folder, and so on.
 
 Your home folder is on a relatively small disk, so for all of our subsequent work we will use
@@ -70,9 +68,8 @@ To get to the main folder for the Schwartz lab you need to changed directories
 using the `cd` command. 
 Unlike the prior commands you learned, but like most commands you'll use,
 this command also takes an argument, which is another "word" that comes after this command.
-In this case you need the argument that is the "path" to the folder.
-
-* Type `cd /data/schwartzlab`.
+In this case you need the argument is the "path" to the folder.
+Type `cd /data/schwartzlab`.
 
 Let's start by making a new folder to put your work in.
 Use the `mkdir` command to make a new directory.
@@ -82,14 +79,11 @@ This is a shared lab folder so you should make a folder with your username.
 For example I might type `mkdir rsschwartz`.
 From now on I will refer to this as your main folder.
 
-* Move into your folder (use `cd`) and make a new folder called data.
-* Now that you have a new folder move into it.
-* Type `pwd` again.
-
+Move into your folder (use `cd`) and make a new folder called data.
+Now that you have a new folder move into it.
+Type `pwd` again.
 Notice what folder you are in.
-Now go back to the folder containing your current folder.
-
-* Type `cd ..`, which will take you one level up in the folder hierarchy.
-* Type `pwd` again to see where you are now.
+To go back to the folder containing your current folder type `cd ..`, which will take you one level up in the folder hierarchy.
+Type `pwd` again to see where you are now.
 
 Now that you have seen a few commands check out the [Cheatsheet](cheatsheet.html) of commands at the end of the book for future reference.

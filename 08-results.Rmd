@@ -2,7 +2,14 @@
 
 ## What does your tree tell you?
 
-* Compare your tree to prior results found in the literature.
-* Go back to the first readings you did and continue to explore.
-* Are your results novel (e.g. have you determined relationships among species that no one had investigated)?
-* Do your results confirm or refute prior work?
+Use the following guide to begin to understand your research results:
+
+* Describe your hypothesis and a potential alternative. Draw from your introduction. Include both the potential phylogenetic hypotheses based on prior research and morphological results that would suggest.
+
+* Explain how your results support or contradict your phylogenetic hypotheses. Your description may include more than one set of relationships. If relevant explain how your results support / contradict your morphological hypotheses.
+
+* Explain how your results support or contradict prior results from other papers.
+
+* How can future research build on these observations?
+
+* What is your general conclusion from your results?

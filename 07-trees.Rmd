@@ -31,13 +31,13 @@ When the software runs it will also try resampling the data to see how much supp
 
 ### Download your results to your computer
 
-First figure out the complete path of your file using `pwd`.
+First figure out the complete path of your file using `pwd` while in the folder containing your alignment.
 
 #### On a Mac
 
 * Make a new terminal window. You are currently on you local computer. 
 * `cd` to a local folder where you will work on this project (make a new folder if you need to)
-* type `scp username@ssh3.hac.uri.edu:path/filename .` (replacing username with your username, path with the path you just found, and filename with the name of the output from raxml, which should start with RAxML_bipartitions)
+* type `scp username@ssh3.hac.uri.edu:path/filename .` (replacing username with your username, path with the path to your scripts or slurm_submissions folder, and filename with the name of the output from raxml, which should start with RAxML_bipartitions - list the files in the scripts or slurm_submissions folders as needed to find your path and file)
 
 #### On a PC
 
@@ -66,7 +66,7 @@ We can look at how often the grouping of sites matches each hypotheized why spec
 You can read [the full explanation (with visuals)](https://www.asc.ohio-state.edu/kubatko.2//SpeciesTreesLab1_2019_Annotated.pdf) but don't worry if it's complicated.
 This method is implemented in SVDQuartets.
 
-* Change the necessary files and information in `runSVDQ.sh` and submit it.
+* Change the necessary files and information in `runSVDQ.sh`, which is in the slurm_submissions folder, and submit it.
 * Download and examine your results.
 
 ## Alternative methods of support

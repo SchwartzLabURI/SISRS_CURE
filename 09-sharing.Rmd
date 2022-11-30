@@ -1,10 +1,6 @@
 # Sharing your results
 
-## Start reading
-
-### Develop a bibliography
-
-You'll need to keep track of everything you are reading. Try Zotero.
+Scientific results are typically shared via (1) the kind of research paper you have been reading as background for your work, and (2) presentations to an audience of peers. We will use both approaches in this class.
 
 ## Presentation
 
@@ -12,7 +8,7 @@ You'll need to keep track of everything you are reading. Try Zotero.
 2. Slides on the information that isn't known about this group - i.e. the question you will answer. Make sure we're convinced that the question you answer will help us address all those cool questions you raised in 1.
 3. Your methods - briefly. Describe the approach, not the steps you take on the computer. Talk about methods, not software.
 4. Your tree. Highlight new information.
-5. Conclusions. What implications do your results have for evolutionary biology?
+5. Conclusions. What implications do your results have for your study group and evolutionary biology more broadly?
 
 Tips: https://research.usu.edu/undergradresearch/oral-presentations/
 
@@ -60,3 +56,7 @@ Finally, wrap up the paper.
 What conclusions have you made that you want to share with readers?
 You should recap some of the same questions that came up in your introduction.
 Do you have answers now?
+
+### Bibliography
+
+You'll need to keep track of everything you are reading. Follow [these instructions](https://uri.libguides.com/zotero/home) to download and install Zotero. This software will allow you to automatically collect information about the papers you are reading and allow you to easily insert references in your paper using the Google Doc extension.

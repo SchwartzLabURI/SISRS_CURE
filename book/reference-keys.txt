@@ -41,11 +41,10 @@ alternative-methods-of-support
 results
 what-does-your-tree-tell-you
 sharing-your-results
-start-reading
-develop-a-bibliography
 presentation
 writing-a-paper
 methods
 results-1
 intro
 discussion
+bibliography

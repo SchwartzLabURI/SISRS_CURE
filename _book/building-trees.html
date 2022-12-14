@@ -187,8 +187,7 @@ When the software runs it will also try resampling the data to see how much supp
 <li>Use <code>nano</code> to open <code>runRAxML.sh</code> in the <code>slurm_submissions</code> folder.</li>
 <li>Change all lines marked CHANGE
 <ul>
-<li>The path to the alignment file should be the full path to one of the files labeled alignment_pi_m1_nogap.phylip-relaxed (yours may have a different number after m)</li>
-<li>To determine which of the m files to use, use <code>head -1</code> followed by the path to the file - you should have a value of at least several thousand as the second number. Try a file with a larger m value as needed.</li>
+<li>The path to the alignment file should be the <em>full path with all folder names</em> to one of the files labeled alignment_pi_m1_nogap.phylip-relaxed (yours may have a different number after m)</li>
 </ul></li>
 <li>Submit the script as a slurm job.</li>
 </ul>
@@ -198,18 +197,22 @@ When the software runs it will also try resampling the data to see how much supp
 <h2><span class="header-section-number">8.3</span> Visualizing trees<a href="building-trees.html#visualizing-trees" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="download-your-results-to-your-computer" class="section level3 hasAnchor">
 <h3><span class="header-section-number">8.3.1</span> Download your results to your computer<a href="building-trees.html#download-your-results-to-your-computer" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>First figure out the complete path of your file using <code>pwd</code> while in the folder containing your alignment.</p>
+<ul>
+<li>Check that a file starting with <code>RAxML_bipartitions</code> is in your scripts folder by listing files (i.e. in the same location from which you submitted your scripts).</li>
+<li>Determine the path to your tree file using <code>pwd</code>.</li>
+</ul>
 <div id="on-a-mac-1" class="section level4 hasAnchor">
 <h4><span class="header-section-number">8.3.1.1</span> On a Mac<a href="building-trees.html#on-a-mac-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
-<li>Make a new terminal window. You are currently on you local computer.</li>
-<li><code>cd</code> to a local folder where you will work on this project (make a new folder if you need to)</li>
-<li>type <code>scp username@ssh3.hac.uri.edu:path/filename .</code> (replacing username with your username, path with the path to your scripts or slurm_submissions folder, and filename with the name of the output from raxml, which should start with RAxML_bipartitions - list the files in the scripts or slurm_submissions folders as needed to find your path and file)</li>
+<li>Make a new terminal window (use ctrl-t). You are currently on you local computer.</li>
+<li><code>cd</code> to a local folder (on your computer - this is not Andromeda) where you will work on this project (make a new folder if you need to)</li>
+<li>type <code>scp username@ssh3.hac.uri.edu:path/filename .</code> (replacing username with your username, path with the path to your folder as identified in the prior step, and filename with the name of the output from raxml, which should start with RAxML_bipartitions)</li>
 </ul>
 </div>
 <div id="on-a-pc-1" class="section level4 hasAnchor">
 <h4><span class="header-section-number">8.3.1.2</span> On a PC<a href="building-trees.html#on-a-pc-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>See Transfering Data on <a href="https://its.uri.edu/research-computing/using-andromeda/#transfer">URI’s HPC Instructions</a>.</p>
+<p>*Navigate to the root folder (/) then into the folder containing your RAxML output</p>
 </div>
 </div>
 <div id="visualize-your-tree" class="section level3 hasAnchor">
@@ -218,7 +221,7 @@ When the software runs it will also try resampling the data to see how much supp
 <li>Download the visualization program <a href="http://tree.bio.ed.ac.uk/software/figtree/">FigTree</a></li>
 <li>Open your tree file</li>
 <li>Select the branch leading to your outgroup and click Reroot</li>
-<li>On the left menu select Node Labels - Display - label</li>
+<li>On the left menu select Node Labels - Display - label and adjust the font size</li>
 <li>Select Tip Labels and adjust the font size</li>
 <li>When you have an aesthetically pleasing tree: File - Export PDF</li>
 </ul>
@@ -239,7 +242,7 @@ You can read <a href="https://www.asc.ohio-state.edu/kubatko.2//SpeciesTreesLab1
 This method is implemented in SVDQuartets.</p>
 <ul>
 <li>Change the necessary files and information in <code>runSVDQ.sh</code>, which is in the slurm_submissions folder, and submit it.</li>
-<li>Download and examine your results.</li>
+<li>Download and examine your results using the same process as for the RAxML tree but noting that you are looking for a file ending in .tre in the folder containing your input alignment.</li>
 </ul>
 </div>
 <div id="alternative-methods-of-support" class="section level2 hasAnchor">
@@ -248,7 +251,7 @@ This method is implemented in SVDQuartets.</p>
 However, bootstrap resampling can have limitations when using larger datasets.
 An alternative approach is to examine the proportion of sites that support each alternative hypothesis given a tree,
 similar to the SVDQ approach.
-You can calculate SCF support by editing the <code>runSCF.sh</code> script and inputting your tree and your alignment.
+You can calculate SCF support by editing the <code>runSCF.sh</code> script and inputting your tree from either RAxML or SVDQ and your alignment.
 If you estimated different trees using the above methods you may try more than one.</p>
 
 </div>

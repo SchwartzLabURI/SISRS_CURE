@@ -23,7 +23,7 @@
 <meta name="author" content="Rachel Schwartz" />
 
 
-<meta name="date" content="2022-11-30" />
+<meta name="date" content="2022-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -169,7 +169,7 @@
 <ul>
 <li>Type <code>git clone https://github.com/SchwartzLabURI/SISRS.git</code></li>
 </ul>
-<p>Since you only have to do this once don’t worry about details beyond the idea that you are downloading a program.</p>
+<p>Because you only have to do this once don’t worry about details beyond the idea that you are downloading a program.</p>
 <p>Now we need to work with scripts (just like before) to run each step of the analysis.</p>
 <ul>
 <li>Move into the SISRS folder</li>
@@ -181,23 +181,31 @@
 <li>Change all the lines marked <code>CHANGE</code> to be relevant to your work.</li>
 <li>Exit nano and save the script.</li>
 <li>Submit your first job as <code>sbatch slurm_submissions/1_submit.slurm</code>.</li>
+<li>You should get an email when your job is done, but you can also check the status of the job using <code>squeue</code>.</li>
+<li>Be sure the job completed correctly by checking that the folder you specified as your analysis output folder was created AND that the TaxonList.txt file within that folder has the list of your study species.</li>
 </ul>
-<p>You will get an email when your job is done.</p>
-<p>Continue to edit scripts and submit jobs, changing the information as with the first script. For the ntasks-per-node line use 36 processors any time that information is requested.</p>
-<p><strong>Wait for each script to report that it has completed before continuing to the next step and do not continue if your recieve any error messages.</strong></p>
+<p>Continue to edit scripts and submit jobs, changing the information as with the first script. For the ntasks-per-node line use 36 processors any time that information is requested.
+<strong>Wait for each script to report that it has completed before continuing to the next step and do not continue if your recieve any error messages or if the noted files are not present.</strong></p>
 <ul>
-<li>slurm_submissions/1_submit.slurm</li>
-<li>slurm_submissions/2_submit.slurm</li>
-<li>slurm_submissions/3_submit.slurm</li>
-<li>slurm_submissions/4_submit.slurm</li>
-<li>slurm_submissions/5_submit.slurm</li>
-<li>slurm_submissions/6_submit_array.slurm</li>
-<li>slurm_submissions/6b_submit_array.slurm</li>
-<li>slurm_submissions/6c_submit_array.slurm</li>
-<li>slurm_submissions/6d_submit_array.slurm</li>
-<li>slurm_submissions/7_submit.slurm</li>
+<li><p>slurm_submissions/2_submit.slurm
+| The output of this script can be found in each species folder in the Reads/TrimReads folder in your analysis folder. You should see the sames files as in your species folders in your data folder.</p></li>
+<li><p>slurm_submissions/3_submit.slurm
+| The output of this script is a set of files in the Reads/SubsetReads folder in your analysis folder.</p></li>
+<li><p>slurm_submissions/4_submit.slurm
+| The output of this script is a set of files in the Ray_Composite_Genome folder in your analysis folder. There must be a <code>Contigs.fasta</code> file in this folder.</p></li>
+<li><p>slurm_submissions/5_submit.slurm
+| This script sets up the rest of the run. You can check that it completed correctly by looking for the phrase “==== Site list created:” in the output from the slurm run.</p></li>
+<li><p>slurm_submissions/6_submit_array.slurm
+| This script produces information on where each genome read aligns to the reference. Each species folder in the SISRS_Run folder in your analysis folder should have a file that starts with the species name and ends in bam.</p></li>
+<li><p>slurm_submissions/6b_submit_array.slurm
+| This script produces information on the sequence for each species. Each species folder in the SISRS_Run folder in your analysis folder should have a file that starts with the species name and ends in fa.</p></li>
+<li><p>slurm_submissions/6c_submit_array.slurm
+| This script redoes the analysis of where each genome read aligns to the reference. Each species folder in the SISRS_Run folder in your analysis folder should have a file that starts with the species name and ends in bam. To determine whether this script ran and you aren’t looking at the results from step 6 check the date and time for the file.</p></li>
+<li><p>slurm_submissions/6d_submit_array.slurm
+| This script produces information on the sequence for each species by site in the genome. Each species folder in the SISRS_Run folder in your analysis folder should have a file that starts with the species name and ends in LocList.</p></li>
+<li><p>slurm_submissions/7_submit.slurm
+| <strong>For step 7 list several numbers for the missing flag in the range of approximately half of your species.</strong> This script produces an alignment of sites with shared ancestry that you can use to build your tree. You should see in your SISRS_Run folder in you analysis folder multiple files starting with alignment and ending with relaxed. To determine which file to use for building trees use <code>head</code> to look at the first line of each file that starts with alignment_pi_m and ends with _nogap.phylip-relaxed. You should use the file with the smallest m value (least amount of missing data) that also has a relatively large amount of total data (preferably &gt;10000 sites).</p></li>
 </ul>
-<p><strong>For step 7 list several numbers for the missing flag in the range of approximately half of your species.</strong></p>
 <div id="what-sisrs-does" class="section level3 hasAnchor">
 <h3><span class="header-section-number">7.1.1</span> What SISRS does<a href="phylogenetic-markers.html#what-sisrs-does" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The software we have just used automates the process of identifying orthologous genetic markers.

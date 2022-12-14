@@ -6,7 +6,7 @@ In your main folder (cd back there if you need to) download the software we will
 
 * Type `git clone https://github.com/SchwartzLabURI/SISRS.git`
 
-Since you only have to do this once don't worry about details beyond the idea that you are downloading a program.
+Because you only have to do this once don't worry about details beyond the idea that you are downloading a program.
 
 Now we need to work with scripts (just like before) to run each step of the analysis.
 
@@ -19,25 +19,38 @@ Slurm is the name of the software used to keep track of all the jobs you submit.
 * Change all the lines marked `CHANGE` to be relevant to your work.
 * Exit nano and save the script.
 * Submit your first job as `sbatch slurm_submissions/1_submit.slurm`.
+* You should get an email when your job is done, but you can also check the status of the job using `squeue`.
+* Be sure the job completed correctly by checking that the folder you specified as your analysis output folder was created AND that the TaxonList.txt file within that folder has the list of your study species.
 
-You will get an email when your job is done.
+Continue to edit scripts and submit jobs, changing the information as with the first script. For the ntasks-per-node line use 36 processors any time that information is requested.
+**Wait for each script to report that it has completed before continuing to the next step and do not continue if your recieve any error messages or if the noted files are not present.**
 
-Continue to edit scripts and submit jobs, changing the information as with the first script. For the ntasks-per-node line use 36 processors any time that information is requested. 
-
-**Wait for each script to report that it has completed before continuing to the next step and do not continue if your recieve any error messages.**
-
-* slurm_submissions/1_submit.slurm
 * slurm_submissions/2_submit.slurm
-* slurm_submissions/3_submit.slurm
-* slurm_submissions/4_submit.slurm
-* slurm_submissions/5_submit.slurm
-* slurm_submissions/6_submit_array.slurm
-* slurm_submissions/6b_submit_array.slurm
-* slurm_submissions/6c_submit_array.slurm
-* slurm_submissions/6d_submit_array.slurm
-* slurm_submissions/7_submit.slurm
+| The output of this script can be found in each species folder in the Reads/TrimReads folder in your analysis folder. You should see the sames files as in your species folders in your data folder.
 
-**For step 7 list several numbers for the missing flag in the range of approximately half of your species.**
+* slurm_submissions/3_submit.slurm
+| The output of this script is a set of files in the Reads/SubsetReads folder in your analysis folder.
+
+* slurm_submissions/4_submit.slurm
+| The output of this script is a set of files in the Ray_Composite_Genome folder in your analysis folder. There must be a `Contigs.fasta` file in this folder.
+
+* slurm_submissions/5_submit.slurm
+| This script sets up the rest of the run. You can check that it completed correctly by looking for the phrase "==== Site list created:" in the output from the slurm run.
+
+* slurm_submissions/6_submit_array.slurm
+| This script produces information on where each genome read aligns to the reference. Each species folder in the SISRS_Run folder in your analysis folder should have a file that starts with the species name and ends in bam.
+
+* slurm_submissions/6b_submit_array.slurm
+| This script produces information on the sequence for each species. Each species folder in the SISRS_Run folder in your analysis folder should have a file that starts with the species name and ends in fa.
+
+* slurm_submissions/6c_submit_array.slurm
+| This script redoes the analysis of where each genome read aligns to the reference. Each species folder in the SISRS_Run folder in your analysis folder should have a file that starts with the species name and ends in bam. To determine whether this script ran and you aren't looking at the results from step 6 check the date and time for the file.
+
+* slurm_submissions/6d_submit_array.slurm
+| This script produces information on the sequence for each species by site in the genome. Each species folder in the SISRS_Run folder in your analysis folder should have a file that starts with the species name and ends in LocList.
+
+* slurm_submissions/7_submit.slurm
+| **For step 7 list several numbers for the missing flag in the range of approximately half of your species.** This script produces an alignment of sites with shared ancestry that you can use to build your tree. You should see in your SISRS_Run folder in you analysis folder multiple files starting with alignment and ending with relaxed. To determine which file to use for building trees use `head` to look at the first line of each file that starts with alignment_pi_m and ends with _nogap.phylip-relaxed. You should use the file with the smallest m value (least amount of missing data) that also has a relatively large amount of total data (preferably >10000 sites).
 
 ### What SISRS does
 

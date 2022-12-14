@@ -2,22 +2,23 @@
 
 ## Download
 
-* Move into your `data` folder in your main folder with `cd`.
+* Move into your `data` folder in your main folder (not your home folder!) with `cd`.
 If you aren't continuing from the last chapter you may need to use the full path to your main folder.
+* You can use `pwd` to check which folder you are in.
 
 Our next step will be to download the data you want to work with onto Bluewaves.
 First we need to create a **script** to make this happen.
 A script is a detailed set of instructions for the computer to follow.
 Your script is going to be a series of instructions to download files and put them in particular folders so you can access them.
-We are going to use the program `nano`, which is built into the system, to write this script.
+We are going to use the program `nano`, which is a very simple text editor built into the system, to write this script.
 
 * Type `nano download_data.sh`.
 
-Again, we have a command followed by an argument (in this case the name of the file we are creating).
+Again, we have a command (i.e. run `nano`) followed by an argument (in this case the name of the file we are creating).
 Notice how the file ends in `.sh`.
 Just like you have files that end in `.xls` or `.doc` this tells the computer the file is a shell script.
 
-Commands in your shell script and just like commands on the command line.
+Commands in your shell script are just like commands on the command line.
 For each file you want to download type the following (separated by spaces) on a single line:
 
 * `wget`
@@ -29,6 +30,8 @@ For each file you want to download type the following (separated by spaces) on a
 
 * Repeat this process for each sample you want to download.
 
+* Make sure there is one ftp link per line - many samples come in pairs so check for two links separated by ; and place each link on a separate line (i.e. you may have two lines in your file for some of the lines in your spreadsheet)
+
 * Exit `nano` using `ctrl-x` and save your changes.
 
 There are many people doing work on the cluster so we need take advantage of the computing power of the cluster
@@ -36,6 +39,7 @@ so that each student in the class can run their analysis on a separate computer.
 When you log in to the cluster you are on the "head node".
 From here you can submit jobs to run analyses on the other nodes attached to the cluster.
 In order to communicate information about your job to the cluster you need to add the following lines to the beginning of your download script.
+To reopen your file use the same `nano` command as before followed by the name of your file.
 
 ```
 #!/bin/bash
@@ -44,12 +48,24 @@ In order to communicate information about your job to the cluster you need to ad
 #SBATCH --nodes=1   # number of nodes
 #SBATCH --ntasks-per-node=36   # processor core(s) per node
 #SBATCH --mail-user="rsschwartz@uri.edu" 
+#SBATCH --mail-type=ALL
+#SBATCH --output=slurm_%x_%j.out
+#SBATCH --error=slurm_%x_%j.err
 
 cd $SLURM_SUBMIT_DIR
 
 ```
 
+Try to decipher what these commands are communicating to the computer: informing it of the name of the job you have assigned, the amount of time to run, the number of computers you need to allocate, the number of cores on each computer, and your information so it can tell you when the job is done. Additionally, the job will output any errors and other information in files labeled with "slurm", the job name, and the job number. If something goes wrong you can look at these files to find out.
+
 * Replace the email address on the second-to-last line with yours.
 * Quit nano and save.
 * Submit your job as `sbatch download_data.sh`.
-* Monitor the progress of your download by listing the contents of your `data` folder and the contents of the folders inside it.
+* You can check whether your job is still running by typing `squeue` to list all running jobs. Check to see if your username and job are on the list.
+* You can also monitor the progress of your download by listing the contents of your `data` folder and the contents of the folders inside it. Type the command `ls` (as before) but followed by "flags" `-lh` and then the name of one of your species folders. This lists the contents of the folder with additional information. If you repeat this command while files are downloading you'll be able to see the increasing size of files as they are downloaded.
+
+Note: you should also be able to read your `wget` commands: 
+
+* `wget` is the command to get from the web
+* the ftp link is the necessary argument
+* `-P` is a flag to indicate that what follows is the output directory (which comes next)

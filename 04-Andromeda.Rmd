@@ -6,7 +6,7 @@ It would be hard to compare all that data to data from other species just using 
 Instead we're going to need to learn some basic programming skills 
 so we can tell the computer how to work with our data.
 
-First, you'll have noticed that the computer we're using doesn't have the graphical interface
+First, the computer we're using doesn't have the graphical interface
 you usually use (like a PC or Mac).
 That means you have to type in your commands - you can't point and click.
 This actually has a hidden benefit because it's easy to write down what you did in
@@ -14,35 +14,22 @@ a line of text rather than having to try to explain where to click on each step.
 
 Let's start by learning how to log in the our server and run commands without clicking.
 
-## Access from off campus (optional)
+## Getting access
 
-* Make sure you have [two-factor authentication set up](https://its.uri.edu/duo/). You should end up with the Duo App on your phone.
-* Download the Cisco app from [My Applications](https://myapplications.microsoft.com/) following these [detailed instructions](https://its.uri.edu/itsec/vpn-enrollment/).
+* Follow the directions for students to [obtain an account](https://docs.unity.uri.edu/documentation/getting-access/){:target="_blank"} on URI's High Performance Computing Cluster (Unity).
+* You will need to request an account under pi_rsschwartz_uri_edu
+* Wait for your account to be approved
 
-## On a Mac
 
-### Getting access
+## Log in to the server
 
-* open your Terminal (you may need to search for it)
-* follow the instructions under Generating an SSH Key at [https://its.uri.edu/research-computing/using-andromeda/](https://web.uri.edu/hpc-research-computing/using-andromeda/)
-
-### Log in to the server
-
-* In your Terminal at the prompt type `ssh -l username ssh3.hac.uri.edu` , replacing `username` with the first part of your email address.
-* You should see a prompt with `ssh3`
-
-## On a PC
-
-* Download and install [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/). 
-* open Putty
-* follow the instructions under Generating an SSH Key at [https://its.uri.edu/research-computing/using-andromeda/](https://web.uri.edu/hpc-research-computing/using-andromeda/)
-* In the box marked Host Name type `ssh3.hac.uri.edu`, replacing username with the first part of your email address.
-* Use your email username to log in
-* You should see a prompt with `ssh3`
+* On the [main Unity page](https://unity.uri.edu/){:target="_blank"} select OpenOnDemand
+* Select URI to log in
+* At the top of the page select Shell - Unity Shell access
 
 ## Basic navigation
 
-You are now logged in to Andromeda, which is a cluster of computers that can be used for research.
+You are now logged in to Unity, which is a cluster of computers that can be used for research.
 First, you'll need to learn to navigate around only by typing.
 Computing clusters typically require you to type all the commands.
 
@@ -64,12 +51,12 @@ Your home folder is on a relatively small disk, so for all of our subsequent wor
 a large storage disk.
 This disk contains everyone's data, organized by research lab.
 You change the directory using the `cd` command.
-To get to the main folder for the Schwartz lab you need to changed directories
+To get to the main folder for the lab you need to changed directories
 using the `cd` command. 
 Unlike the prior commands you learned, but like most commands you'll use,
 this command also takes an argument, which is another "word" that comes after this command.
 In this case you need the argument is the "path" to the folder.
-Type `cd /data/schwartzlab`.
+Type `cd /project/pi_rsschwartz_uri_edu`.
 
 Let's start by making a new folder to put your work in.
 Use the `mkdir` command to make a new directory.
@@ -87,3 +74,25 @@ To go back to the folder containing your current folder type `cd ..`, which will
 Type `pwd` again to see where you are now.
 
 Now that you have seen a few commands check out the [Cheatsheet](cheatsheet.html) of commands at the end of the book for future reference.
+
+## Data storage
+
+Unlike your personal computer, Unity has multiple storage options.
+This is because you will have extremely large datasets and for long-term storage these
+should be stored in the most cost-effective way possible.
+However, for more immediate work you will need storage drives with optimal processing speeds.
+Because these drives have faster processing speeds they are also more expensive
+and therefore you will have less space on them.
+For this reason we may work on data in one place (faster speeds, but less space and more expensive) and then move our results to another location (more space, slower speed).
+
+When you log in you should see something like the following information:
+
+```
+/home/rsschwartz_uri_edu: 146M (1%) of 50G
+/work/pi_rsschwartz_uri_edu: 19G (2%) of 1000G
+/project/pi_rsschwartz_uri_edu: 0 (0%) of 5.0T
+```
+
+Read [Unity's storage guide](https://docs.unity.uri.edu/documentation/cluster_specs/storage/) for additional information.
+
+Following these guidelines you should use `/work` for running your analyses and `/project` for storage.

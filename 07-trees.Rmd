@@ -21,40 +21,21 @@ First, we'll use software that calculates the likelihood that the data fit the p
 The software will try lots of different phylogenies and pick the case where the data are most likely.
 When the software runs it will also try resampling the data to see how much support we have for each relationship we estimate.
 
-* Use `nano` to open `runRAxML.sh` in the `slurm_submissions` folder.
+* Use `nano` to open `runRAxML.sh` in the `slurm_example_scripts` folder.
 * Change all lines marked CHANGE
-  - The path to the alignment file should be the *full path with all folder names* to one of the files labeled alignment_pi_m1_nogap.phylip-relaxed (yours may have a different number after m)
+  - The path to the alignment file should be the *relative path* to one of the files labeled alignment_pi_m1_nogap.phylip-relaxed (yours may have a different number after m)
 * Submit the script as a slurm job.
 
 ## Visualizing trees
 
-### Download your results to your computer
-
-* Check that a file starting with `RAxML_bipartitions` is in your scripts folder by listing files (i.e. in the same location from which you submitted your scripts).
-* Determine the path to your tree file using `pwd`.
-
-#### On a Mac
-
-* Make a new terminal window (use ctrl-t). You are currently on you local computer. 
-* `cd` to a local folder (on your computer - this is not Andromeda) where you will work on this project (make a new folder if you need to)
-* type `scp username@ssh3.hac.uri.edu:path/filename .` (replacing username with your username, path with the path to your folder as identified in the prior step, and filename with the name of the output from raxml, which should start with RAxML_bipartitions)
-
-#### On a PC
-
-See Transfering Data on [URI's HPC Instructions](https://its.uri.edu/research-computing/using-andromeda/#transfer). 
-
-*Navigate to the root folder (/) then into the folder containing your RAxML output
-
-### Visualize your tree
-
-* Download the visualization program [FigTree](http://tree.bio.ed.ac.uk/software/figtree/)
-* Open your tree file
-* Select the branch leading to your outgroup and click Reroot
-* On the left menu select Node Labels - Display - label and adjust the font size
-* Select Tip Labels and adjust the font size
-* When you have an aesthetically pleasing tree: File - Export PDF
+* Check that a file starting with `RAxML_bipartitions` is in your slurm folder by listing files (i.e. in the same location from which you submitted your scripts).
+* Use `nano` to open `viewTree.slurm`.
+* Change all lines marked CHANGE
+* Follow the instructions for [transferring files from Unity](https://docs.unity.uri.edu/documentation/managing-files/ondemand/) to obtain the pdf output for your tree (it should have the same name as the input tree file followed by pdf)
 
 ## What does my tree mean?
+
+Interpret your tree using what you know about the group and how to read trees.
 
 https://artic.network/how-to-read-a-tree.html
 
@@ -68,8 +49,9 @@ We can look at how often the grouping of sites matches each hypotheized why spec
 You can read [the full explanation (with visuals)](https://www.asc.ohio-state.edu/kubatko.2//SpeciesTreesLab1_2019_Annotated.pdf) but don't worry if it's complicated.
 This method is implemented in SVDQuartets.
 
-* Change the necessary files and information in `runSVDQ.sh`, which is in the slurm_submissions folder, and submit it.
-* Download and examine your results using the same process as for the RAxML tree but noting that you are looking for a file ending in .tre in the folder containing your input alignment.
+* Change the necessary files and information in `runSVDQ.sh` and submit it.
+* Visualize your tree using the same process as for the RAxML tree but noting that you are looking for a file ending in .tre in the folder containing your input alignment.
+* Download and examine your results
 
 ## Alternative methods of support
 
@@ -79,4 +61,5 @@ An alternative approach is to examine the proportion of sites that support each 
 similar to the SVDQ approach. 
 You can calculate SCF support by editing the `runSCF.sh` script and inputting your tree from either RAxML or SVDQ and your alignment.
 If you estimated different trees using the above methods you may try more than one.
+Visualize and download as for other trees.
 

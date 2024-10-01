@@ -2,11 +2,11 @@
 
 ## Download
 
-* Move into your `data` folder in your main folder (not your home folder!) with `cd`.
-If you aren't continuing from the last chapter you may need to use the full path to your main folder.
+* Move into your data folder in the project drive
+If you aren't continuing from the last chapter you may need to use the full path to the folders you are working in.
 * You can use `pwd` to check which folder you are in.
 
-Our next step will be to download the data you want to work with onto Bluewaves.
+Our next step will be to download the data you want to work with onto Unity
 First we need to create a **script** to make this happen.
 A script is a detailed set of instructions for the computer to follow.
 Your script is going to be a series of instructions to download files and put them in particular folders so you can access them.
@@ -40,15 +40,17 @@ When you log in to the cluster you are on the "head node".
 From here you can submit jobs to run analyses on the other nodes attached to the cluster.
 In order to communicate information about your job to the cluster you need to add the following lines to the beginning of your download script.
 To reopen your file use the same `nano` command as before followed by the name of your file.
+For an alternate example see the [Unity guide](https://docs.unity.uri.edu/documentation/jobs/sbatch/).
 
 ```
 #!/bin/bash
 #SBATCH --job-name="download"
 #SBATCH --time=150:00:00  # walltime limit (HH:MM:SS)
 #SBATCH --nodes=1   # number of nodes
-#SBATCH --ntasks-per-node=36   # processor core(s) per node
+#SBATCH --ntasks-per-node=2   # processor core(s) per node
 #SBATCH --mail-user="rsschwartz@uri.edu" 
 #SBATCH --mail-type=ALL
+#SBATCH -p uri-cpu  # Partition
 #SBATCH --output=slurm_%x_%j.out
 #SBATCH --error=slurm_%x_%j.err
 

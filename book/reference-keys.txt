@@ -15,12 +15,10 @@ reflection-assignment
 getting-data
 example-data-and-trees
 computational-skills
-access-from-off-campus-optional
-on-a-mac
 getting-access
 log-in-to-the-server
-on-a-pc
 basic-navigation
+data-storage
 getting-your-data
 download
 phylogenetic-markers
@@ -31,10 +29,6 @@ background-on-tree-building
 building-trees-from-your-data
 likelihood
 visualizing-trees
-download-your-results-to-your-computer
-on-a-mac-1
-on-a-pc-1
-visualize-your-tree
 what-does-my-tree-mean
 other-tree-building-methods
 alternative-methods-of-support

@@ -13,9 +13,10 @@ you either need to do a lot of sequencing, or find sequencing someone else has d
 Becuase sequencing takes time and money we'll try using data that is already available
 and just hasn't been analyzed to answer the questions you are interested in.
 
-1. Go to the [European Nucleotide Archive](https://www.ebi.ac.uk/ena/browser/advanced-search) ([Learn more about ENA here](https://www.ebi.ac.uk/ena/browser/about))
+1. Go to the [European Nucleotide Archive](https://www.ebi.ac.uk/ena/browser/advanced-search){:target="_blank"}
+ ([Learn more about ENA here](https://www.ebi.ac.uk/ena/browser/about)){:target="_blank"}
 2. Select: Data type: Raw Reads (click next)
-3. Query: Select Taxonomy, Select filter: NCBI Taxonomy, Type a taxon name in the search box and select the correct group from the dropdown menu, select 'include subordinate'
+3. Select: Taxonomy, Select filter: NCBI Taxonomy, Type a taxon name in the search box and select the correct group from the dropdown menu, select 'include subordinate'
 4. Add to query box: ` AND instrument_platform="ILLUMINA" AND (library_strategy="RNA-Seq" OR library_strategy="WGS")` (click next twice)
 5. Manually select fields: scientific_name, base_count, fastq_ftp (click the right arrow after each to put it in the Selected Fields box) (click search)
 6. Click Download report tsv

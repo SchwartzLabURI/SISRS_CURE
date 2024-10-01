@@ -59,7 +59,11 @@ The bootstrap approach automatically implemented by RAxML is one method of deter
 However, bootstrap resampling can have limitations when using larger datasets.
 An alternative approach is to examine the proportion of sites that support each alternative hypothesis given a tree,
 similar to the SVDQ approach. 
-You can calculate SCF support by editing the `runSCF.sh` script and inputting your tree from either RAxML or SVDQ and your alignment.
-If you estimated different trees using the above methods you may try more than one.
-Visualize and download as for other trees.
 
+* Calculate SCF support by editing the `runSCF.sh` script and inputting your tree from either RAxML or SVDQ and your alignment.
+* If you estimated different trees using the above methods you may try more than one.
+* Visualize and download as for other trees.
+
+## Data storage
+
+Once your SISRS analysis is complete use the `mv` command to move all of your work to the project folder for long-term storage.

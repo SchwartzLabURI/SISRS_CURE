@@ -16,14 +16,14 @@ Let's start by learning how to log in the our server and run commands without cl
 
 ## Getting access
 
-* Follow the directions for students to [obtain an account](https://docs.unity.uri.edu/documentation/getting-access/){:target="_blank"} on URI's High Performance Computing Cluster (Unity).
+* Follow the directions for students to [obtain an account](https://docs.unity.uri.edu/documentation/getting-access/) on URI's High Performance Computing Cluster (Unity).
 * You will need to request an account under pi_rsschwartz_uri_edu
 * Wait for your account to be approved
 
 
 ## Log in to the server
 
-* On the [main Unity page](https://unity.uri.edu/){:target="_blank"} select OpenOnDemand
+* On the [main Unity page](https://unity.uri.edu/) select OpenOnDemand
 * Select URI to log in
 * At the top of the page select Shell - Unity Shell access
 
@@ -56,7 +56,7 @@ using the `cd` command.
 Unlike the prior commands you learned, but like most commands you'll use,
 this command also takes an argument, which is another "word" that comes after this command.
 In this case you need the argument is the "path" to the folder.
-Type `cd /project/pi_rsschwartz_uri_edu`.
+Type `cd /work/pi_rsschwartz_uri_edu`.
 
 Let's start by making a new folder to put your work in.
 Use the `mkdir` command to make a new directory.
@@ -95,4 +95,4 @@ When you log in you should see something like the following information:
 
 Read [Unity's storage guide](https://docs.unity.uri.edu/documentation/cluster_specs/storage/) for additional information.
 
-Following these guidelines you should use `/work` for running your analyses and `/project` for storage.
+Following these guidelines you should use `/work` for running your analyses and `/project` for long-term storage.

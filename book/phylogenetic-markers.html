@@ -129,6 +129,7 @@
 <li class="chapter" data-level="8.4" data-path="building-trees.html"><a href="building-trees.html#what-does-my-tree-mean"><i class="fa fa-check"></i><b>8.4</b> What does my tree mean?</a></li>
 <li class="chapter" data-level="8.5" data-path="building-trees.html"><a href="building-trees.html#other-tree-building-methods"><i class="fa fa-check"></i><b>8.5</b> Other tree building methods</a></li>
 <li class="chapter" data-level="8.6" data-path="building-trees.html"><a href="building-trees.html#alternative-methods-of-support"><i class="fa fa-check"></i><b>8.6</b> Alternative methods of support</a></li>
+<li class="chapter" data-level="8.7" data-path="building-trees.html"><a href="building-trees.html#data-storage-1"><i class="fa fa-check"></i><b>8.7</b> Data storage</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>9</b> Results</a>
 <ul>
@@ -201,8 +202,11 @@
 <p>Continue to edit scripts and submit jobs, changing the information as with the first script. For the ntasks-per-node line use 20 processors any time that information is requested.
 <strong>Wait for each script to report that it has completed before continuing to the next step and do not continue if your recieve any error messages or if the noted files are not present.</strong></p>
 <ul>
-<li><p>02_trimmer.slurm
-| The output of this script can be found in each species folder in the Reads/TrimReads folder in your analysis folder. You should see the sames files as in your species folders in your data folder.</p></li>
+<li>02_trimmer.slurm
+| The output of this script can be found in each species folder in the Reads/TrimReads folder in your analysis folder. You should see the sames files as in your species folders in your data folder.</li>
+</ul>
+<p><strong>Now that you have a trimmed version of the original downloaded data you should delete the latter data. Use <code>rm -rf [insert path to folder no brackets]</code></strong></p>
+<ul>
 <li><p>03_subset.slurm
 | The output of this script is a set of files in the Reads/SubsetReads folder in your analysis folder.</p></li>
 <li><p>04_composite.slurm

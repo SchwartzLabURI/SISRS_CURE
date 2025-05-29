@@ -2,11 +2,9 @@
 
 ## SISRS
 
-* Move into the `/work/pi_rsschwartz_uri_edu` folder
-* Make a new folder for your work (use your username)
-* To download the software we will use to analyze your data go to https://github.com/SchwartzLabURI/SISRS/tree/unity
-* Click the green code button and download the zip file
-* Follow the instructions for [transferring files from Unity](https://docs.unity.uri.edu/documentation/managing-files/ondemand/) to upload the file to Unity in your personal folder that you just made.
+* Go to your home folder
+* To see the software we will use to analyze your data go to https://github.com/SchwartzLabURI/SISRS/tree/unity
+* On the command line enter `git clone -b unity https://github.com/SchwartzLabURI/SISRS.git`
 
 Now we need to work with scripts (just like before) to run each step of the analysis.
 
@@ -16,7 +14,7 @@ Now we need to work with scripts (just like before) to run each step of the anal
 Slurm is the name of the software used to keep track of all the jobs you submit.
 
 * Use nano to open `01_setup.slurm`.
-* Change all the lines marked `CHANGE` to be relevant to your work.
+* Change all the lines marked `CHANGE` to be relevant to your work. Use the path to you scratch folder for your output
 * Exit nano and save the script.
 * Submit your first job as `sbatch 01_setup.slurm`.
 * You should get an email when your job is done, but you can also check the status of the job using `squeue --me`.

@@ -2,7 +2,7 @@
 
 ## Download
 
-* Move into your data folder in the project drive
+* Move into your data folder in your folder in the group folder in the project drive
 If you aren't continuing from the last chapter you may need to use the full path to the folders you are working in.
 * You can use `pwd` to check which folder you are in.
 

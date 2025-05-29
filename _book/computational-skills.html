@@ -23,7 +23,7 @@
 <meta name="author" content="Rachel Schwartz" />
 
 
-<meta name="date" content="2024-10-01" />
+<meta name="date" content="2025-05-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -221,7 +221,7 @@ to access files.
 Type <code>pwd</code> to see the folder you are in.
 You’ll see your folder at the end, preceeded by a slash, preceeded by another folder, and so on.</p>
 <p>Your home folder is on a relatively small disk, so for all of our subsequent work we will use
-a large storage disk.
+a alternatives for temporary and long-term storage.
 This disk contains everyone’s data, organized by research lab.
 You change the directory using the <code>cd</code> command.
 To get to the main folder for the lab you need to changed directories
@@ -229,7 +229,7 @@ using the <code>cd</code> command.
 Unlike the prior commands you learned, but like most commands you’ll use,
 this command also takes an argument, which is another “word” that comes after this command.
 In this case you need the argument is the “path” to the folder.
-Type <code>cd /work/pi_rsschwartz_uri_edu</code>.</p>
+Type <code>cd /project/pi_rsschwartz_uri_edu</code>.</p>
 <p>Let’s start by making a new folder to put your work in.
 Use the <code>mkdir</code> command to make a new directory.
 When you make a directory you need to name it, so instead of just
@@ -259,7 +259,9 @@ For this reason we may work on data in one place (faster speeds, but less space 
 /work/pi_rsschwartz_uri_edu: 19G (2%) of 1000G
 /project/pi_rsschwartz_uri_edu: 0 (0%) of 5.0T</code></pre>
 <p>Read <a href="https://docs.unity.uri.edu/documentation/cluster_specs/storage/">Unity’s storage guide</a> for additional information.</p>
-<p>Following these guidelines you should use <code>/work</code> for running your analyses and <code>/project</code> for long-term storage.</p>
+<p>Following these guidelines you should use <code>scratch</code> temporary space for running your analyses and <code>project</code> for long-term storage.</p>
+<p>To request scratch space enter <code>ws_allocate -m your_email@uri.edu -r 1 -G pi_rsschwartz_uri_edu shared 30</code> (make sure to change the email address). This will allocate space for your use for 30 days. Remember to extend the expiration of the scratch space after 30 days or move completed work to the project storage - it will email you 1 day before.</p>
+<p>Make sure to note the path to your storage folder.</p>
 
 </div>
 </div>

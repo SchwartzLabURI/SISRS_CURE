@@ -23,7 +23,7 @@
 <meta name="author" content="Rachel Schwartz" />
 
 
-<meta name="date" content="2024-10-01" />
+<meta name="date" content="2025-05-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -179,11 +179,9 @@
 <div id="sisrs" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> SISRS<a href="phylogenetic-markers.html#sisrs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>Move into the <code>/work/pi_rsschwartz_uri_edu</code> folder</li>
-<li>Make a new folder for your work (use your username)</li>
-<li>To download the software we will use to analyze your data go to <a href="https://github.com/SchwartzLabURI/SISRS/tree/unity" class="uri">https://github.com/SchwartzLabURI/SISRS/tree/unity</a></li>
-<li>Click the green code button and download the zip file</li>
-<li>Follow the instructions for <a href="https://docs.unity.uri.edu/documentation/managing-files/ondemand/">transferring files from Unity</a> to upload the file to Unity in your personal folder that you just made.</li>
+<li>Go to your home folder</li>
+<li>To see the software we will use to analyze your data go to <a href="https://github.com/SchwartzLabURI/SISRS/tree/unity" class="uri">https://github.com/SchwartzLabURI/SISRS/tree/unity</a></li>
+<li>On the command line enter <code>git clone -b unity https://github.com/SchwartzLabURI/SISRS.git</code></li>
 </ul>
 <p>Now we need to work with scripts (just like before) to run each step of the analysis.</p>
 <ul>
@@ -193,7 +191,7 @@
 <p>Slurm is the name of the software used to keep track of all the jobs you submit.</p>
 <ul>
 <li>Use nano to open <code>01_setup.slurm</code>.</li>
-<li>Change all the lines marked <code>CHANGE</code> to be relevant to your work.</li>
+<li>Change all the lines marked <code>CHANGE</code> to be relevant to your work. Use the path to you scratch folder for your output</li>
 <li>Exit nano and save the script.</li>
 <li>Submit your first job as <code>sbatch 01_setup.slurm</code>.</li>
 <li>You should get an email when your job is done, but you can also check the status of the job using <code>squeue --me</code>.</li>

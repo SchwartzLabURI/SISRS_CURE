@@ -48,7 +48,7 @@ Type `pwd` to see the folder you are in.
 You'll see your folder at the end, preceeded by a slash, preceeded by another folder, and so on.
 
 Your home folder is on a relatively small disk, so for all of our subsequent work we will use
-a large storage disk.
+a alternatives for temporary and long-term storage.
 This disk contains everyone's data, organized by research lab.
 You change the directory using the `cd` command.
 To get to the main folder for the lab you need to changed directories
@@ -56,7 +56,7 @@ using the `cd` command.
 Unlike the prior commands you learned, but like most commands you'll use,
 this command also takes an argument, which is another "word" that comes after this command.
 In this case you need the argument is the "path" to the folder.
-Type `cd /work/pi_rsschwartz_uri_edu`.
+Type `cd /project/pi_rsschwartz_uri_edu`.
 
 Let's start by making a new folder to put your work in.
 Use the `mkdir` command to make a new directory.
@@ -95,4 +95,9 @@ When you log in you should see something like the following information:
 
 Read [Unity's storage guide](https://docs.unity.uri.edu/documentation/cluster_specs/storage/) for additional information.
 
-Following these guidelines you should use `/work` for running your analyses and `/project` for long-term storage.
+Following these guidelines you should use `scratch` temporary space for running your analyses and `project` for long-term storage.
+
+To request scratch space enter `ws_allocate -m your_email@uri.edu -r 1 -G pi_rsschwartz_uri_edu shared 30` (make sure to change the email address). This will allocate space for your use for 30 days. Remember to extend the expiration of the scratch space after 30 days or move completed work to the project storage - it will email you 1 day before.
+
+Make sure to note the path to your storage folder.
+
